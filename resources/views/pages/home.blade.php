@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/product-options.css') }}">
     <link rel="stylesheet" href="{{ asset('css/servings.css') }}">
     <link rel="stylesheet" href="{{ asset('css/promo-reseller.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/order-section.css') }}">
 </head>
 <body>
 
@@ -203,6 +204,63 @@
                         DAFTAR JADI RESELLER
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-section" id="contact">
+        <div class="order-decoration-circle"></div>
+        <div class="order-decoration-splash"></div>
+        <div class="order-decoration-beans"></div>
+
+        <div class="order-container">
+            <h2 class="order-title">DAPATKAN KOPSOON SEKARANG!</h2>
+
+            <div class="order-product-grid">
+                <div class="order-product-card">
+                    <div class="order-image-box">
+                        <img 
+                            src="{{ asset('images/order-sachet.jpg') }}" 
+                            alt="Kopsoon Sachet Satuan"
+                            class="order-product-image"
+                        >
+                    </div>
+
+                    <a href="#" class="order-btn">ORDER NOW</a>
+                </div>
+
+                <div class="order-product-card">
+                    <div class="order-image-box">
+                        <img 
+                            src="{{ asset('images/order-bundling.jpg') }}" 
+                            alt="Paket Bundling Kopsoon"
+                            class="order-product-image"
+                        >
+                    </div>
+
+                    <a href="#" class="order-btn">ORDER NOW</a>
+                </div>
+
+                <div class="order-product-card">
+                    <div class="order-image-box">
+                        <img 
+                            src="{{ asset('images/order-box.jpg') }}" 
+                            alt="Box Keluarga Kopsoon"
+                            class="order-product-image"
+                        >
+                    </div>
+
+                    <a href="#" class="order-btn">ORDER NOW</a>
+                </div>
+            </div>
+
+            <div class="order-social">
+                <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
+
+                <a href="#" class="order-tiktok-link">
+                    <span class="order-tiktok-icon">♪</span>
+                    <span>tiktokkopsoon</span>
+                </a>
             </div>
         </div>
     </section>
