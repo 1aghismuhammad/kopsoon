@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/uvp.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-options.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/servings.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/promo-reseller.css') }}">
 </head>
 <body>
 
@@ -120,6 +122,86 @@
                         alt="Kopsoon pack keluarga" 
                         class="product-image product-image-bottom"
                     >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="serving-section" id="serving">
+        <div class="serving-container">
+            <h2 class="serving-title">NIKMATI SESUAI GAYAMU</h2>
+
+            <div class="serving-grid">
+                <div class="serving-card">
+                    <h3 class="serving-card-title">Penyajian Panas (Hot)</h3>
+
+                    <div class="serving-image-wrap">
+                        <img 
+                            src="{{ asset('images/serving-hot.png') }}" 
+                            alt="Penyajian panas Kopsoon" 
+                            class="serving-image"
+                        >
+                    </div>
+
+                    <ul class="serving-list">
+                        <li>Tuang 1 sachet KOPSOON ke dalam cangkir.</li>
+                        <li>Tambahkan 150ml air panas.</li>
+                        <li>Aduk rata dan nikmati aroma khas.</li>
+                    </ul>
+                </div>
+
+                <div class="serving-card">
+                    <h3 class="serving-card-title">Penyajian Dingin (Ice Kopi Santan)</h3>
+
+                    <div class="serving-image-wrap">
+                        <img 
+                            src="{{ asset('images/serving-ice.png') }}" 
+                            alt="Penyajian dingin Kopsoon" 
+                            class="serving-image"
+                        >
+                    </div>
+
+                    <ul class="serving-list">
+                        <li>Tuang 1 sachet KOPSOON, seduh dengan sedikit air panas (50ml) untuk melarutkan.</li>
+                        <li>Tambahkan air dingin dan es batu secukupnya.</li>
+                        <li>Siap menyegarkan harimu!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-reseller-section" id="reseller">
+        <div class="promo-decoration promo-decoration-left"></div>
+        <div class="promo-decoration promo-decoration-top"></div>
+        <div class="promo-decoration promo-decoration-bottom"></div>
+
+        <div class="promo-reseller-container">
+            <h2 class="promo-reseller-title">SPESIAL UNTUKMU & PELUANG KEMITRAAN</h2>
+
+            <div class="promo-reseller-list">
+                <div class="promo-reseller-card">
+                    <div class="promo-reseller-text">
+                        <h3>Promo Mahasiswa: Diskon Pembelian Pertama!” atau “Klaim Voucher Buy 1 Get 1</h3>
+                    </div>
+
+                    <a href="#contact" class="promo-reseller-btn">
+                        GET YOUR PROMO HERE
+                    </a>
+                </div>
+
+                <div class="promo-reseller-card">
+                    <div class="promo-reseller-text">
+                        <h3>Tertarik mendapat penghasilan tambahan? Bergabunglah menjadi mitra/reseller KOPSOON.</h3>
+                        <p>
+                            Keuntungan: Harga khusus distributor, materi promosi (foto/video untuk TikTok/IG)
+                            sudah disiapkan.
+                        </p>
+                    </div>
+
+                    <a href="#contact" class="promo-reseller-btn">
+                        DAFTAR JADI RESELLER
+                    </a>
                 </div>
             </div>
         </div>
