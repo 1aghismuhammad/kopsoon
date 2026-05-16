@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOPSOON - Kopi Santan Instan Khas Blora</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/uvp.css') }}">
 </head>
 <body>
 
@@ -31,6 +32,44 @@
                 <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
             </div>
 
+        </div>
+    </section>
+
+    <section class="uvp-section" id="about">
+        <div class="uvp-decoration-left"></div>
+        <div class="uvp-decoration-lines"></div>
+
+        <div class="uvp-container">
+            <div class="uvp-header">
+                <h2 class="uvp-title">Kenapa Harus Kopsoon?</h2>
+                <p class="uvp-description">
+                    Kopi santan tradisional dikenal dengan rasa yang gurih, creamy, dan khas Nusantara.
+                    Namun, cita rasa ini tidak selalu mudah ditemukan dalam bentuk yang praktis.
+                    KOPSOON hadir sebagai inovasi kopi santan instan yang tetap membawa rasa autentik,
+                    mudah disajikan, dan cocok dinikmati kapan saja.
+                </p>
+            </div>
+
+            <div class="uvp-content">
+                <h3 class="uvp-subtitle">Nilai Jual (UVP)</h3>
+
+                <div class="uvp-grid">
+                    <div class="uvp-item">
+                        <div class="uvp-check-icon"></div>
+                        <h4>100% Autentik</h4>
+                    </div>
+
+                    <div class="uvp-item">
+                        <div class="uvp-check-icon"></div>
+                        <h4>Praktis</h4>
+                    </div>
+
+                    <div class="uvp-item">
+                        <div class="uvp-check-icon"></div>
+                        <h4>Terjangkau</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
