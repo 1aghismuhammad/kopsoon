@@ -1,124 +1,225 @@
-/* --- 7. Footer Section --- */
+/* ==========================================================================
+   KOPSOON - FOOTER SYMMETRICAL STYLESHEET
+   ========================================================================== */
+
 .site-footer {
-    background-color: var(--color-coffee);
-    color: var(--color-cream);
-    padding: 70px 0 25px;
+    /* PILIH SALAH SATU KODE HEX DI BAWAH INI YANG PALING SESUAI DENGAN GAMBAR KAMU */
+    background-color: #D9D9D9; /* Opsi A: Cokelat Espresso Super Pekat (Sangat direkomendasikan untuk F&B) */
+    /* background-color: #1E140F; */ /* Opsi B: Dark Chocolate / Kopi Hitam hangat */
+    /* background-color: #2C1E17; */ /* Opsi C: Cokelat Gelap ber-tone hangat */
+    
+    color: #2B231D;
+    padding: 80px 0 30px 0;
     font-family: var(--font-body);
+    border-top: 4px solid var(--color-leaf); /* Garis aksen premium hijau daun */
+    position: relative;
+    width: 100%;
+    clear: both;
 }
 
 .footer-container {
+    width: 100%;
+    max-width: 1150px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 50px;
+    align-items: flex-start;
+    gap: 40px;
     margin-bottom: 50px;
 }
 
-.footer-brand {
-    flex: 1.5;
-    min-width: 280px;
-}
-
-.footer-logo {
-    font-family: var(--font-heading);
-    font-size: 36px;
-    color: var(--color-white);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.footer-tagline {
-    font-size: 15px;
-    color: rgba(234, 227, 210, 0.85);
-    margin-bottom: 25px;
-    line-height: 1.7;
-    max-width: 350px;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 20px;
-}
-
-.social-link {
-    color: var(--color-leaf);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: var(--transition);
-}
-
-.social-link:hover {
-    color: var(--color-white);
-}
-
-.footer-links, 
-.footer-contact {
+.footer-col {
     flex: 1;
-    min-width: 220px;
 }
 
-.footer-heading {
+/* --- KOLOM KIRI (Marketplace) --- */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left .column-title {
     font-family: var(--font-heading);
-    font-size: 22px;
-    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-leaf); 
     margin-bottom: 25px;
+}
+
+.marketplace-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 260px;
+}
+
+.btn-market {
+    display: flex;
+    align-items: center;
+    background-color: rgba(43, 35, 29, 0.04); 
+    border: 1px solid rgba(43, 35, 29, 0.12);
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #2B231D;                            
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.market-icon {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.market-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.market-text small {
+    font-size: 10px;
+    color: rgba(43, 35, 29, 0.6); 
+    text-transform: uppercase;
+    margin-bottom: 1px;
+}
+
+.market-text strong {
+    font-size: 14px;
     font-weight: 700;
 }
 
-.footer-links ul, 
-.footer-contact ul {
-    list-style: none;
-}
-
-.footer-links li, 
-.footer-contact li {
-    margin-bottom: 15px;
-    color: rgba(234, 227, 210, 0.85);
-    font-size: 15px;
-}
-
-.footer-links a {
-    color: rgba(234, 227, 210, 0.85);
-    text-decoration: none;
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.footer-links a:hover {
+.btn-market:hover {
+    background-color: #2B231D;
     color: var(--color-white);
-    transform: translateX(5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(43, 35, 29, 0.15);
 }
 
+.btn-market.shopee:hover { border-color: #EE4D2D; background-color: #EE4D2D; }
+.btn-market.tokopedia:hover { border-color: #42B549; background-color: #42B549; }
+.btn-market.tiktok-shop:hover { border-color: #FE2C55; background-color: #FE2C55; }
+
+/* --- KOLOM TENGAH (Logo, Teks, & Bulatan Ikon) --- */
+.footer-center {
+    flex: 1.3; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-brand-wrapper {
+    margin-bottom: 15px;
+}
+
+.footer-logo-img {
+    height: 70px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-main-heading {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: #2B231D; 
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: rgba(43, 35, 29, 0.7); 
+    margin-bottom: 25px;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+/* Penataan Baris Ikon */
+.footer-social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Tombol Lingkaran untuk Ikon */
+.social-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(43, 35, 29, 0.05); /* Latar belakang lingkaran tipis */
+    color: #2B231D;                            /* Warna bawaan ikon espresso */
+    border: 1px solid rgba(43, 35, 29, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+}
+
+.social-icon-btn .icon-svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Efek Hover Lingkaran: Mengisi penuh dengan warna espresso pekat + Ikon jadi putih */
+.social-icon-btn:hover {
+    background-color: #2B231D;
+    color: var(--color-white);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(43, 35, 29, 0.18);
+}
+
+/* --- KOLOM KANAN (Kontak Bantuan) --- */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right;
+}
+
+.footer-right .column-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-leaf);
+    margin-bottom: 25px;
+}
+
+.footer-right .column-desc {
+    font-size: 14px;
+    color: rgba(43, 35, 29, 0.75); 
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+/* --- CATATAN KAKI (Copyright) --- */
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgba(234, 227, 210, 0.15);
+    border-top: 1px solid rgba(43, 35, 29, 0.1); 
     padding-top: 25px;
-    font-size: 14px;
-    color: rgba(234, 227, 210, 0.6);
+    font-size: 13px;
+    color: rgba(43, 35, 29, 0.5); 
+    letter-spacing: 0.3px;
 }
 
-/* Footer Responsive */
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
-    .footer-container {
+    .footer-row {
         flex-direction: column;
-        gap: 40px;
+        align-items: center;
+        text-align: center;
+        gap: 45px;
     }
 
-    .footer-brand, 
-    .footer-links, 
-    .footer-contact {
-        min-width: 100%;
+    .footer-right {
+        align-items: center;
         text-align: center;
     }
 
-    .footer-tagline {
-        margin: 0 auto 25px auto;
-    }
-
-    .footer-socials {
-        justify-content: center;
+    .marketplace-buttons {
+        margin: 0 auto;
     }
 }
