@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: laravel-apache-app
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - laravel-net
+
+networks:
+  laravel-net:
+    driver: bridge
