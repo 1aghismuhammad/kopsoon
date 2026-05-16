@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/uvp.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product-options.css') }}">
 </head>
 <body>
 
@@ -68,6 +69,57 @@
                         <div class="uvp-check-icon"></div>
                         <h4>Terjangkau</h4>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-options-section" id="produk">
+        <div class="product-options-decoration-top"></div>
+        <div class="product-options-decoration-left"></div>
+        <div class="product-options-beans"></div>
+
+        <div class="product-options-container">
+            <div class="product-options-content">
+                <div class="product-options-text">
+                    <h2 class="product-options-title">PILIHAN PAS UNTUK HARIMU</h2>
+
+                    <div class="product-options-list">
+                        <div class="product-option-item">
+                            <h3>Sachet Satuan:</h3>
+                            <p>Cocok untuk yang baru ingin mencoba rasa unik KOPSOON.</p>
+                        </div>
+
+                        <div class="product-option-item">
+                            <h3>Paket Bundling (Best Seller):</h3>
+                            <p>Lebih hemat untuk stok mingguan.</p>
+                        </div>
+
+                        <div class="product-option-item">
+                            <h3>Box / Pack Keluarga:</h3>
+                            <p>Pilihan tepat untuk dinikmati bersama teman atau keluarga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-options-visual">
+                    <img 
+                        src="{{ asset('images/product-drink.png') }}" 
+                        alt="Kopsoon sachet dan minuman" 
+                        class="product-image product-image-top"
+                    >
+
+                    <img 
+                        src="{{ asset('images/product-box.png') }}" 
+                        alt="Kopsoon box" 
+                        class="product-image product-image-right"
+                    >
+
+                    <img 
+                        src="{{ asset('images/product-pack.png') }}" 
+                        alt="Kopsoon pack keluarga" 
+                        class="product-image product-image-bottom"
+                    >
                 </div>
             </div>
         </div>
