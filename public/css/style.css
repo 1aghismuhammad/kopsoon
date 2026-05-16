@@ -1,0 +1,194 @@
+/* ==========================================================================
+   KOPSOON - MAIN STYLESHEET
+   ========================================================================== */
+
+/* --- 1. Global Variables & Palettes --- */
+:root {
+    /* Palet Warna: Warm, Clean, Semi-Premium */
+    --color-coffee: #3C2A21;     
+    --color-cream: #EAE3D2;      
+    --color-leaf: #5D9C59;       
+    --color-text-body: #4F4F4F;  
+    --color-white: #FAF9F6;      
+    --color-accent: #A0937D;     
+    
+    /* Tipografi (UBAH BAGIAN INI) */
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    
+    /* Utility */
+    --border-radius: 12px;       
+    --transition: all 0.3s ease;
+}
+
+/* --- 2. Base & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-body);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* --- 3. Layout & Utilities --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 4. Common Components (Buttons) --- */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-leaf);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #4A5736;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-coffee);
+    border: 2px solid var(--color-coffee);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(60, 42, 33, 0.05);
+}
+
+.btn-sm {
+    padding: 10px 24px;
+    font-size: 13px;
+}
+
+
+
+/* --- 6. Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    /* background-color: var(--color-cream); <- Baris ini telah dihapus */
+    background-image: url("../images/Hero.png"); /* Ganti 'hero-bg.jpg' dengan nama file gambar Anda */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    color: var(--color-coffee);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-title .highlight {
+    color: var(--color-leaf);
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    max-width: 550px;
+}
+
+.hero-actions {
+    margin-top: 20px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(60, 42, 33, 0.2));
+}
+
+/* Hero Responsive */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+
+    .hero-description {
+        margin: 0 auto 30px;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .btn-primary {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+
