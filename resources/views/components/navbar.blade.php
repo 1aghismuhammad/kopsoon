@@ -12,11 +12,12 @@
         </button>
 
         <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="/" class="nav-link active">Beranda</a></li>
-            <li><a href="/about" class="nav-link">Cerita Kami</a></li>
-            <li><a href="/product" class="nav-link">Produk</a></li>
-            <li><a href="/serving" class="nav-link">Penyajian</a></li>
+            <li><a href="/" class="nav-link active">Home</a></li>
+            <li><a href="/about" class="nav-link">About</a></li>
+            <li><a href="/product" class="nav-link">Product</a></li>
+            <li><a href="/serving" class="nav-link">Serving Method</a></li>
             <li><a href="/reseller" class="nav-link">Reseller</a></li>
+            <li><a href="/contact" class="nav-link">Contact</a></li>
         </ul>
 
     </div>
