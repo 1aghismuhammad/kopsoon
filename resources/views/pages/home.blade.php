@@ -16,15 +16,17 @@
     <section class="hero-section">
         <div class="hero-container container">
             <div class="hero-content">
-                <h1 class="hero-title">Kehangatan Kopi Santan Khas Blora, <span class="highlight">Langsung di Tanganmu</span>.</h1>
-                <p class="hero-description">Nikmati perpaduan unik kopi premium dan kelembutan santan segar. Aroma khas, rasa otentik. Bikin harimu lebih cozy, dimana saja, kapan saja!</p>
+                <h1 class="hero-title">Sensasi Kopi Santan Autentik Nusantara, <span class="highlight">Kini Dalam Genggaman!</span></h1>
+                
+                <p class="hero-description">Tinggalkan kopi instan yang monoton. <strong>KOPSOON</strong> memadukan kopi pilihan dan santan berkualitas—praktis, creamy, dan selalu siap menemani harimu.</p>
+                
                 <div class="hero-actions">
                     <a href="#produk" class="btn btn-primary">Jelajahi Produk</a>
                     <a href="#about" class="btn btn-secondary">Cerita Kami</a>
                 </div>
             </div>
             <div class="hero-image-container">
-                <img src="{{ asset('images/hero-product.png') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
+                <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
             </div>
         </div>
     </section>

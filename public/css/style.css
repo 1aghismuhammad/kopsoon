@@ -47,27 +47,34 @@ body {
 /* --- 4. Common Components (Buttons) --- */
 .btn {
     display: inline-block;
-    padding: 14px 30px;
+    padding: 14px 32px; /* Sedikit dilebarkan agar terlihat premium */
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 50px;
-    transition: var(--transition);
-    border: none;
+    /* Menggunakan transisi cubic-bezier agar efek memantulnya sangat halus */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    border: 2px solid transparent; 
     cursor: pointer;
+    letter-spacing: 0.5px;
 }
 
+/* Tombol Utama (Jelajahi Produk) */
 .btn-primary {
     background-color: var(--color-leaf);
     color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(93, 156, 89, 0.2); /* Bayangan dasar */
 }
 
+/* Hover Tombol Utama: Melayang ke atas + Bayangan Hijau menyala */
 .btn-primary:hover {
     background-color: #4A5736;
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.02); /* Sedikit membesar dan naik */
+    box-shadow: 0 10px 25px rgba(93, 156, 89, 0.45); 
 }
 
+/* Tombol Sekunder (Cerita Kami) */
 .btn-secondary {
     background-color: transparent;
     color: var(--color-coffee);
@@ -75,8 +82,12 @@ body {
     margin-left: 15px;
 }
 
+/* Hover Tombol Sekunder: Terisi warna kopi + Teks jadi putih + Melayang */
 .btn-secondary:hover {
-    background-color: rgba(60, 42, 33, 0.05);
+    background-color: var(--color-coffee); 
+    color: var(--color-white);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(60, 42, 33, 0.3);
 }
 
 .btn-sm {
@@ -89,8 +100,7 @@ body {
 /* --- 6. Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* background-color: var(--color-cream); <- Baris ini telah dihapus */
-    background-image: url("../images/Hero.png"); /* Ganti 'hero-bg.jpg' dengan nama file gambar Anda */
+    background-image: url("../images/Hero.png"); /* Menggunakan file gambar Hero Anda */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,13 +123,15 @@ body {
     padding-right: 50px;
 }
 
+/* Ukuran disesuaikan kembali menjadi 46px karena teks berupa kalimat panjang */
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 52px;
+    font-size: 46px; 
     color: var(--color-coffee);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 25px;
+    letter-spacing: -0.5px;
 }
 
 .hero-title .highlight {
@@ -127,10 +139,12 @@ body {
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 40px;
     font-weight: 400;
-    max-width: 550px;
+    max-width: 540px;
+    color: var(--color-text-body);
+    line-height: 1.8;
 }
 
 .hero-actions {
@@ -148,47 +162,118 @@ body {
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 15px 30px rgba(60, 42, 33, 0.2));
+    transition: transform 0.4s ease-out, filter 0.4s ease-out; /* Transisi dasar agar hover mulus */
 }
 
-/* Hero Responsive */
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 42px;
+@media (min-width: 993px) {
+    .hero-image:hover {
+        transform: scale(1.05) translateY(-10px);
+        filter: drop-shadow(0 25px 40px rgba(60, 42, 33, 0.35));
     }
 }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Responsive Hero (Mobile & Tablet) --- */
+@media (max-width: 992px) {
+    .hero-container {
+        padding-top: 130px;
+        padding-bottom: 60px;
+    }
+    .hero-title {
+        font-size: 38px;
+    }
+    
+    /* Panggil animasi floating otomatis di layar kecil */
+    .hero-image {
+        animation: float 4s ease-in-out infinite; 
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 120px;
-        padding-bottom: 30px;
+        padding-top: 140px;
+        padding-bottom: 50px;
     }
 
     .hero-content {
         padding-right: 0;
-        margin-top: 40px;
+        margin-top: 35px; 
+    }
+
+    .hero-title {
+        font-size: 30px;
+        line-height: 1.35;
+        margin-bottom: 20px;
+        letter-spacing: -0.3px;
     }
 
     .hero-description {
-        margin: 0 auto 30px;
+        font-size: 15px;
+        margin: 0 auto 35px auto;
+        max-width: 100%;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; 
+        width: 100%;
+        max-width: 340px; 
+        margin: 0 auto;   
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        text-align: center;
     }
 
     .btn-secondary {
-        margin-left: 0;
-        margin-top: 15px;
-        display: block;
-        width: 100%;
+        margin-left: 0; 
+        margin-top: 0; 
     }
 
-    .btn-primary {
-        display: block;
+    .hero-image-container {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-image {
-        max-width: 70%;
+        max-width: 55%; 
+        height: auto;
         margin: 0 auto;
     }
 }
 
+@media (max-width: 480px) {
+    .hero-container {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+    
+    .hero-title {
+        font-size: 25px; 
+        line-height: 1.4;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    .hero-image {
+        max-width: 65%; 
+    }
+}
