@@ -22,7 +22,11 @@
                 </a>
             </li>
             <li><a href="{{ route('home') }}#produk" class="nav-link">Product</a></li>
-            <li><a href="{{ route('home') }}#serving" class="nav-link">Serving Method</a></li>
+            <li>
+                <a href="{{ route('serving') }}" class="nav-link {{ request()->routeIs('serving') ? 'active' : '' }}">
+                    Serving Method
+                </a>
+            </li>
             <li><a href="{{ route('home') }}#reseller" class="nav-link">Reseller</a></li>
             <li><a href="{{ route('home') }}#contact" class="nav-link">Contact</a></li>
         </ul>

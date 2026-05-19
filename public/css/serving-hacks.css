@@ -1,0 +1,174 @@
+/* ========================================================================
+   KOPSOON - SERVING HACKS
+   ======================================================================== */
+
+.serving-hacks-section {
+    background: #FAF9F6;
+    padding: 82px 0 92px;
+    color: #161616;
+}
+
+.serving-hacks-container {
+    position: relative;
+    z-index: 2;
+}
+
+.serving-hacks-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.serving-hacks-header h2 {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.16;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.serving-hacks-header p {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.serving-hacks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    align-items: start;
+}
+
+.serving-hack-card {
+    text-align: center;
+}
+
+.serving-hack-image-box {
+    width: 100%;
+    height: 132px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    background: #EFE6D3;
+}
+
+.serving-hack-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.serving-hack-card:hover .serving-hack-image {
+    transform: scale(1.06);
+}
+
+.serving-hack-card h3 {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.serving-hack-card p {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.serving-curve-hacks {
+    width: 560px;
+    height: 360px;
+    right: -78px;
+    top: 38px;
+    border: 24px solid rgba(200, 185, 167, 0.58);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-18deg);
+}
+
+.serving-bean-hacks {
+    left: -74px;
+    bottom: 36px;
+    width: 260px;
+    height: 130px;
+    background: #7A4B35;
+}
+
+.serving-bean-hacks::after {
+    inset: 24px 112px;
+    border-left-width: 12px;
+}
+
+.serving-beans-outline-right {
+    right: 120px;
+    bottom: 24px;
+}
+
+@media (max-width: 992px) {
+    .serving-hacks-grid {
+        gap: 30px;
+    }
+
+    .serving-hack-card h3 {
+        font-size: 22px;
+    }
+
+    .serving-hack-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serving-hacks-section {
+        padding: 68px 0 76px;
+    }
+
+    .serving-hacks-header {
+        margin-bottom: 42px;
+    }
+
+    .serving-hacks-header h2 {
+        font-size: 28px;
+    }
+
+    .serving-hacks-header p {
+        font-size: 17px;
+    }
+
+    .serving-hacks-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .serving-hack-image-box {
+        height: 160px;
+    }
+
+    .serving-curve-hacks {
+        width: 340px;
+        height: 230px;
+        right: -190px;
+        top: 28px;
+        border-width: 18px;
+    }
+
+    .serving-bean-hacks {
+        width: 160px;
+        height: 80px;
+        left: -82px;
+        bottom: 16px;
+    }
+
+    .serving-beans-outline-right {
+        right: 22px;
+        bottom: 18px;
+    }
+}

@@ -1,0 +1,110 @@
+/* ========================================================================
+   KOPSOON - SERVING HERO
+   ======================================================================== */
+
+.serving-hero-page-section {
+    min-height: 635px;
+    background: linear-gradient(90deg, #EFE6D3 0%, #EFE6D3 51%, #C8B9A7 51%, #C8B9A7 100%);
+    display: flex;
+    align-items: center;
+    padding: 155px 0 90px;
+}
+
+.serving-hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.serving-hero-content {
+    max-width: 730px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(30px);
+}
+
+.serving-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #161616;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.serving-hero-content p {
+    max-width: 690px;
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #161616;
+}
+
+.serving-curve-hero {
+    width: 760px;
+    height: 520px;
+    right: -95px;
+    top: 74px;
+    border: 28px solid rgba(255, 250, 236, 0.82);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-20deg);
+    box-shadow: 16px 12px 0 rgba(91, 73, 55, 0.12);
+}
+
+.serving-bean-left {
+    left: -70px;
+    bottom: 78px;
+}
+
+@media (max-width: 992px) {
+    .serving-hero-page-section {
+        min-height: 560px;
+        padding-top: 140px;
+        background: linear-gradient(90deg, #EFE6D3 0%, #EFE6D3 55%, #C8B9A7 55%, #C8B9A7 100%);
+    }
+
+    .serving-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .serving-hero-content p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serving-hero-page-section {
+        min-height: auto;
+        padding: 130px 0 84px;
+        background: #EFE6D3;
+    }
+
+    .serving-hero-content {
+        transform: none;
+    }
+
+    .serving-hero-content h1 {
+        font-size: 28px;
+    }
+
+    .serving-hero-content p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .serving-curve-hero {
+        width: 420px;
+        height: 300px;
+        right: -185px;
+        top: 95px;
+        border-width: 18px;
+    }
+
+    .serving-bean-left {
+        left: -75px;
+        bottom: 28px;
+    }
+}

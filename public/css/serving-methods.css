@@ -1,0 +1,148 @@
+/* ========================================================================
+   KOPSOON - SERVING METHODS
+   ======================================================================== */
+
+.serving-method-section {
+    padding: 128px 0;
+}
+
+.serving-method-hot {
+    background: #1F3B27;
+    color: #F7F3E8;
+}
+
+.serving-method-ice {
+    background: #EFE6D3;
+    color: #241D18;
+}
+
+.serving-method-container {
+    position: relative;
+    z-index: 2;
+}
+
+.serving-method-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.serving-method-grid-reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+.serving-method-content {
+    max-width: 660px;
+}
+
+.serving-method-content h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.16;
+    margin-bottom: 28px;
+    letter-spacing: -0.4px;
+}
+
+.serving-method-content h2 span {
+    font-weight: 800;
+}
+
+.serving-method-lead {
+    max-width: 650px;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.32;
+    margin-bottom: 32px;
+}
+
+.serving-method-list {
+    max-width: 580px;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.serving-method-list li {
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
+
+.serving-method-image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serving-method-image {
+    width: 325px;
+    height: 325px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 28px 54px rgba(0, 0, 0, 0.18);
+}
+
+.serving-method-ice .serving-method-image {
+    width: 350px;
+    height: 350px;
+}
+
+@media (max-width: 992px) {
+    .serving-method-section {
+        padding: 92px 0;
+    }
+
+    .serving-method-grid,
+    .serving-method-grid-reverse {
+        grid-template-columns: 1fr;
+        gap: 44px;
+        text-align: center;
+    }
+
+    .serving-method-content {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .serving-method-list {
+        max-width: 620px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .serving-method-grid-reverse .serving-method-image-wrap {
+        order: 2;
+    }
+
+    .serving-method-grid-reverse .serving-method-content {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .serving-method-section {
+        padding: 72px 0;
+    }
+
+    .serving-method-content h2 {
+        font-size: 27px;
+    }
+
+    .serving-method-lead {
+        font-size: 17px;
+        margin-bottom: 24px;
+    }
+
+    .serving-method-list li {
+        font-size: 13.5px;
+    }
+
+    .serving-method-image,
+    .serving-method-ice .serving-method-image {
+        width: 245px;
+        height: 245px;
+    }
+}
