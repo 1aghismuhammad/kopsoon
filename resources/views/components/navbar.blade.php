@@ -27,7 +27,11 @@
                     Serving Method
                 </a>
             </li>
-            <li><a href="{{ route('home') }}#reseller" class="nav-link">Reseller</a></li>
+            <li>
+                <a href="{{ route('reseller') }}" class="nav-link {{ request()->routeIs('reseller') ? 'active' : '' }}">
+                    Reseller
+                </a>
+            </li>
             <li><a href="{{ route('home') }}#contact" class="nav-link">Contact</a></li>
         </ul>
     </div>

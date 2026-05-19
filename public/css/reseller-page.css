@@ -1,0 +1,94 @@
+/* ========================================================================
+   KOPSOON - RESELLER PAGE BASE
+   ======================================================================== */
+
+.reseller-page {
+    background: var(--color-white);
+    color: #191817;
+}
+
+.reseller-page main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reseller-page section {
+    position: relative;
+}
+
+.reseller-page .container {
+    max-width: 1280px;
+}
+
+.reseller-curve,
+.reseller-wave,
+.reseller-circle,
+.reseller-bean,
+.reseller-beans-outline {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.reseller-curve,
+.reseller-circle {
+    border-radius: 50%;
+}
+
+.reseller-bean {
+    width: 170px;
+    height: 82px;
+    border-radius: 50%;
+    background: #7A4B35;
+    transform: rotate(9deg);
+    opacity: 0.98;
+}
+
+.reseller-bean::after {
+    content: '';
+    position: absolute;
+    inset: 17px 70px;
+    border-left: 10px solid rgba(255, 255, 255, 0.88);
+    border-radius: 50%;
+    transform: rotate(18deg);
+}
+
+.reseller-beans-outline {
+    width: 150px;
+    height: 135px;
+    opacity: 0.18;
+}
+
+.reseller-beans-outline::before,
+.reseller-beans-outline::after {
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 86px;
+    border: 6px solid #7A6A5B;
+    border-radius: 50%;
+    transform: rotate(-28deg);
+}
+
+.reseller-beans-outline::before {
+    left: 10px;
+    top: 18px;
+}
+
+.reseller-beans-outline::after {
+    right: 16px;
+    top: 36px;
+    transform: rotate(28deg);
+}
+
+@media (max-width: 768px) {
+    .reseller-page .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .reseller-bean {
+        width: 120px;
+        height: 58px;
+    }
+}

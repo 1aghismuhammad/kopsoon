@@ -2,9 +2,9 @@
 
 ## 1. Project Overview
 
-KOPSOON adalah website landing page bisnis untuk produk **Kopi Santan Instan Khas Blora**. Website ini bertujuan untuk menampilkan identitas brand, katalog produk, cara penyajian, promo, program reseller, kontak, dan jalur pemesanan.
+KOPSOON adalah website landing page bisnis untuk produk **Kopi Santan Instan Khas Blora**. Website ini bertujuan menampilkan identitas brand, katalog produk, cara penyajian, promo, program reseller, kontak, dan jalur pemesanan.
 
-Website ini dikembangkan sebagai landing page promosi yang hangat, modern, semi-premium, dan cocok untuk target audiens anak muda, mahasiswa, pecinta kopi lokal, serta calon reseller.
+Website dikembangkan sebagai landing page promosi yang hangat, modern, semi-premium, dan cocok untuk target audiens anak muda, mahasiswa, pecinta kopi lokal, serta calon reseller.
 
 ---
 
@@ -54,7 +54,7 @@ Jika ada form seperti order, kontak, atau pendaftaran reseller, cukup buat tampi
 Project menggunakan:
 - Laravel
 - Blade
-- CSS 
+- CSS
 - SQLite
 
 Catatan:
@@ -64,31 +64,136 @@ Catatan:
 
 ---
 
-## 5. Website Pages
+## 5. Current Pages and Routes
 
-Website memiliki halaman utama berikut:
+Halaman yang saat ini tersedia:
 
-1. Home
-2. About KOPSOON
-3. Produk
-4. Cara Penyajian
-5. Promo & Reseller
-6. Kontak / Order
+1. Home: `/`
+2. About KOPSOON: `/about`
+3. Serving Method / Cara Penyajian: `/serving`
+4. Reseller / Promo: `/reseller`
+
+Route berada di:
+
+```txt
+routes/web.php
+```
 
 ---
 
-## 6. Navigation
+## 6. Current View Structure
+
+Struktur Blade utama:
+
+```txt
+resources/views/pages/home.blade.php
+resources/views/pages/about.blade.php
+resources/views/pages/serving.blade.php
+resources/views/pages/reseller.blade.php
+resources/views/components/navbar.blade.php
+resources/views/components/footer.blade.php
+```
+
+---
+
+## 7. Styling Structure
+
+CSS global dan komponen umum:
+
+```txt
+public/css/style.css
+public/css/navbar.css
+public/css/footer.css
+```
+
+CSS halaman About:
+
+```txt
+public/css/about.css
+public/css/about-hero.css
+public/css/about-story.css
+public/css/about-values.css
+public/css/about-team.css
+```
+
+CSS halaman Serving:
+
+```txt
+public/css/serving-page.css
+public/css/serving-hero.css
+public/css/serving-methods.css
+public/css/serving-hacks.css
+```
+
+CSS halaman Reseller:
+
+```txt
+public/css/reseller-page.css
+public/css/reseller-hero.css
+public/css/reseller-deals.css
+public/css/reseller-benefits.css
+public/css/reseller-packages.css
+public/css/reseller-join.css
+```
+
+Catatan penting:
+- Jangan menaruh style navbar di CSS halaman seperti `about.css`, `serving-page.css`, atau `reseller-page.css`.
+- Navbar harus dikontrol dari `public/css/navbar.css` agar ukuran logo, menu, jarak, dan active state konsisten di semua halaman.
+- Footer harus dikontrol dari `public/css/footer.css`.
+
+---
+
+## 8. Navigation
 
 Menu utama website:
-
 - Home
-- About KOPSOON
-- Produk
-- Cara Penyajian
-- Promo & Reseller
-- Kontak / Order
+- About
+- Product
+- Serving Method
+- Reseller
+- Contact
 
-Navigasi harus dibuat di file:
+Navigasi dibuat di:
 
 ```txt
 resources/views/components/navbar.blade.php
+```
+
+Arah navigasi saat ini:
+- Home menuju `route('home')`
+- About menuju `route('about')`
+- Product menuju `route('home') . '#produk'`
+- Serving Method menuju `route('serving')`
+- Reseller menuju `route('reseller')`
+- Contact menuju `route('home') . '#contact'`
+
+---
+
+## 9. Assets
+
+Asset gambar utama berada di:
+
+```txt
+public/images
+```
+
+Gambar yang sudah digunakan:
+- `logo.png`
+- `Hero.png`
+- `gambarkopi.png`
+- `product-pack.png`
+- `product-box.png`
+- `product-drink.png`
+- `serving-hot.png`
+- `serving-ice.png`
+
+---
+
+## 10. Development Rule
+
+Untuk update berikutnya:
+- Tambahkan halaman baru melalui Blade page di `resources/views/pages`.
+- Pisahkan CSS halaman baru ke beberapa file kecil di `public/css`.
+- Tambahkan route secukupnya di `routes/web.php`.
+- Update navbar hanya jika halaman baru perlu menjadi menu utama.
+- Jangan menyentuh database dan backend tanpa instruksi eksplisit.
