@@ -1,0 +1,96 @@
+/* ==========================================================================
+   KOPSOON - ABOUT VALUES
+   ========================================================================== */
+
+.about-values-section {
+    min-height: 615px;
+    background: #1F402B;
+    color: #F7F0DE;
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.about-values-container {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    align-items: center;
+    gap: 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-values-heading h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    color: #F7F0DE;
+    text-align: center;
+}
+
+.about-values-list {
+    display: grid;
+    gap: 48px;
+    max-width: 570px;
+}
+
+.about-value-item h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #F7F0DE;
+    margin-bottom: 8px;
+}
+
+.about-value-item p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.65;
+    color: rgba(247, 240, 222, 0.88);
+}
+
+.about-values-curve {
+    position: absolute;
+    right: -140px;
+    bottom: -150px;
+    width: 520px;
+    height: 520px;
+    border: 38px solid rgba(130, 101, 65, 0.55);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+}
+
+@media (max-width: 992px) {
+    .about-values-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-values-heading h2 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-values-section {
+        padding: 80px 0;
+    }
+
+    .about-values-heading h2 {
+        font-size: 27px;
+    }
+
+    .about-value-item h3 {
+        font-size: 20px;
+    }
+
+    .about-value-item p {
+        font-size: 14px;
+    }
+
+    .about-values-list {
+        gap: 34px;
+    }
+}
