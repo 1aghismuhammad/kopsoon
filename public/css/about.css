@@ -12,18 +12,6 @@
     overflow: hidden;
 }
 
-.about-page .site-navbar {
-    position: absolute;
-}
-
-.about-page .logo-img {
-    height: 74px;
-}
-
-.about-page .nav-link {
-    font-size: 17px;
-    color: #2B231D;
-}
 
 .about-page section {
     position: relative;
@@ -55,11 +43,4 @@
 }
 
 @media (max-width: 768px) {
-    .about-page .logo-img {
-        height: 58px;
-    }
-
-    .about-page .nav-link {
-        font-size: 16px;
-    }
 }
