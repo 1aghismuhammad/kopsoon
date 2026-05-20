@@ -21,7 +21,11 @@
                     About
                 </a>
             </li>
-            <li><a href="{{ route('home') }}#produk" class="nav-link">Product</a></li>
+            <li>
+                <a href="{{ route('product') }}" class="nav-link {{ request()->routeIs('product') ? 'active' : '' }}">
+                    Product
+                </a>
+            </li>
             <li>
                 <a href="{{ route('serving') }}" class="nav-link {{ request()->routeIs('serving') ? 'active' : '' }}">
                     Serving Method

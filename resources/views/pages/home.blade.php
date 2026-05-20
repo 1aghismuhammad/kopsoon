@@ -27,7 +27,7 @@
                 <h1 class="hero-title">Sensasi Kopi Santan Autentik Nusantara, <span class="highlight">Kini Dalam Genggaman!</span></h1>
                 <p class="hero-description">Tinggalkan kopi instan yang monoton. <strong>KOPSOON</strong> memadukan kopi pilihan dan santan berkualitas—praktis, creamy, dan selalu siap menemani harimu.</p>
                 <div class="hero-actions">
-                    <a href="#produk" class="btn btn-primary">Jelajahi Produk</a>
+                    <a href="{{ route('product') }}" class="btn btn-primary">Jelajahi Produk</a>
                     <a href="#about" class="btn btn-secondary">Cerita Kami</a>
                 </div>
             </div>
