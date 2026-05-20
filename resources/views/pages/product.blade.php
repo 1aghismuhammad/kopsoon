@@ -60,7 +60,7 @@
                             Cocok untuk pembeli pertama yang ingin mencicipi rasa kopi santan khas Blora
                             tanpa harus membeli banyak. Praktis dibawa ke kampus, kantor, atau kos.
                         </p>
-                        <a href="#contact-product" class="showcase-cta">Pesan Sekarang</a>
+                        <a href="{{ route('contact') }}" class="showcase-cta">Pesan Sekarang</a>
                     </div>
                 </article>
 
@@ -78,7 +78,7 @@
                             Paket hemat untuk menemani aktivitas padat, mulai dari nugas, kerja lembur,
                             sampai santai di akhir pekan. Lebih efisien daripada beli satuan berulang.
                         </p>
-                        <a href="#contact-product" class="showcase-cta">Ambil Paket Ini</a>
+                        <a href="{{ route('contact') }}" class="showcase-cta">Ambil Paket Ini</a>
                     </div>
                 </article>
 
@@ -96,7 +96,7 @@
                             Pilihan terbaik untuk dinikmati kapan saja di kos, rumah, atau kantor.
                             Cocok juga untuk disuguhkan saat kumpul bersama teman dan keluarga.
                         </p>
-                        <a href="#contact-product" class="showcase-cta">Cek Stok Box</a>
+                        <a href="{{ route('contact') }}" class="showcase-cta">Cek Stok Box</a>
                     </div>
                 </article>
 
@@ -165,7 +165,7 @@
                 </div>
 
                 <div class="product-contact-actions">
-                    <a href="https://wa.me/6289912314371" target="_blank" class="btn btn-primary">Chat WhatsApp</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Lihat Kontak</a>
                     <a href="{{ route('reseller') }}" class="btn btn-secondary">Lihat Reseller</a>
                 </div>
             </div>

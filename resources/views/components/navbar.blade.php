@@ -36,7 +36,11 @@
                     Reseller
                 </a>
             </li>
-            <li><a href="{{ route('home') }}#contact" class="nav-link">Contact</a></li>
+            <li>
+                <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">
+                    Contact
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

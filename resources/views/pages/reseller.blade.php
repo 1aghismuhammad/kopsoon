@@ -54,7 +54,7 @@
                                 untuk dapatkan diskon 10% di pembelian pertama!
                             </p>
                         </div>
-                        <a href="#" class="reseller-deal-btn">GET YOUR PROMO HERE</a>
+                        <a href="{{ route('contact') }}" class="reseller-deal-btn">GET YOUR PROMO HERE</a>
                     </article>
 
                     <article class="reseller-deal-card">
@@ -64,7 +64,7 @@
                                 Beli 2 KOPSOON paket nugas isi 10 sachet, gratis ongkir ke seluruh Pulau Jawa!
                             </p>
                         </div>
-                        <a href="#" class="reseller-deal-btn">GET YOUR PROMO HERE</a>
+                        <a href="{{ route('contact') }}" class="reseller-deal-btn">GET YOUR PROMO HERE</a>
                     </article>
                 </div>
             </div>
@@ -211,7 +211,7 @@
                         Tunggu apa lagi? Kuota agen reseller per area terbatas, lho!<br>
                         Amankan posisimu sekarang dan mulai raih cuan bareng KOPSOON.
                     </p>
-                    <a href="#" class="reseller-join-btn">Daftar Jadi Reseller Sekarang</a>
+                    <a href="{{ route('contact') }}" class="reseller-join-btn">Daftar Jadi Reseller Sekarang</a>
                 </div>
             </div>
         </section>

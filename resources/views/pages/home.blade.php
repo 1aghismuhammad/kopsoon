@@ -28,7 +28,7 @@
                 <p class="hero-description">Tinggalkan kopi instan yang monoton. <strong>KOPSOON</strong> memadukan kopi pilihan dan santan berkualitas—praktis, creamy, dan selalu siap menemani harimu.</p>
                 <div class="hero-actions">
                     <a href="{{ route('product') }}" class="btn btn-primary">Jelajahi Produk</a>
-                    <a href="#about" class="btn btn-secondary">Cerita Kami</a>
+                    <a href="{{ route('about') }}" class="btn btn-secondary">Cerita Kami</a>
                 </div>
             </div>
 
@@ -186,7 +186,7 @@
                         <h3>Promo Mahasiswa: Diskon Pembelian Pertama!” atau “Klaim Voucher Buy 1 Get 1</h3>
                     </div>
 
-                    <a href="#contact" class="promo-reseller-btn">
+                    <a href="{{ route('contact') }}" class="promo-reseller-btn">
                         GET YOUR PROMO HERE
                     </a>
                 </div>
@@ -200,7 +200,7 @@
                         </p>
                     </div>
 
-                    <a href="#contact" class="promo-reseller-btn">
+                    <a href="{{ route('contact') }}" class="promo-reseller-btn">
                         DAFTAR JADI RESELLER
                     </a>
                 </div>
@@ -220,44 +220,44 @@
                 <div class="order-product-card">
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/order-sachet.jpg') }}" 
+                            src="{{ asset('images/product-drink.png') }}" 
                             alt="Kopsoon Sachet Satuan"
                             class="order-product-image"
                         >
                     </div>
 
-                    <a href="#" class="order-btn">ORDER NOW</a>
+                    <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
                 <div class="order-product-card">
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/order-bundling.jpg') }}" 
+                            src="{{ asset('images/product-pack.png') }}" 
                             alt="Paket Bundling Kopsoon"
                             class="order-product-image"
                         >
                     </div>
 
-                    <a href="#" class="order-btn">ORDER NOW</a>
+                    <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
                 <div class="order-product-card">
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/order-box.jpg') }}" 
+                            src="{{ asset('images/product-box.png') }}" 
                             alt="Box Keluarga Kopsoon"
                             class="order-product-image"
                         >
                     </div>
 
-                    <a href="#" class="order-btn">ORDER NOW</a>
+                    <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
             </div>
 
             <div class="order-social">
                 <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
 
-                <a href="#" class="order-tiktok-link">
+                <a href="https://tiktok.com/@KOPSOON" target="_blank" class="order-tiktok-link">
                     <span class="order-tiktok-icon">♪</span>
                     <span>tiktokkopsoon</span>
                 </a>

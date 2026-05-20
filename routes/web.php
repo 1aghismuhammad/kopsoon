@@ -22,3 +22,7 @@ Route::get('/serving', function () {
 Route::get('/reseller', function () {
     return view('pages.reseller');
 })->name('reseller');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
