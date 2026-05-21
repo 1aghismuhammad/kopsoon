@@ -194,16 +194,21 @@
     width: 142px;
     height: 142px;
     margin: 0 auto 20px;
-    background: #dedede;
-    color: #183f29;
+    background: rgba(247, 240, 223, 0.94);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 46px;
-    font-weight: 800;
-    border-radius: 0;
+    border-radius: 24px;
+    overflow: hidden;
     box-shadow: 0 18px 35px rgba(0, 0, 0, 0.14);
     transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+
+.marketplace-logo-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .marketplace-card:hover .marketplace-logo-box {

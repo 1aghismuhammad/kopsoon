@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
 <body class="product-page-body">
+    @include('components.page-transition')
 
     @include('components.navbar')
 
@@ -175,5 +177,6 @@
     @include('components.footer')
 
     <script src="{{ asset('js/product-page.js') }}"></script>
+    <script src="{{ asset('js/page-transition.js') }}"></script>
 </body>
 </html>

@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="{{ asset('css/about-story.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-values.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-team.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
 <body class="about-page">
+    @include('components.page-transition')
 
     @include('components.navbar')
 
@@ -186,5 +188,6 @@
 
     @include('components.footer')
 
+    <script src="{{ asset('js/page-transition.js') }}"></script>
 </body>
 </html>

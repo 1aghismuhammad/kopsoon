@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="{{ asset('css/serving-hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/serving-methods.css') }}">
     <link rel="stylesheet" href="{{ asset('css/serving-hacks.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
 <body class="serving-page">
+    @include('components.page-transition')
 
     @include('components.navbar')
 
@@ -120,5 +122,6 @@
 
     @include('components.footer')
 
+    <script src="{{ asset('js/page-transition.js') }}"></script>
 </body>
 </html>

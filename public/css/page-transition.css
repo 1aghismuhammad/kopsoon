@@ -1,0 +1,205 @@
+:root {
+    --transition-cream: #f7f0df;
+    --transition-cream-soft: #efe4cf;
+    --transition-brown: #6f4a36;
+    --transition-dark-green: #183f29;
+    --transition-deep: #241914;
+}
+
+html {
+    background: var(--transition-cream);
+}
+
+body {
+    background: var(--transition-cream);
+}
+
+body.is-transitioning {
+    cursor: wait;
+}
+
+body.is-transitioning a,
+body.is-transitioning button {
+    pointer-events: none;
+}
+
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 82%, rgba(111, 74, 54, 0.28) 0 13%, transparent 14%),
+        radial-gradient(circle at 90% 12%, rgba(24, 63, 41, 0.24) 0 15%, transparent 16%),
+        linear-gradient(135deg, var(--transition-cream) 0%, var(--transition-cream-soft) 48%, #d9cbb6 100%);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition:
+        transform 820ms cubic-bezier(0.78, 0, 0.18, 1),
+        opacity 240ms ease,
+        visibility 0ms linear 0ms;
+    will-change: transform;
+}
+
+body.page-ready .page-transition-overlay {
+    transform: translateY(-101%);
+    opacity: 1;
+    visibility: hidden;
+    transition:
+        transform 820ms cubic-bezier(0.78, 0, 0.18, 1),
+        visibility 0ms linear 840ms;
+}
+
+body.page-exiting .page-transition-overlay {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition:
+        transform 720ms cubic-bezier(0.78, 0, 0.18, 1),
+        visibility 0ms linear 0ms;
+}
+
+.transition-grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.28) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(111,74,54,0.12) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(circle at center, black 0 62%, transparent 100%);
+}
+
+.transition-splash {
+    position: absolute;
+    border-radius: 55% 45% 44% 56% / 50% 43% 57% 50%;
+    pointer-events: none;
+}
+
+.transition-splash-left {
+    left: -120px;
+    bottom: -90px;
+    width: min(40vw, 440px);
+    height: min(40vw, 380px);
+    background: rgba(111, 74, 54, 0.92);
+    transform: rotate(-18deg);
+}
+
+.transition-splash-left::before {
+    content: '';
+    position: absolute;
+    inset: 84px 88px 92px 92px;
+    border: 32px solid var(--transition-cream);
+    border-radius: 50%;
+    transform: rotate(30deg);
+}
+
+.transition-splash-right {
+    right: -130px;
+    top: -120px;
+    width: min(36vw, 390px);
+    height: min(38vw, 420px);
+    background: rgba(24, 63, 41, 0.88);
+    transform: rotate(23deg);
+}
+
+.transition-mark {
+    position: relative;
+    z-index: 2;
+    width: min(38vw, 210px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 999px;
+    background: rgba(247, 240, 223, 0.72);
+    border: 1px solid rgba(111, 74, 54, 0.2);
+    box-shadow: 0 26px 80px rgba(36, 25, 20, 0.18);
+    backdrop-filter: blur(8px);
+    transform: translateY(8px) scale(0.96);
+    opacity: 0;
+    transition: opacity 260ms ease, transform 480ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body:not(.page-ready) .transition-mark,
+body.page-exiting .transition-mark {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 160ms;
+}
+
+.transition-logo {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(36, 25, 20, 0.12));
+}
+
+.transition-label {
+    font-family: var(--font-heading, 'DM Sans', sans-serif);
+    color: var(--transition-brown);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+main,
+.site-navbar,
+.site-footer {
+    transition: opacity 420ms ease, transform 420ms ease, filter 420ms ease;
+}
+
+body.page-exiting main,
+body.page-exiting .site-navbar,
+body.page-exiting .site-footer {
+    opacity: 0.24;
+    transform: translateY(-10px);
+    filter: blur(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-transition-overlay,
+    .transition-mark,
+    main,
+    .site-navbar,
+    .site-footer {
+        transition: none !important;
+    }
+
+    body.page-ready .page-transition-overlay {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .transition-splash-left {
+        width: 300px;
+        height: 270px;
+        left: -150px;
+        bottom: -100px;
+    }
+
+    .transition-splash-right {
+        width: 280px;
+        height: 310px;
+        right: -150px;
+        top: -120px;
+    }
+
+    .transition-mark {
+        width: 150px;
+    }
+
+    .transition-logo {
+        width: 60px;
+        height: 60px;
+    }
+}

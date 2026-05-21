@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="{{ asset('css/reseller-benefits.css') }}">
     <link rel="stylesheet" href="{{ asset('css/reseller-packages.css') }}">
     <link rel="stylesheet" href="{{ asset('css/reseller-join.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
 <body class="reseller-page">
+    @include('components.page-transition')
 
     @include('components.navbar')
 
@@ -219,5 +221,6 @@
 
     @include('components.footer')
 
+    <script src="{{ asset('js/page-transition.js') }}"></script>
 </body>
 </html>

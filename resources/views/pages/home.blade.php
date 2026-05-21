@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="{{ asset('css/servings.css') }}">
     <link rel="stylesheet" href="{{ asset('css/promo-reseller.css') }}">
     <link rel="stylesheet" href="{{ asset('css/order-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
 <body>
+    @include('components.page-transition')
 
     @include('components.navbar')
 
@@ -267,5 +269,6 @@
 
     @include('components.footer')
 
+    <script src="{{ asset('js/page-transition.js') }}"></script>
 </body>
 </html>
