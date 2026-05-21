@@ -1,0 +1,949 @@
+/* ===========================================================================
+   KOPSOON - RESELLER PARALLAX + REVISED SECTION DESIGN
+   =========================================================================== */
+
+body.reseller-parallax {
+    --reseller-hero-bg-y: 0px;
+    --reseller-hero-content-y: 0px;
+    --reseller-hero-opacity: 1;
+    --reseller-parallax-y: 0px;
+    background: #FBF6EE;
+}
+
+/* ---------------------------------------------------------------------------
+   HERO: disamakan dengan karakter Home/About/Serving
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-hero-section {
+    min-height: 100vh;
+    padding: 150px 0 96px;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+    overflow: hidden;
+    background-image:
+        linear-gradient(90deg, rgba(244, 236, 216, 0.76) 0%, rgba(244, 236, 216, 0.60) 44%, rgba(201, 184, 164, 0.38) 100%),
+        url('../images/Hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center calc(50% + var(--reseller-hero-bg-y));
+    transition: background-position 80ms linear;
+    will-change: background-position;
+}
+
+.reseller-parallax .reseller-hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.24), transparent 30%),
+        linear-gradient(180deg, rgba(255, 252, 244, 0.08) 0%, rgba(77, 56, 40, 0.08) 100%);
+}
+
+.reseller-parallax .reseller-hero-container {
+    position: relative;
+    z-index: 3;
+}
+
+.reseller-parallax .reseller-hero-content {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    transform: none;
+    opacity: var(--reseller-hero-opacity);
+    translate: 0 var(--reseller-hero-content-y);
+    will-change: translate, opacity;
+}
+
+.reseller-parallax .reseller-hero-content h1 {
+    max-width: 830px;
+    margin: 0 auto 24px;
+    font-size: clamp(38px, 5vw, 74px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -1.5px;
+    color: #3C2A21;
+}
+
+.reseller-parallax .reseller-hero-content p {
+    max-width: 790px;
+    margin: 0 auto;
+    font-size: clamp(17px, 1.8vw, 25px);
+    font-weight: 700;
+    line-height: 1.46;
+    color: #58524C;
+}
+
+.reseller-parallax .reseller-curve-hero,
+.reseller-parallax .reseller-bean-left,
+.reseller-parallax .reseller-beans-hero {
+    z-index: 2;
+}
+
+.reseller-parallax .reseller-curve-hero {
+    width: 880px;
+    height: 640px;
+    right: -120px;
+    top: 46px;
+    border-width: 30px;
+    opacity: 0.92;
+}
+
+.reseller-parallax .reseller-bean-left {
+    left: -74px;
+    bottom: 94px;
+}
+
+.reseller-parallax .reseller-beans-hero {
+    right: 120px;
+    bottom: 54px;
+}
+
+/* ---------------------------------------------------------------------------
+   GENERAL PARALLAX / REVEAL
+   --------------------------------------------------------------------------- */
+.reseller-parallax [data-reseller-parallax] {
+    --reseller-parallax-y: 0px;
+    translate: 0 var(--reseller-parallax-y);
+    will-change: translate;
+}
+
+.reseller-parallax [data-reseller-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 44px, 0) scale(0.985);
+    filter: blur(8px);
+    transition:
+        opacity 760ms ease,
+        transform 760ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        filter 760ms ease;
+    transition-delay: var(--reseller-reveal-delay, 0ms);
+    will-change: opacity, transform, filter;
+}
+
+.reseller-parallax [data-reseller-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+
+.reseller-parallax .reseller-parallax-section {
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------------
+   SPECIAL DEALS: panel lebih compact seperti referensi
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-deals-section {
+    padding: 88px 0 0;
+    background:
+        radial-gradient(circle at 12% 6%, rgba(243, 234, 216, 0.92) 0 130px, transparent 132px),
+        radial-gradient(circle at 88% 0%, rgba(235, 191, 171, 0.68) 0 180px, transparent 182px),
+        #FBF6EE;
+    color: #FBF6EE;
+}
+
+.reseller-parallax .reseller-deals-container {
+    max-width: 980px;
+    padding: 72px 48px 62px;
+    border-radius: 0;
+    background:
+        radial-gradient(circle at 86% 22%, rgba(255, 255, 255, 0.055), transparent 25%),
+        linear-gradient(135deg, #3C2A21 0%, #432B1F 100%);
+    box-shadow: 0 28px 70px rgba(60, 42, 33, 0.18);
+}
+
+.reseller-parallax .reseller-deals-container h2 {
+    margin: 0 0 34px;
+    font-size: clamp(24px, 2.4vw, 35px);
+    font-weight: 800;
+    color: #FBF6EE;
+    text-align: center;
+    letter-spacing: -0.025em;
+}
+
+.reseller-parallax .reseller-deals-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.reseller-parallax .reseller-deal-card {
+    position: relative;
+    display: flex;
+    min-height: 172px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 28px 28px 24px;
+    border-radius: 14px;
+    background: rgba(251, 246, 238, 0.96);
+    color: #3C2A21;
+    box-shadow: 0 18px 38px rgba(14, 10, 8, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    overflow: hidden;
+    transition:
+        transform 360ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        box-shadow 360ms ease,
+        background 360ms ease;
+}
+
+.reseller-parallax .reseller-deal-card::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(93, 156, 89, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(93, 156, 89, 0.14);
+}
+
+.reseller-parallax .reseller-deal-card:hover {
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 28px 64px rgba(14, 10, 8, 0.25);
+    background: #FFFFFF;
+}
+
+.reseller-parallax .reseller-deal-text h3 {
+    margin: 0 0 8px;
+    padding-right: 44px;
+    font-size: 18px;
+    line-height: 1.18;
+    color: #3C2A21;
+}
+
+.reseller-parallax .reseller-deal-text p {
+    max-width: none;
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.55;
+    color: #58524C;
+}
+
+.reseller-parallax .reseller-deal-btn {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    border-radius: 999px;
+    background: #5D9C59;
+    border-color: #5D9C59;
+    color: #FBF6EE;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    box-shadow: 0 12px 25px rgba(93, 156, 89, 0.22);
+}
+
+.reseller-parallax .reseller-deal-btn:hover {
+    background: #1F3B27;
+    border-color: #1F3B27;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(31, 59, 39, 0.28);
+}
+
+.reseller-parallax .reseller-wave-top,
+.reseller-parallax .reseller-circle-deals {
+    opacity: 0.18;
+}
+
+/* ---------------------------------------------------------------------------
+   BENEFITS: green panel, card hover untuk semua benefit
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-benefits-section {
+    padding: 0 0 92px;
+    background: #FBF6EE;
+    color: #FBF6EE;
+}
+
+.reseller-parallax .reseller-benefits-container {
+    max-width: 980px;
+    padding: 74px 54px 78px;
+    background:
+        radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.08), transparent 22%),
+        linear-gradient(135deg, #254B35 0%, #1F3B27 100%);
+    box-shadow: 0 30px 68px rgba(31, 59, 39, 0.18);
+}
+
+.reseller-parallax .reseller-benefits-header {
+    max-width: 720px;
+    margin: 0 auto 58px;
+}
+
+.reseller-parallax .reseller-benefits-header h2 {
+    font-size: clamp(26px, 2.6vw, 38px);
+    color: #FBF6EE;
+    margin-bottom: 14px;
+}
+
+.reseller-parallax .reseller-benefits-header p {
+    color: rgba(251, 246, 238, 0.78);
+    font-size: 14.5px;
+    line-height: 1.65;
+}
+
+.reseller-parallax .reseller-benefits-grid {
+    gap: 34px 42px;
+    max-width: 860px;
+}
+
+.reseller-parallax .reseller-benefit-item {
+    position: relative;
+    grid-template-columns: 58px 1fr;
+    gap: 18px;
+    padding: 22px 20px;
+    border-radius: 22px;
+    background: rgba(251, 246, 238, 0.045);
+    border: 1px solid rgba(251, 246, 238, 0.10);
+    transition:
+        transform 340ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        background 340ms ease,
+        border-color 340ms ease,
+        box-shadow 340ms ease;
+}
+
+.reseller-parallax .reseller-benefit-item:hover {
+    transform: translateY(-8px);
+    background: rgba(251, 246, 238, 0.085);
+    border-color: rgba(251, 246, 238, 0.22);
+    box-shadow: 0 24px 44px rgba(0, 0, 0, 0.16);
+}
+
+.reseller-parallax .reseller-benefit-icon {
+    width: 46px;
+    height: 46px;
+    background: rgba(251, 246, 238, 0.13);
+    color: #FBF6EE;
+    box-shadow: inset 0 0 0 1px rgba(251, 246, 238, 0.20);
+    transition: transform 340ms ease, background 340ms ease;
+}
+
+.reseller-parallax .reseller-benefit-item:hover .reseller-benefit-icon {
+    transform: rotate(-5deg) scale(1.08);
+    background: rgba(93, 156, 89, 0.32);
+}
+
+.reseller-parallax .reseller-benefit-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.reseller-parallax .reseller-benefit-item h3 {
+    color: #FBF6EE;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.reseller-parallax .reseller-benefit-item p {
+    max-width: none;
+    color: rgba(251, 246, 238, 0.76);
+    font-size: 13.5px;
+    line-height: 1.55;
+}
+
+/* ---------------------------------------------------------------------------
+   PACKAGES: card image premium + hover
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-packages-section {
+    padding: 92px 0 92px;
+    background:
+        radial-gradient(circle at 6% 0%, rgba(111, 74, 54, 0.08), transparent 30%),
+        radial-gradient(circle at 94% 12%, rgba(93, 156, 89, 0.07), transparent 28%),
+        #FBF6EE;
+}
+
+.reseller-parallax .reseller-packages-container {
+    max-width: 1040px;
+}
+
+.reseller-parallax .reseller-packages-container h2 {
+    color: #3C2A21;
+    font-size: clamp(25px, 2.6vw, 38px);
+    margin-bottom: 48px;
+}
+
+.reseller-parallax .reseller-package-grid {
+    max-width: 960px;
+    gap: 36px;
+}
+
+.reseller-parallax .reseller-package-card {
+    position: relative;
+    padding: 0 0 30px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: rgba(251, 246, 238, 0.94);
+    border: 1px solid rgba(60, 42, 33, 0.10);
+    box-shadow: 0 18px 44px rgba(60, 42, 33, 0.12);
+    transition:
+        transform 380ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        box-shadow 380ms ease,
+        border-color 380ms ease;
+}
+
+.reseller-parallax .reseller-package-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 34px 70px rgba(60, 42, 33, 0.20);
+    border-color: rgba(93, 156, 89, 0.32);
+}
+
+.reseller-parallax .reseller-package-card.is-featured::before {
+    content: "Paling Diminati";
+    position: absolute;
+    z-index: 4;
+    top: 16px;
+    right: 16px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: #5D9C59;
+    color: #FBF6EE;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    box-shadow: 0 10px 22px rgba(31, 59, 39, 0.24);
+}
+
+.reseller-parallax .reseller-package-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 245px;
+    margin: 0 0 0;
+    border-radius: 0;
+    background: #EAE3D2;
+    box-shadow: none;
+}
+
+.reseller-parallax .reseller-package-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(60, 42, 33, 0.20) 100%);
+    pointer-events: none;
+}
+
+.reseller-parallax .reseller-package-image {
+    transform-origin: center;
+}
+
+.reseller-parallax .reseller-package-card:hover .reseller-package-image {
+    transform: scale(1.08);
+}
+
+.reseller-parallax .reseller-package-card h3,
+.reseller-parallax .reseller-package-card ul {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.reseller-parallax .reseller-package-card h3 {
+    margin: 24px 0 16px;
+    color: #3C2A21;
+    font-size: 23px;
+}
+
+.reseller-parallax .reseller-package-card h3 span {
+    display: block;
+    margin-top: 3px;
+    font-size: 0.78em;
+    font-weight: 700;
+    color: #746A62;
+}
+
+.reseller-parallax .reseller-package-card li {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 12px;
+    color: #58524C;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.reseller-parallax .reseller-package-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(93, 156, 89, 0.15);
+    color: #1F3B27;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.reseller-parallax .reseller-package-card li strong {
+    color: #3C2A21;
+}
+
+/* ---------------------------------------------------------------------------
+   JOIN: timeline card revised + hover
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-join-section {
+    padding: 92px 0 104px;
+    background:
+        radial-gradient(circle at 7% 86%, rgba(111, 74, 54, 0.10), transparent 26%),
+        radial-gradient(circle at 96% 8%, rgba(255, 255, 255, 0.60), transparent 30%),
+        #F3EAD8;
+}
+
+.reseller-parallax .reseller-join-container {
+    max-width: 980px;
+    padding: 70px 64px 66px;
+    border-radius: 0;
+    background: rgba(251, 246, 238, 0.88);
+    box-shadow: 0 28px 70px rgba(60, 42, 33, 0.13);
+    text-align: center;
+}
+
+.reseller-parallax .reseller-join-container h2 {
+    margin-bottom: 48px;
+    color: #3C2A21;
+    font-size: clamp(25px, 2.5vw, 36px);
+}
+
+.reseller-parallax .reseller-steps {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto 52px;
+    gap: 26px;
+}
+
+.reseller-parallax .reseller-steps::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background: rgba(31, 59, 39, 0.20);
+}
+
+.reseller-parallax .reseller-step-item {
+    position: relative;
+    grid-template-columns: 46px 1fr;
+    align-items: center;
+    gap: 26px;
+    text-align: left;
+}
+
+.reseller-parallax .reseller-step-item span {
+    position: relative;
+    z-index: 2;
+    width: 46px;
+    height: 46px;
+    background: #1F3B27;
+    color: #FBF6EE;
+    font-size: 15px;
+    box-shadow: 0 14px 30px rgba(31, 59, 39, 0.28);
+    transition: transform 320ms ease, background 320ms ease;
+}
+
+.reseller-parallax .reseller-step-item p {
+    max-width: none;
+    margin: 0;
+    padding: 22px 26px;
+    border-radius: 13px;
+    background: #FFFFFF;
+    color: #3C2A21;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.42;
+    box-shadow: 0 18px 38px rgba(60, 42, 33, 0.08);
+    transition: transform 320ms ease, box-shadow 320ms ease;
+}
+
+.reseller-parallax .reseller-step-item:hover span {
+    transform: scale(1.08);
+    background: #5D9C59;
+}
+
+.reseller-parallax .reseller-step-item:hover p {
+    transform: translateX(8px);
+    box-shadow: 0 24px 48px rgba(60, 42, 33, 0.13);
+}
+
+.reseller-parallax .reseller-join-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.reseller-parallax .reseller-join-bottom p {
+    max-width: 620px;
+    color: #58524C;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.reseller-parallax .reseller-join-btn {
+    min-width: 280px;
+    height: 52px;
+    border-radius: 999px;
+    background: #5D9C59;
+    border-color: #5D9C59;
+    color: #FBF6EE;
+    font-size: 14px;
+    box-shadow: 0 16px 32px rgba(93, 156, 89, 0.26);
+}
+
+.reseller-parallax .reseller-join-btn:hover {
+    background: #1F3B27;
+    border-color: #1F3B27;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(31, 59, 39, 0.28);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .reseller-parallax .reseller-hero-section {
+        min-height: 86vh;
+        padding: 136px 0 86px;
+        background-image:
+            linear-gradient(90deg, rgba(244, 236, 216, 0.80) 0%, rgba(244, 236, 216, 0.68) 52%, rgba(201, 184, 164, 0.32) 100%),
+            url('../images/Hero.png');
+    }
+
+    .reseller-parallax .reseller-curve-hero {
+        width: 660px;
+        height: 470px;
+        right: -210px;
+        top: 88px;
+        border-width: 24px;
+    }
+
+    .reseller-parallax .reseller-deals-container,
+    .reseller-parallax .reseller-benefits-container,
+    .reseller-parallax .reseller-join-container {
+        max-width: calc(100% - 44px);
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .reseller-parallax .reseller-benefits-grid {
+        gap: 24px;
+    }
+
+    .reseller-parallax .reseller-package-grid {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-parallax .reseller-hero-section {
+        min-height: 100svh;
+        padding: 126px 0 72px;
+        background-image:
+            linear-gradient(180deg, rgba(244, 236, 216, 0.86), rgba(239, 228, 207, 0.76)),
+            url('../images/Hero.png');
+        background-position: center center;
+    }
+
+    .reseller-parallax .reseller-hero-content h1 {
+        font-size: 34px;
+        letter-spacing: -0.7px;
+    }
+
+    .reseller-parallax .reseller-hero-content p {
+        font-size: 15.5px;
+        font-weight: 700;
+    }
+
+    .reseller-parallax .reseller-curve-hero,
+    .reseller-parallax .reseller-bean-left,
+    .reseller-parallax .reseller-beans-hero {
+        opacity: 0.42;
+    }
+
+    .reseller-parallax .reseller-deals-section {
+        padding-top: 62px;
+    }
+
+    .reseller-parallax .reseller-deals-container,
+    .reseller-parallax .reseller-benefits-container,
+    .reseller-parallax .reseller-join-container {
+        max-width: calc(100% - 28px);
+        padding: 48px 22px;
+        border-radius: 24px;
+    }
+
+    .reseller-parallax .reseller-deals-list,
+    .reseller-parallax .reseller-benefits-grid,
+    .reseller-parallax .reseller-package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reseller-parallax .reseller-benefits-section {
+        padding-bottom: 64px;
+    }
+
+    .reseller-parallax .reseller-benefit-item {
+        grid-template-columns: 50px 1fr;
+        padding: 18px 16px;
+    }
+
+    .reseller-parallax .reseller-packages-section,
+    .reseller-parallax .reseller-join-section {
+        padding: 66px 0 74px;
+    }
+
+    .reseller-parallax .reseller-package-image-wrap {
+        height: 220px;
+    }
+
+    .reseller-parallax .reseller-step-item {
+        grid-template-columns: 40px 1fr;
+        gap: 16px;
+    }
+
+    .reseller-parallax .reseller-step-item span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reseller-parallax .reseller-step-item p {
+        padding: 18px;
+        font-size: 13.5px;
+    }
+
+    .reseller-parallax .reseller-steps::before {
+        left: 19px;
+    }
+
+    .reseller-parallax [data-reseller-reveal] {
+        transform: translate3d(0, 28px, 0) scale(0.99);
+        filter: blur(5px);
+        transition-duration: 620ms;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reseller-parallax .reseller-hero-section {
+        background-position: center center !important;
+        transition: none !important;
+    }
+
+    .reseller-parallax .reseller-hero-content,
+    .reseller-parallax [data-reseller-parallax] {
+        translate: 0 0 !important;
+        opacity: 1 !important;
+    }
+
+    .reseller-parallax [data-reseller-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+    }
+
+    .reseller-parallax .reseller-deal-card,
+    .reseller-parallax .reseller-benefit-item,
+    .reseller-parallax .reseller-package-card,
+    .reseller-parallax .reseller-step-item p,
+    .reseller-parallax .reseller-step-item span {
+        transition: none !important;
+    }
+}
+
+/* ---------------------------------------------------------------------------
+   FULL-WIDTH RESELLER DEALS + BENEFITS FIX
+   Membuat panel promo dan benefit memenuhi lebar halaman, sementara isi tetap
+   terkunci di tengah agar readable.
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-deals-section {
+    width: 100%;
+    padding: 0;
+    background:
+        radial-gradient(circle at 9% 0%, rgba(243, 234, 216, 0.18) 0 155px, transparent 158px),
+        radial-gradient(circle at 88% -8%, rgba(235, 191, 171, 0.24) 0 220px, transparent 224px),
+        linear-gradient(135deg, #3C2A21 0%, #432B1F 100%);
+    color: #FBF6EE;
+    overflow: hidden;
+}
+
+.reseller-parallax .reseller-deals-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(70px, 7vw, 112px) clamp(28px, 8vw, 140px) clamp(70px, 6vw, 96px);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.reseller-parallax .reseller-deals-list {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reseller-parallax .reseller-benefits-section {
+    width: 100%;
+    padding: 0;
+    background:
+        radial-gradient(circle at 74% 16%, rgba(255, 255, 255, 0.075), transparent 28%),
+        radial-gradient(circle at 18% 92%, rgba(93, 156, 89, 0.13), transparent 32%),
+        linear-gradient(135deg, #254B35 0%, #1F3B27 100%);
+    color: #FBF6EE;
+    overflow: hidden;
+}
+
+.reseller-parallax .reseller-benefits-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(78px, 7vw, 116px) clamp(28px, 8vw, 140px) clamp(84px, 7vw, 126px);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.reseller-parallax .reseller-benefits-header {
+    max-width: 820px;
+}
+
+.reseller-parallax .reseller-benefits-grid {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 34px 46px;
+}
+
+@media (max-width: 992px) {
+    .reseller-parallax .reseller-deals-list {
+        max-width: 760px;
+    }
+
+    .reseller-parallax .reseller-benefits-grid {
+        max-width: 820px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-parallax .reseller-deals-container,
+    .reseller-parallax .reseller-benefits-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .reseller-parallax .reseller-deals-list {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+    }
+
+    .reseller-parallax .reseller-benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+}
+
+/* ---------------------------------------------------------------------------
+   FULL-WIDTH RESELLER JOIN FIX
+   Membuat section Cara Bergabung memenuhi lebar halaman seperti Special Deals
+   dan Benefits. Konten tetap dikunci di tengah agar tidak terlalu melebar.
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-join-section {
+    width: 100%;
+    padding: 0;
+    background:
+        radial-gradient(circle at 8% 88%, rgba(111, 74, 54, 0.10), transparent 28%),
+        radial-gradient(circle at 92% 8%, rgba(255, 255, 255, 0.62), transparent 32%),
+        linear-gradient(135deg, #F3EAD8 0%, #FBF6EE 52%, #F3EAD8 100%);
+    overflow: hidden;
+}
+
+.reseller-parallax .reseller-join-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(82px, 7vw, 118px) clamp(28px, 8vw, 140px) clamp(88px, 7vw, 124px);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+.reseller-parallax .reseller-join-container::before {
+    content: "";
+    position: absolute;
+    inset: clamp(34px, 4vw, 62px) clamp(24px, 7vw, 132px);
+    z-index: -1;
+    border-radius: 34px;
+    background: rgba(251, 246, 238, 0.62);
+    box-shadow: 0 28px 80px rgba(60, 42, 33, 0.09);
+    pointer-events: none;
+}
+
+.reseller-parallax .reseller-join-container h2 {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reseller-parallax .reseller-steps {
+    max-width: 780px;
+}
+
+.reseller-parallax .reseller-step-item p {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(60, 42, 33, 0.055);
+}
+
+.reseller-parallax .reseller-join-bottom {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reseller-parallax .reseller-join-btn {
+    transition:
+        transform 340ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        box-shadow 340ms ease,
+        background 340ms ease,
+        border-color 340ms ease;
+}
+
+.reseller-parallax .reseller-join-btn:hover {
+    transform: translateY(-6px) scale(1.015);
+}
+
+@media (max-width: 992px) {
+    .reseller-parallax .reseller-join-container {
+        max-width: none;
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    .reseller-parallax .reseller-join-container::before {
+        inset: 28px 22px;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-parallax .reseller-join-container {
+        max-width: none;
+        padding: 66px 22px 74px;
+        border-radius: 0;
+    }
+
+    .reseller-parallax .reseller-join-container::before {
+        inset: 18px 14px;
+        border-radius: 24px;
+    }
+
+    .reseller-parallax .reseller-steps {
+        max-width: 520px;
+    }
+}
