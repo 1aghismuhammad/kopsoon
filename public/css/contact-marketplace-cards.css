@@ -1,0 +1,282 @@
+/* ==========================================================================
+   KOPSOON - CONTACT MARKETPLACE CARD POLISH
+   Override khusus setelah global palette agar card marketplace lebih premium.
+   ========================================================================== */
+
+.marketplace-section {
+    padding: 104px 0 112px;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(247, 240, 223, 0.12), transparent 28%),
+        radial-gradient(circle at 86% 82%, rgba(93, 156, 89, 0.16), transparent 32%),
+        linear-gradient(135deg, #143722 0%, #174328 48%, #10311e 100%);
+}
+
+.marketplace-section::before,
+.marketplace-section::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: 999px;
+    z-index: 0;
+}
+
+.marketplace-section::before {
+    top: 44px;
+    left: -92px;
+    width: 260px;
+    height: 260px;
+    border: 36px solid rgba(247, 240, 223, 0.055);
+}
+
+.marketplace-section::after {
+    right: -120px;
+    bottom: -130px;
+    width: 340px;
+    height: 340px;
+    background: rgba(247, 240, 223, 0.045);
+    box-shadow: inset 0 0 0 38px rgba(247, 240, 223, 0.04);
+}
+
+.marketplace-container {
+    position: relative;
+    z-index: 2;
+}
+
+.marketplace-header {
+    max-width: 980px;
+    margin: 0 auto 54px;
+}
+
+.marketplace-header h2 {
+    color: #fbf6ee !important;
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+}
+
+.marketplace-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1160px;
+    align-items: stretch;
+}
+
+.marketplace-card {
+    position: relative;
+    display: flex;
+    min-height: 392px;
+    padding: 34px 30px 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 32px;
+    border: 1px solid rgba(247, 240, 223, 0.18);
+    background:
+        linear-gradient(180deg, rgba(251, 246, 238, 0.16) 0%, rgba(251, 246, 238, 0.075) 100%);
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    isolation: isolate;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform-origin: center bottom;
+    transition:
+        transform 360ms cubic-bezier(0.2, 0.84, 0.24, 1),
+        box-shadow 360ms ease,
+        border-color 360ms ease,
+        background 360ms ease;
+}
+
+.marketplace-card::before {
+    content: "";
+    position: absolute;
+    top: -72px;
+    left: -80px;
+    width: 210px;
+    height: 210px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(251, 246, 238, 0.24), transparent 64%);
+    opacity: 0.75;
+    z-index: -1;
+    transition: transform 420ms ease, opacity 420ms ease;
+}
+
+.marketplace-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.15) 42%, transparent 60%);
+    transform: translateX(-125%);
+    transition: transform 720ms cubic-bezier(0.2, 0.84, 0.24, 1);
+}
+
+.contact-parallax .marketplace-card:hover,
+.marketplace-card:hover {
+    transform: translateY(-16px) scale(1.025);
+    border-color: rgba(251, 246, 238, 0.36);
+    background:
+        linear-gradient(180deg, rgba(251, 246, 238, 0.24) 0%, rgba(251, 246, 238, 0.105) 100%);
+    box-shadow:
+        0 36px 90px rgba(0, 0, 0, 0.30),
+        0 0 0 1px rgba(251, 246, 238, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+.marketplace-card:hover::before {
+    opacity: 1;
+    transform: translate(28px, 22px) scale(1.15);
+}
+
+.marketplace-card:hover::after {
+    transform: translateX(125%);
+}
+
+.marketplace-logo-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 26px;
+    border-radius: 34px;
+    background:
+        radial-gradient(circle at 34% 26%, rgba(255, 255, 255, 0.70), transparent 32%),
+        linear-gradient(145deg, #fbf6ee 0%, #eee2c9 100%);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    box-shadow:
+        0 22px 44px rgba(0, 0, 0, 0.20),
+        0 0 0 10px rgba(251, 246, 238, 0.045);
+    transition:
+        transform 360ms cubic-bezier(0.2, 0.84, 0.24, 1),
+        box-shadow 360ms ease,
+        border-radius 360ms ease;
+}
+
+.marketplace-logo-box::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 26px;
+    border: 1px solid rgba(60, 42, 33, 0.08);
+    pointer-events: none;
+}
+
+.marketplace-card:hover .marketplace-logo-box {
+    transform: translateY(-8px) rotate(-2deg) scale(1.05);
+    border-radius: 38px;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.28),
+        0 0 0 14px rgba(251, 246, 238, 0.07);
+}
+
+.marketplace-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 18px;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.08));
+    transition: transform 360ms ease;
+}
+
+.marketplace-card:hover .marketplace-logo-img {
+    transform: scale(1.07);
+}
+
+.marketplace-card h3 {
+    color: #fbf6ee !important;
+    font-size: clamp(20px, 1.6vw, 24px);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    margin-bottom: 10px;
+}
+
+.marketplace-card p {
+    min-height: 66px;
+    max-width: 260px;
+    margin: 0 auto 26px;
+    color: rgba(251, 246, 238, 0.78) !important;
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 700;
+}
+
+.marketplace-btn {
+    position: relative;
+    margin-top: auto;
+    min-width: 178px;
+    min-height: 52px;
+    padding: 15px 24px;
+    border: 0 !important;
+    border-radius: 999px;
+    background: #fbf6ee !important;
+    color: #183f29 !important;
+    box-shadow:
+        0 15px 32px rgba(0, 0, 0, 0.20),
+        inset 0 -2px 0 rgba(60, 42, 33, 0.10) !important;
+    overflow: hidden;
+    letter-spacing: 0.035em;
+}
+
+.marketplace-btn::after {
+    content: "→";
+    margin-left: 9px;
+    transform: translateX(0);
+    transition: transform 260ms ease;
+}
+
+.marketplace-btn:hover {
+    background: #5d9c59 !important;
+    color: #fbf6ee !important;
+    transform: translateY(-4px);
+    box-shadow: 0 22px 42px rgba(93, 156, 89, 0.28) !important;
+}
+
+.marketplace-card:hover .marketplace-btn::after,
+.marketplace-btn:hover::after {
+    transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+    .marketplace-section {
+        padding: 84px 0 92px;
+    }
+
+    .marketplace-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+        gap: 26px;
+    }
+
+    .marketplace-card {
+        min-height: auto;
+        padding: 32px 28px 30px;
+    }
+
+    .marketplace-card p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .marketplace-header h2 {
+        font-size: clamp(24px, 8vw, 34px);
+    }
+
+    .marketplace-card {
+        border-radius: 26px;
+        padding: 28px 22px 26px;
+    }
+
+    .marketplace-logo-box {
+        width: 126px;
+        height: 126px;
+        border-radius: 28px;
+    }
+
+    .marketplace-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}

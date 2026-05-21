@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/contact-parallax.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
     <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact-marketplace-cards.css') }}">
 </head>
 <body class="contact-page-body contact-parallax">
     @include('components.page-transition')
@@ -143,7 +144,13 @@
             <div class="faq-beans" data-contact-parallax data-contact-speed="18" aria-hidden="true"></div>
 
             <div class="faq-container container">
-                <h2 id="faq-title" class="sr-only">Pertanyaan yang Sering Diajukan</h2>
+                <div class="faq-heading" data-contact-reveal>
+                    <span class="faq-eyebrow">FAQ KOPSOON</span>
+                    <h2 id="faq-title">Pertanyaan yang Sering Ditanyakan</h2>
+                    <p>
+                        Biar kamu makin yakin sebelum order, ini beberapa pertanyaan yang paling sering masuk ke tim kami.
+                    </p>
+                </div>
 
                 <div class="faq-list">
                     <article class="faq-item" data-contact-reveal>
