@@ -47,7 +47,8 @@
         <div class="uvp-decoration-lines" data-parallax data-parallax-speed="28"></div>
 
         <div class="uvp-container">
-            <div class="uvp-header" data-reveal>
+            <div class="uvp-header uvp-header-card" data-reveal>
+                <span class="uvp-eyebrow">Why Kopsoon</span>
                 <h2 class="uvp-title">Kenapa Harus Kopsoon?</h2>
                 <p class="uvp-description">
                     Kopi santan tradisional dikenal dengan rasa yang gurih, creamy, dan khas Nusantara.
@@ -57,23 +58,26 @@
                 </p>
             </div>
 
-            <div class="uvp-content" data-reveal data-reveal-delay="120">
+            <div class="uvp-content uvp-content-card" data-reveal data-reveal-delay="120">
                 <h3 class="uvp-subtitle">Nilai Jual (UVP)</h3>
 
                 <div class="uvp-grid">
                     <div class="uvp-item">
                         <div class="uvp-check-icon"></div>
                         <h4>100% Autentik</h4>
+                        <p>Racikan kopi santan khas Nusantara dengan karakter rasa yang tetap terasa original.</p>
                     </div>
 
                     <div class="uvp-item">
                         <div class="uvp-check-icon"></div>
                         <h4>Praktis</h4>
+                        <p>Mudah diseduh dan dinikmati kapan saja, cocok untuk gaya hidup aktif sehari-hari.</p>
                     </div>
 
                     <div class="uvp-item">
                         <div class="uvp-check-icon"></div>
                         <h4>Terjangkau</h4>
+                        <p>Memberikan pengalaman rasa premium dengan harga yang tetap ramah di kantong.</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +221,11 @@
         <div class="order-decoration-beans" data-parallax data-parallax-speed="-22"></div>
 
         <div class="order-container">
-            <h2 class="order-title" data-reveal>DAPATKAN KOPSOON SEKARANG!</h2>
+            <div class="order-header" data-reveal>
+                <span class="order-eyebrow">Order & Connect</span>
+                <h2 class="order-title">DAPATKAN KOPSOON SEKARANG!</h2>
+                <p class="order-description">Pilih varian favoritmu dan nikmati pengalaman kopi santan khas Nusantara dengan cara yang paling praktis.</p>
+            </div>
 
             <div class="order-product-grid">
                 <div class="order-product-card" data-reveal>
@@ -228,7 +236,10 @@
                             class="order-product-image"
                         >
                     </div>
-
+                    <div class="order-product-info">
+                        <h3>Sachet Satuan</h3>
+                        <p>Pas untuk coba pertama kali dan teman ngopi harianmu.</p>
+                    </div>
                     <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
@@ -240,7 +251,10 @@
                             class="order-product-image"
                         >
                     </div>
-
+                    <div class="order-product-info">
+                        <h3>Paket Bundling</h3>
+                        <p>Best seller untuk stok mingguan yang lebih hemat.</p>
+                    </div>
                     <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
@@ -252,18 +266,24 @@
                             class="order-product-image"
                         >
                     </div>
-
+                    <div class="order-product-info">
+                        <h3>Box Keluarga</h3>
+                        <p>Pilihan praktis untuk rumah, kantor, atau kumpul bareng.</p>
+                    </div>
                     <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
             </div>
 
             <div class="order-social" data-reveal>
-                <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
+                <div class="order-social-card">
+                    <span class="order-social-label">Stay Connected</span>
+                    <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
 
-                <a href="https://tiktok.com/@KOPSOON" target="_blank" class="order-tiktok-link">
-                    <span class="order-tiktok-icon">♪</span>
-                    <span>tiktokkopsoon</span>
-                </a>
+                    <a href="https://tiktok.com/@KOPSOON" target="_blank" class="order-tiktok-link">
+                        <span class="order-tiktok-icon">♪</span>
+                        <span>tiktokkopsoon</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
