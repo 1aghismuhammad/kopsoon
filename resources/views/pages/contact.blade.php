@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact-page.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
 </head>
 <body class="contact-page-body">
     @include('components.page-transition')

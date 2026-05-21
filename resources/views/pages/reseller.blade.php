@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/reseller-packages.css') }}">
     <link rel="stylesheet" href="{{ asset('css/reseller-join.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
 </head>
 <body class="reseller-page">
     @include('components.page-transition')

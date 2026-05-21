@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/about-team.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-parallax.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
 </head>
 <body class="about-page about-parallax">
     @include('components.page-transition')
