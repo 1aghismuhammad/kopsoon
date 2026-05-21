@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="{{ asset('css/about-team.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-parallax.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
 </head>
 <body class="about-page about-parallax">
     @include('components.page-transition')
@@ -43,8 +42,17 @@
         <section class="about-story-section about-story-light about-parallax-section">
             <div class="about-cup-outline" data-about-parallax data-about-speed="-42"></div>
             <div class="about-story-container container about-story-grid">
-                <div class="about-story-visual" aria-hidden="true" data-about-parallax data-about-speed="30"></div>
-                <div class="about-story-content" data-about-reveal>
+                <div class="about-story-visual" aria-hidden="true" data-about-parallax data-about-speed="30">
+                    <div class="about-story-visual-card">
+                        <div class="about-story-visual-pill">Rasa Lokal, Vibes Modern</div>
+                        <div class="about-story-visual-badge">
+                            <span>Kopi Santan</span>
+                            <strong>Authentic Taste</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-story-content about-story-content-card" data-about-reveal>
+                    <span class="about-story-eyebrow">Cerita Awal KOPSOON</span>
                     <h2><span>B</span>erawal dari Rasa yang Mulai Terlupakan</h2>
                     <p>
                         Di tengah gempuran tren minuman kekinian yang rasanya sering kali monoton dan didominasi rasa manis,
@@ -64,7 +72,8 @@
             <div class="about-dark-decoration about-dark-decoration-left" data-about-parallax data-about-speed="44"></div>
             <div class="about-dark-decoration about-dark-decoration-right" data-about-parallax data-about-speed="-32"></div>
             <div class="about-story-container container about-story-grid about-story-grid-reverse">
-                <div class="about-story-content about-story-content-dark" data-about-reveal>
+                <div class="about-story-content about-story-content-dark about-story-content-dark-card" data-about-reveal>
+                    <span class="about-story-eyebrow about-story-eyebrow-dark">Tradisi yang Dibawa Maju</span>
                     <h2><span>M</span>embawa Tradisi ke Dalam Genggaman</h2>
                     <p>
                         Berangkat dari kerinduan akan cita rasa lokal tersebut, KOPSOON hadir. Kami meracik perpaduan biji kopi
@@ -75,9 +84,20 @@
                         creamy-nya kopi santan khas Nusantara kapan saja dan di mana saja — cocok diseduh hangat sebagai teman tugas,
                         atau disajikan dingin dengan es batu untuk menyegarkan harimu.
                     </p>
+                    <div class="about-story-feature-row">
+                        <div class="about-story-feature-chip">Praktis Diseduh</div>
+                        <div class="about-story-feature-chip">Rasa Nusantara</div>
+                        <div class="about-story-feature-chip">Hangat / Dingin</div>
+                    </div>
                 </div>
-                <div class="about-product-photo" data-about-reveal data-about-reveal-delay="120" data-about-parallax data-about-speed="-24">
-                    <img src="{{ asset('images/product-pack.png') }}" alt="Produk KOPSOON Kopi Santan Instan">
+                <div class="about-product-photo about-product-photo-card" data-about-reveal data-about-reveal-delay="120" data-about-parallax data-about-speed="-24">
+                    <div class="about-product-photo-frame">
+                        <img src="{{ asset('images/product-pack.png') }}" alt="Produk KOPSOON Kopi Santan Instan">
+                        <div class="about-product-floating-badge">
+                            <span>Ready to Brew</span>
+                            <strong>Praktis & Creamy</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -85,12 +105,17 @@
         <section class="about-values-section about-parallax-section">
             <div class="about-values-curve" data-about-parallax data-about-speed="38"></div>
             <div class="about-values-container container">
-                <div class="about-values-heading" data-about-reveal>
+                <div class="about-values-heading about-values-heading-card" data-about-reveal>
+                    <span class="about-values-eyebrow">Nilai Utama Kami</span>
                     <h2>OUR CORE VALUES</h2>
+                    <p>
+                        Tiga fondasi yang membentuk cara KOPSOON meracik rasa, membangun produk, dan menyapa generasi baru pecinta kopi santan.
+                    </p>
                 </div>
 
                 <div class="about-values-list" data-about-reveal data-about-reveal-delay="120">
                     <article class="about-value-item">
+                        <span class="about-value-badge">01</span>
                         <h3>Cita Rasa Autentik Nusantara</h3>
                         <p>
                             Kami berkomitmen menjaga keaslian rasa kopi santan tradisional, namun dengan standar kualitas
@@ -99,6 +124,7 @@
                     </article>
 
                     <article class="about-value-item">
+                        <span class="about-value-badge">02</span>
                         <h3>Praktis & Dinamis</h3>
                         <p>
                             KOPSOON dirancang untuk gaya hidup aktif: mudah diseduh, mudah dibawa, dan tetap nikmat dinikmati
@@ -107,6 +133,7 @@
                     </article>
 
                     <article class="about-value-item">
+                        <span class="about-value-badge">03</span>
                         <h3>Kebanggaan Lokal</h3>
                         <p>
                             Misi kami adalah memperkenalkan kembali kebanggaan kuliner lokal kepada generasi muda, membuktikan

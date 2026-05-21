@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-page.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
 </head>
 <body class="product-page-body">
     @include('components.page-transition')
