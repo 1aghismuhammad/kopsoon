@@ -3,11 +3,14 @@
    ========================================================================== */
 
 .about-hero-section {
-    min-height: 520px;
-    background: linear-gradient(90deg, #F4ECD8 0%, #EFE4CF 46%, #C9B8A4 46%, #C9B8A4 100%);
+    min-height: 100vh;
+    background: #F4ECD8;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-top: 108px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
 }
 
 .about-hero-container {
@@ -17,14 +20,14 @@
 }
 
 .about-hero-content {
-    max-width: 650px;
+    max-width: 720px;
     margin-left: 120px;
-    margin-top: 42px;
+    margin-top: 36px;
 }
 
 .about-hero-title {
     font-family: var(--font-heading);
-    font-size: 43px;
+    font-size: 50px;
     font-weight: 800;
     line-height: 1.12;
     letter-spacing: -1px;
@@ -33,12 +36,12 @@
 }
 
 .about-hero-title span {
-    font-size: 70px;
+    font-size: 82px;
     line-height: 0.8;
 }
 
 .about-hero-content p {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 800;
     line-height: 1.35;
     max-width: 610px;
@@ -47,10 +50,10 @@
 
 .about-hero-curve {
     position: absolute;
-    top: -120px;
-    left: 48%;
-    width: 560px;
-    height: 560px;
+    top: -160px;
+    left: 52%;
+    width: 720px;
+    height: 720px;
     border: 28px solid rgba(255, 252, 240, 0.82);
     border-left-color: transparent;
     border-top-color: transparent;
@@ -71,7 +74,7 @@
 
 .about-bean-left {
     left: -18px;
-    bottom: 42px;
+    bottom: 92px;
 }
 
 @media (max-width: 992px) {
@@ -90,9 +93,10 @@
 
 @media (max-width: 768px) {
     .about-hero-section {
-        min-height: 440px;
+        min-height: 100svh;
         background: #EFE4CF;
-        padding-top: 120px;
+        padding-top: 112px;
+        padding-bottom: 64px;
     }
 
     .about-hero-content {

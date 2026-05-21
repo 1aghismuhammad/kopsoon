@@ -16,16 +16,17 @@
     <link rel="stylesheet" href="{{ asset('css/promo-reseller.css') }}">
     <link rel="stylesheet" href="{{ asset('css/order-section.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home-parallax.css') }}">
 </head>
-<body>
+<body class="home-parallax">
     @include('components.page-transition')
 
     @include('components.navbar')
 
-    <section class="hero-section">
+    <section class="hero-section" data-home-hero>
         <div class="hero-container container">
             
-            <div class="hero-content">
+            <div class="hero-content" data-reveal>
                 <h1 class="hero-title">Sensasi Kopi Santan Autentik Nusantara, <span class="highlight">Kini Dalam Genggaman!</span></h1>
                 <p class="hero-description">Tinggalkan kopi instan yang monoton. <strong>KOPSOON</strong> memadukan kopi pilihan dan santan berkualitas—praktis, creamy, dan selalu siap menemani harimu.</p>
                 <div class="hero-actions">
@@ -34,19 +35,19 @@
                 </div>
             </div>
 
-            <div class="hero-image-container">
+            <div class="hero-image-container" data-reveal data-reveal-delay="120">
                 <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
             </div>
 
         </div>
     </section>
 
-    <section class="uvp-section" id="about">
-        <div class="uvp-decoration-left"></div>
-        <div class="uvp-decoration-lines"></div>
+    <section class="uvp-section home-parallax-section" id="about">
+        <div class="uvp-decoration-left" data-parallax data-parallax-speed="-34"></div>
+        <div class="uvp-decoration-lines" data-parallax data-parallax-speed="28"></div>
 
         <div class="uvp-container">
-            <div class="uvp-header">
+            <div class="uvp-header" data-reveal>
                 <h2 class="uvp-title">Kenapa Harus Kopsoon?</h2>
                 <p class="uvp-description">
                     Kopi santan tradisional dikenal dengan rasa yang gurih, creamy, dan khas Nusantara.
@@ -56,7 +57,7 @@
                 </p>
             </div>
 
-            <div class="uvp-content">
+            <div class="uvp-content" data-reveal data-reveal-delay="120">
                 <h3 class="uvp-subtitle">Nilai Jual (UVP)</h3>
 
                 <div class="uvp-grid">
@@ -79,14 +80,14 @@
         </div>
     </section>
 
-    <section class="product-options-section" id="produk">
-        <div class="product-options-decoration-top"></div>
-        <div class="product-options-decoration-left"></div>
-        <div class="product-options-beans"></div>
+    <section class="product-options-section home-parallax-section" id="produk">
+        <div class="product-options-decoration-top" data-parallax data-parallax-speed="-46"></div>
+        <div class="product-options-decoration-left" data-parallax data-parallax-speed="38"></div>
+        <div class="product-options-beans" data-parallax data-parallax-speed="-24"></div>
 
         <div class="product-options-container">
             <div class="product-options-content">
-                <div class="product-options-text">
+                <div class="product-options-text" data-reveal>
                     <h2 class="product-options-title">PILIHAN PAS UNTUK HARIMU</h2>
 
                     <div class="product-options-list">
@@ -107,35 +108,35 @@
                     </div>
                 </div>
 
-                <div class="product-options-visual">
+                <div class="product-options-visual" data-reveal data-reveal-delay="120">
                     <img 
                         src="{{ asset('images/product-drink.png') }}" 
                         alt="Kopsoon sachet dan minuman" 
-                        class="product-image product-image-top"
+                        class="product-image product-image-top" data-parallax data-parallax-speed="-26"
                     >
 
                     <img 
                         src="{{ asset('images/product-box.png') }}" 
                         alt="Kopsoon box" 
-                        class="product-image product-image-right"
+                        class="product-image product-image-right" data-parallax data-parallax-speed="22"
                     >
 
                     <img 
                         src="{{ asset('images/product-pack.png') }}" 
                         alt="Kopsoon pack keluarga" 
-                        class="product-image product-image-bottom"
+                        class="product-image product-image-bottom" data-parallax data-parallax-speed="-16"
                     >
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="serving-section" id="serving">
+    <section class="serving-section home-parallax-section" id="serving">
         <div class="serving-container">
-            <h2 class="serving-title">NIKMATI SESUAI GAYAMU</h2>
+            <h2 class="serving-title" data-reveal>NIKMATI SESUAI GAYAMU</h2>
 
             <div class="serving-grid">
-                <div class="serving-card">
+                <div class="serving-card" data-reveal>
                     <h3 class="serving-card-title">Penyajian Panas (Hot)</h3>
 
                     <div class="serving-image-wrap">
@@ -153,7 +154,7 @@
                     </ul>
                 </div>
 
-                <div class="serving-card">
+                <div class="serving-card" data-reveal data-reveal-delay="140">
                     <h3 class="serving-card-title">Penyajian Dingin (Ice Kopi Santan)</h3>
 
                     <div class="serving-image-wrap">
@@ -174,16 +175,16 @@
         </div>
     </section>
 
-    <section class="promo-reseller-section" id="reseller">
-        <div class="promo-decoration promo-decoration-left"></div>
-        <div class="promo-decoration promo-decoration-top"></div>
-        <div class="promo-decoration promo-decoration-bottom"></div>
+    <section class="promo-reseller-section home-parallax-section" id="reseller">
+        <div class="promo-decoration promo-decoration-left" data-parallax data-parallax-speed="36"></div>
+        <div class="promo-decoration promo-decoration-top" data-parallax data-parallax-speed="-40"></div>
+        <div class="promo-decoration promo-decoration-bottom" data-parallax data-parallax-speed="24"></div>
 
         <div class="promo-reseller-container">
-            <h2 class="promo-reseller-title">SPESIAL UNTUKMU & PELUANG KEMITRAAN</h2>
+            <h2 class="promo-reseller-title" data-reveal>SPESIAL UNTUKMU & PELUANG KEMITRAAN</h2>
 
             <div class="promo-reseller-list">
-                <div class="promo-reseller-card">
+                <div class="promo-reseller-card" data-reveal>
                     <div class="promo-reseller-text">
                         <h3>Promo Mahasiswa: Diskon Pembelian Pertama!” atau “Klaim Voucher Buy 1 Get 1</h3>
                     </div>
@@ -193,7 +194,7 @@
                     </a>
                 </div>
 
-                <div class="promo-reseller-card">
+                <div class="promo-reseller-card" data-reveal data-reveal-delay="120">
                     <div class="promo-reseller-text">
                         <h3>Tertarik mendapat penghasilan tambahan? Bergabunglah menjadi mitra/reseller KOPSOON.</h3>
                         <p>
@@ -210,16 +211,16 @@
         </div>
     </section>
 
-    <section class="order-section" id="contact">
-        <div class="order-decoration-circle"></div>
-        <div class="order-decoration-splash"></div>
-        <div class="order-decoration-beans"></div>
+    <section class="order-section home-parallax-section" id="contact">
+        <div class="order-decoration-circle" data-parallax data-parallax-speed="-42"></div>
+        <div class="order-decoration-splash" data-parallax data-parallax-speed="34"></div>
+        <div class="order-decoration-beans" data-parallax data-parallax-speed="-22"></div>
 
         <div class="order-container">
-            <h2 class="order-title">DAPATKAN KOPSOON SEKARANG!</h2>
+            <h2 class="order-title" data-reveal>DAPATKAN KOPSOON SEKARANG!</h2>
 
             <div class="order-product-grid">
-                <div class="order-product-card">
+                <div class="order-product-card" data-reveal>
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-drink.png') }}" 
@@ -231,7 +232,7 @@
                     <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
-                <div class="order-product-card">
+                <div class="order-product-card" data-reveal data-reveal-delay="100">
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-pack.png') }}" 
@@ -243,7 +244,7 @@
                     <a href="{{ route('contact') }}" class="order-btn">ORDER NOW</a>
                 </div>
 
-                <div class="order-product-card">
+                <div class="order-product-card" data-reveal data-reveal-delay="200">
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-box.png') }}" 
@@ -256,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="order-social">
+            <div class="order-social" data-reveal>
                 <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
 
                 <a href="https://tiktok.com/@KOPSOON" target="_blank" class="order-tiktok-link">
@@ -270,5 +271,6 @@
     @include('components.footer')
 
     <script src="{{ asset('js/page-transition.js') }}"></script>
+    <script src="{{ asset('js/home-parallax.js') }}"></script>
 </body>
 </html>

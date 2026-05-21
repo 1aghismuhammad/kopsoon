@@ -16,18 +16,19 @@
     <link rel="stylesheet" href="{{ asset('css/about-values.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-team.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about-parallax.css') }}">
 </head>
-<body class="about-page">
+<body class="about-page about-parallax">
     @include('components.page-transition')
 
     @include('components.navbar')
 
     <main>
-        <section class="about-hero-section">
-            <div class="about-hero-curve"></div>
-            <div class="about-bean about-bean-left"></div>
+        <section class="about-hero-section" data-about-hero>
+            <div class="about-hero-curve" data-about-parallax data-about-speed="-34"></div>
+            <div class="about-bean about-bean-left" data-about-parallax data-about-speed="26"></div>
             <div class="about-hero-container container">
-                <div class="about-hero-content">
+                <div class="about-hero-content" data-about-reveal>
                     <h1 class="about-hero-title">
                         <span>C</span>erita di Balik Secangkir KOPSOON
                     </h1>
@@ -38,11 +39,11 @@
             </div>
         </section>
 
-        <section class="about-story-section about-story-light">
-            <div class="about-cup-outline"></div>
+        <section class="about-story-section about-story-light about-parallax-section">
+            <div class="about-cup-outline" data-about-parallax data-about-speed="-42"></div>
             <div class="about-story-container container about-story-grid">
-                <div class="about-story-visual" aria-hidden="true"></div>
-                <div class="about-story-content">
+                <div class="about-story-visual" aria-hidden="true" data-about-parallax data-about-speed="30"></div>
+                <div class="about-story-content" data-about-reveal>
                     <h2><span>B</span>erawal dari Rasa yang Mulai Terlupakan</h2>
                     <p>
                         Di tengah gempuran tren minuman kekinian yang rasanya sering kali monoton dan didominasi rasa manis,
@@ -58,11 +59,11 @@
             </div>
         </section>
 
-        <section class="about-story-section about-story-dark">
-            <div class="about-dark-decoration about-dark-decoration-left"></div>
-            <div class="about-dark-decoration about-dark-decoration-right"></div>
+        <section class="about-story-section about-story-dark about-parallax-section">
+            <div class="about-dark-decoration about-dark-decoration-left" data-about-parallax data-about-speed="44"></div>
+            <div class="about-dark-decoration about-dark-decoration-right" data-about-parallax data-about-speed="-32"></div>
             <div class="about-story-container container about-story-grid about-story-grid-reverse">
-                <div class="about-story-content about-story-content-dark">
+                <div class="about-story-content about-story-content-dark" data-about-reveal>
                     <h2><span>M</span>embawa Tradisi ke Dalam Genggaman</h2>
                     <p>
                         Berangkat dari kerinduan akan cita rasa lokal tersebut, KOPSOON hadir. Kami meracik perpaduan biji kopi
@@ -74,20 +75,20 @@
                         atau disajikan dingin dengan es batu untuk menyegarkan harimu.
                     </p>
                 </div>
-                <div class="about-product-photo">
+                <div class="about-product-photo" data-about-reveal data-about-reveal-delay="120" data-about-parallax data-about-speed="-24">
                     <img src="{{ asset('images/product-pack.png') }}" alt="Produk KOPSOON Kopi Santan Instan">
                 </div>
             </div>
         </section>
 
-        <section class="about-values-section">
-            <div class="about-values-curve"></div>
+        <section class="about-values-section about-parallax-section">
+            <div class="about-values-curve" data-about-parallax data-about-speed="38"></div>
             <div class="about-values-container container">
-                <div class="about-values-heading">
+                <div class="about-values-heading" data-about-reveal>
                     <h2>OUR CORE VALUES</h2>
                 </div>
 
-                <div class="about-values-list">
+                <div class="about-values-list" data-about-reveal data-about-reveal-delay="120">
                     <article class="about-value-item">
                         <h3>Cita Rasa Autentik Nusantara</h3>
                         <p>
@@ -115,14 +116,14 @@
             </div>
         </section>
 
-        <section class="about-team-section">
-            <div class="about-team-decoration about-team-decoration-left"></div>
-            <div class="about-team-decoration about-team-decoration-right"></div>
+        <section class="about-team-section about-parallax-section">
+            <div class="about-team-decoration about-team-decoration-left" data-about-parallax data-about-speed="-30"></div>
+            <div class="about-team-decoration about-team-decoration-right" data-about-parallax data-about-speed="36"></div>
             <div class="about-team-container container">
-                <h2>MEET OUR TEAM</h2>
+                <h2 data-about-reveal>MEET OUR TEAM</h2>
 
                 <div class="about-team-grid">
-                    <article class="about-team-card">
+                    <article class="about-team-card" data-about-reveal data-about-reveal-delay="80">
                         <div class="about-team-photo"></div>
                         <div class="about-team-info">
                             <h3>Aghis Najib</h3>
@@ -134,7 +135,7 @@
                         </div>
                     </article>
 
-                    <article class="about-team-card">
+                    <article class="about-team-card" data-about-reveal data-about-reveal-delay="140">
                         <div class="about-team-photo"></div>
                         <div class="about-team-info">
                             <h3>Aghis Najib</h3>
@@ -146,7 +147,7 @@
                         </div>
                     </article>
 
-                    <article class="about-team-card">
+                    <article class="about-team-card" data-about-reveal data-about-reveal-delay="200">
                         <div class="about-team-photo"></div>
                         <div class="about-team-info">
                             <h3>Aghis Najib</h3>
@@ -158,7 +159,7 @@
                         </div>
                     </article>
 
-                    <article class="about-team-card">
+                    <article class="about-team-card" data-about-reveal data-about-reveal-delay="260">
                         <div class="about-team-photo"></div>
                         <div class="about-team-info">
                             <h3>Aghis Najib</h3>
@@ -170,7 +171,7 @@
                         </div>
                     </article>
 
-                    <article class="about-team-card">
+                    <article class="about-team-card" data-about-reveal data-about-reveal-delay="320">
                         <div class="about-team-photo"></div>
                         <div class="about-team-info">
                             <h3>Aghis Najib</h3>
@@ -189,5 +190,6 @@
     @include('components.footer')
 
     <script src="{{ asset('js/page-transition.js') }}"></script>
+    <script src="{{ asset('js/about-parallax.js') }}"></script>
 </body>
 </html>
