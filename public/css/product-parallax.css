@@ -1,0 +1,342 @@
+/* ===========================================================================
+   KOPSOON - PRODUCT PARALLAX EFFECTS
+   Catatan: product showcase/scroll slider sengaja tidak diubah.
+   =========================================================================== */
+
+body.product-parallax {
+    --product-hero-content-y: 0px;
+    --product-hero-opacity: 1;
+    --product-parallax-y: 0px;
+    --product-reveal-delay: 0ms;
+    background: #F1E8D8;
+}
+
+.product-parallax .product-hero {
+    min-height: 100vh;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 76% 24%, rgba(255, 249, 232, 0.52), transparent 24%),
+        radial-gradient(circle at 12% 84%, rgba(116, 75, 54, 0.10), transparent 28%),
+        linear-gradient(90deg, #F1E8D8 0%, #F1E8D8 55%, #CDBFAA 55%, #CDBFAA 100%);
+}
+
+.product-parallax .product-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(255, 252, 244, 0.05), rgba(43, 35, 29, 0.06)),
+        radial-gradient(circle at 72% 38%, rgba(255, 255, 255, 0.18), transparent 30%);
+}
+
+.product-parallax .product-hero-container {
+    position: relative;
+    z-index: 5;
+}
+
+.product-parallax .product-hero-copy {
+    opacity: var(--product-hero-opacity);
+    translate: 0 var(--product-hero-content-y);
+    will-change: translate, opacity;
+}
+
+.product-parallax [data-product-parallax] {
+    --product-parallax-y: 0px;
+    translate: 0 var(--product-parallax-y);
+    will-change: translate;
+}
+
+.product-parallax [data-product-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0) scale(0.985);
+    filter: blur(8px);
+    transition:
+        opacity 760ms ease,
+        transform 760ms cubic-bezier(0.18, 0.84, 0.28, 1),
+        filter 760ms ease;
+    transition-delay: var(--product-reveal-delay, 0ms);
+    will-change: opacity, transform, filter;
+}
+
+.product-parallax [data-product-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+
+.product-parallax .product-parallax-section {
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.product-parallax .product-hero-cream-wave,
+.product-parallax .product-hero-splash,
+.product-parallax .product-hero-beans,
+.product-parallax .product-hero-ring,
+.product-parallax .product-card,
+.product-parallax .product-list-splash,
+.product-parallax .product-list-beans,
+.product-parallax .product-contact-glow,
+.product-parallax .product-contact-floating-pack {
+    backface-visibility: hidden;
+}
+
+/* ---------------------------------------------------------------------------
+   PRODUCT LIST PARALLAX DECORATION
+   --------------------------------------------------------------------------- */
+.product-parallax .product-list-section {
+    background:
+        radial-gradient(circle at 10% 8%, rgba(255, 249, 232, 0.96) 0 130px, transparent 132px),
+        radial-gradient(circle at 91% 7%, rgba(205, 191, 170, 0.55) 0 170px, transparent 172px),
+        linear-gradient(180deg, #F1E8D8 0%, #F7EEDB 100%);
+    isolation: isolate;
+}
+
+.product-parallax .product-list-container {
+    position: relative;
+    z-index: 3;
+}
+
+.product-list-splash {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0.62;
+}
+
+.product-list-splash-left {
+    left: -130px;
+    top: 68px;
+    width: 270px;
+    height: 270px;
+    background:
+        radial-gradient(circle at 42% 38%, rgba(116, 75, 54, 0.28), transparent 26%),
+        radial-gradient(circle at 60% 58%, rgba(255, 249, 232, 0.74), transparent 44%),
+        rgba(116, 75, 54, 0.12);
+}
+
+.product-list-splash-right {
+    right: -120px;
+    bottom: 44px;
+    width: 310px;
+    height: 310px;
+    background:
+        radial-gradient(circle at 40% 34%, rgba(255, 249, 232, 0.78), transparent 28%),
+        radial-gradient(circle at 58% 62%, rgba(116, 75, 54, 0.16), transparent 48%),
+        rgba(205, 191, 170, 0.32);
+}
+
+.product-list-beans {
+    position: absolute;
+    right: 84px;
+    top: 92px;
+    width: 160px;
+    height: 128px;
+    z-index: 1;
+    opacity: 0.30;
+    pointer-events: none;
+}
+
+.product-list-beans::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 32px;
+    height: 48px;
+    border: 4px solid #8F755E;
+    border-radius: 50%;
+    transform: rotate(-24deg);
+    box-shadow:
+        54px 26px 0 0 #8F755E,
+        104px -12px 0 0 #8F755E,
+        120px 48px 0 0 #8F755E;
+}
+
+.product-list-beans::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 26px;
+    width: 3px;
+    height: 30px;
+    border-radius: 999px;
+    background: #8F755E;
+    transform: rotate(-10deg);
+    box-shadow:
+        54px 26px 0 #8F755E,
+        104px -12px 0 #8F755E,
+        120px 48px 0 #8F755E;
+}
+
+.product-parallax .product-card {
+    position: relative;
+    z-index: 2;
+}
+
+.product-parallax .product-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 22px 22px auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(116, 75, 54, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(116, 75, 54, 0.08);
+    pointer-events: none;
+}
+
+.product-parallax .product-card[data-product-reveal].is-visible:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 46px rgba(43, 35, 29, 0.16);
+}
+
+.product-parallax .product-card-image {
+    transition: transform 520ms ease;
+}
+
+.product-parallax .product-card:hover .product-card-image {
+    transform: scale(1.045);
+}
+
+/* ---------------------------------------------------------------------------
+   CONTACT STRIP PARALLAX DECORATION
+   --------------------------------------------------------------------------- */
+.product-parallax .product-contact-strip {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 82% 28%, rgba(116, 75, 54, 0.11), transparent 26%),
+        linear-gradient(135deg, #FFF9EA 0%, #F8EBD2 100%);
+}
+
+.product-parallax .product-contact-container {
+    position: relative;
+    z-index: 3;
+}
+
+.product-contact-glow {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.product-contact-glow-left {
+    left: -90px;
+    top: 22px;
+    width: 230px;
+    height: 230px;
+    background: rgba(116, 75, 54, 0.10);
+}
+
+.product-contact-glow-right {
+    right: -120px;
+    bottom: -80px;
+    width: 320px;
+    height: 320px;
+    background: rgba(205, 191, 170, 0.38);
+}
+
+.product-contact-floating-pack {
+    position: absolute;
+    right: 9%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 24px;
+    opacity: 0.16;
+    transform: rotate(-8deg);
+    pointer-events: none;
+    box-shadow: 0 24px 44px rgba(43, 35, 29, 0.18);
+}
+
+.product-parallax .product-contact-actions[data-product-reveal] {
+    justify-self: end;
+}
+
+.product-parallax .product-contact-actions .btn {
+    transition: transform 260ms ease, box-shadow 260ms ease, background 260ms ease, color 260ms ease;
+}
+
+.product-parallax .product-contact-actions .btn:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 1080px) {
+    .product-parallax .product-hero {
+        min-height: auto;
+    }
+
+    .product-list-beans {
+        right: 24px;
+        top: 64px;
+        transform: scale(0.86);
+    }
+
+    .product-contact-floating-pack {
+        right: 3%;
+        opacity: 0.12;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-parallax .product-hero {
+        background:
+            radial-gradient(circle at 82% 20%, rgba(255, 249, 232, 0.56), transparent 30%),
+            linear-gradient(180deg, #F1E8D8 0%, #EFE3CF 100%);
+    }
+
+    .product-parallax [data-product-reveal] {
+        transform: translate3d(0, 28px, 0) scale(0.99);
+        filter: blur(5px);
+        transition-duration: 620ms;
+    }
+
+    .product-list-splash-left {
+        left: -190px;
+        top: 24px;
+        opacity: 0.46;
+    }
+
+    .product-list-splash-right {
+        right: -210px;
+        bottom: 12px;
+        opacity: 0.48;
+    }
+
+    .product-list-beans,
+    .product-contact-floating-pack {
+        display: none;
+    }
+
+    .product-contact-glow-left,
+    .product-contact-glow-right {
+        opacity: 0.48;
+    }
+
+    .product-parallax .product-contact-actions[data-product-reveal] {
+        justify-self: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-parallax .product-hero-copy,
+    .product-parallax [data-product-parallax] {
+        translate: 0 0 !important;
+        opacity: 1 !important;
+    }
+
+    .product-parallax [data-product-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+    }
+}
