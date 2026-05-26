@@ -23,12 +23,15 @@
     @include('components.navbar')
 
     <main>
-        <section class="serving-hero-page-section" data-serving-hero>
+        <section class="serving-hero-page-section" data-serving-hero aria-labelledby="serving-hero-title">
             <div class="serving-curve serving-curve-hero" data-serving-parallax data-serving-speed="-34" aria-hidden="true"></div>
             <div class="serving-bean serving-bean-left" data-serving-parallax data-serving-speed="24" aria-hidden="true"></div>
+            <div class="serving-beans-outline serving-beans-hero" data-serving-parallax data-serving-speed="18" aria-hidden="true"></div>
+
             <div class="serving-hero-container container">
                 <div class="serving-hero-content" data-serving-reveal>
-                    <h1>CARA ASIK NIKMATIN KOPSOON!</h1>
+                    <span class="serving-hero-eyebrow">KOPSOON Serving</span>
+                    <h1 id="serving-hero-title">Cara Asik Nikmatin KOPSOON!</h1>
                     <p>
                         Seduh hangat untuk booster fokus saat nugas, atau bikin versi es buat ngademin hari yang panas.
                         Tinggal pilih gaya minum favoritmu!

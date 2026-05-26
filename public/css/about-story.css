@@ -58,28 +58,38 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+.about-story-visual-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
 .about-story-visual-card::before {
     content: '';
     position: absolute;
-    top: -18px;
-    right: 56px;
-    width: 220px;
-    height: 220px;
-    border: 6px solid rgba(191, 183, 161, 0.75);
-    border-radius: 50%;
-    opacity: 0.95;
+    inset: 0;
+    z-index: 2;
+    border-radius: 36px;
+    background: linear-gradient(135deg, rgba(42, 39, 37, 0.42) 0%, rgba(42, 39, 37, 0.10) 48%, rgba(246, 240, 226, 0.24) 100%);
+    pointer-events: none;
 }
 
 .about-story-visual-card::after {
     content: '';
     position: absolute;
-    left: -18px;
-    bottom: -12px;
-    width: 192px;
-    height: 112px;
-    background: #7b523d;
-    border-radius: 58% 42% 0 0 / 76% 60% 0 0;
-    box-shadow: inset -18px 0 0 rgba(251, 246, 236, 0.88);
+    inset: auto 28px 24px auto;
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(246, 240, 226, 0.34) 0%, rgba(246, 240, 226, 0.08) 58%, transparent 70%);
+    pointer-events: none;
 }
 
 .about-story-visual::before {
@@ -96,6 +106,7 @@
 
 .about-story-visual-pill {
     position: absolute;
+    z-index: 3;
     top: 24px;
     left: 24px;
     display: inline-flex;
@@ -113,6 +124,7 @@
 
 .about-story-visual-badge {
     position: absolute;
+    z-index: 3;
     right: 22px;
     bottom: 20px;
     padding: 16px 18px;
@@ -144,6 +156,11 @@
 .about-story-visual:hover .about-story-visual-card {
     transform: translateY(-8px) scale(1.01);
     box-shadow: 0 32px 58px rgba(58, 44, 35, 0.16);
+}
+
+.about-story-visual:hover .about-story-visual-image {
+    transform: scale(1.08);
+    filter: saturate(1.06) contrast(1.03);
 }
 
 .about-story-content {
@@ -434,6 +451,10 @@
 
     .about-story-visual-card {
         min-height: 240px;
+        border-radius: 26px;
+    }
+
+    .about-story-visual-card::before {
         border-radius: 26px;
     }
 

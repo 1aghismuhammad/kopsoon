@@ -24,14 +24,15 @@
     @include('components.navbar')
 
     <main>
-        <section class="about-hero-section" data-about-hero>
-            <div class="about-hero-curve" data-about-parallax data-about-speed="-34"></div>
-            <div class="about-bean about-bean-left" data-about-parallax data-about-speed="26"></div>
+        <section class="about-hero-section" data-about-hero aria-labelledby="about-hero-title">
+            <div class="about-hero-curve" data-about-parallax data-about-speed="-34" aria-hidden="true"></div>
+            <div class="about-hero-splash" data-about-parallax data-about-speed="30" aria-hidden="true"></div>
+            <div class="about-hero-beans" data-about-parallax data-about-speed="20" aria-hidden="true"></div>
+
             <div class="about-hero-container container">
                 <div class="about-hero-content" data-about-reveal>
-                    <h1 class="about-hero-title">
-                        <span>C</span>erita di Balik Secangkir KOPSOON
-                    </h1>
+                    <span class="about-hero-eyebrow">KOPSOON Story</span>
+                    <h1 class="about-hero-title" id="about-hero-title">Cerita di Balik Secangkir KOPSOON</h1>
                     <p>
                         Menghidupkan kembali warisan rasa Nusantara dalam balutan kepraktisan masa kini.
                     </p>
@@ -42,8 +43,13 @@
         <section class="about-story-section about-story-light about-parallax-section">
             <div class="about-cup-outline" data-about-parallax data-about-speed="-42"></div>
             <div class="about-story-container container about-story-grid">
-                <div class="about-story-visual" aria-hidden="true" data-about-parallax data-about-speed="30">
+                <div class="about-story-visual" data-about-parallax data-about-speed="30">
                     <div class="about-story-visual-card">
+                        <img
+                            class="about-story-visual-image"
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=80"
+                            alt="Suasana secangkir kopi hangat untuk cerita awal KOPSOON"
+                        >
                         <div class="about-story-visual-pill">Rasa Lokal, Vibes Modern</div>
                         <div class="about-story-visual-badge">
                             <span>Kopi Santan</span>

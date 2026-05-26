@@ -25,14 +25,15 @@
     @include('components.navbar')
 
     <main>
-        <section class="reseller-hero-section" data-reseller-hero>
+        <section class="reseller-hero-section" data-reseller-hero aria-labelledby="reseller-hero-title">
             <div class="reseller-curve reseller-curve-hero" data-reseller-parallax data-reseller-speed="-34" aria-hidden="true"></div>
             <div class="reseller-bean reseller-bean-left" data-reseller-parallax data-reseller-speed="24" aria-hidden="true"></div>
             <div class="reseller-beans-outline reseller-beans-hero" data-reseller-parallax data-reseller-speed="18" aria-hidden="true"></div>
 
             <div class="reseller-hero-container container">
                 <div class="reseller-hero-content" data-reseller-reveal>
-                    <h1>Nikmati Promonya,<br>Ambil Peluang Cuannya!</h1>
+                    <span class="reseller-eyebrow">KOPSOON Partner</span>
+                    <h1 id="reseller-hero-title">Nikmati Promonya, Ambil Peluang Cuannya!</h1>
                     <p>
                         Mulai dari jajan hemat pakai promo spesial, sampai kumpulin income tambahan
                         buat mahasiswa dan first-jobber. KOPSOON punya penawaran menarik buat kamu!
