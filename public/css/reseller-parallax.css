@@ -947,3 +947,69 @@ body.reseller-parallax {
         max-width: 520px;
     }
 }
+
+/* ---------------------------------------------------------------------------
+   RESELLER HERO TEXT PATCH
+   Menyamakan karakter teks hero Reseller dengan Home tanpa mengubah dekorasi,
+   background, navbar, dan section lainnya.
+   --------------------------------------------------------------------------- */
+.reseller-parallax .reseller-hero-content {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reseller-parallax .reseller-hero-content h1 {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    font-family: var(--font-heading);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: var(--color-coffee);
+}
+
+.reseller-parallax .reseller-hero-content p {
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-body);
+}
+
+@media (max-width: 992px) {
+    .reseller-parallax .reseller-hero-content {
+        max-width: 600px;
+    }
+
+    .reseller-parallax .reseller-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .reseller-parallax .reseller-hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-parallax .reseller-hero-content {
+        max-width: 100%;
+        padding: 0 18px;
+    }
+
+    .reseller-parallax .reseller-hero-content h1 {
+        font-size: 32px;
+        line-height: 1.25;
+        letter-spacing: -0.35px;
+        margin-bottom: 18px;
+    }
+
+    .reseller-parallax .reseller-hero-content p {
+        max-width: 440px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+}
