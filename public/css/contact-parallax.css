@@ -6,6 +6,7 @@ body.contact-parallax {
     --contact-hero-bg-y: 0px;
     --contact-hero-content-y: 0px;
     --contact-hero-opacity: 1;
+    --contact-card-parallax-y: 0px;
 }
 
 .contact-parallax .contact-hero-section {
@@ -54,6 +55,14 @@ body.contact-parallax {
     --contact-parallax-y: 0px;
     translate: 0 var(--contact-parallax-y);
     will-change: translate;
+}
+
+.contact-parallax .marketplace-card,
+.contact-parallax .service-info-block,
+.contact-parallax .service-action-row,
+.contact-parallax .operational-card,
+.contact-parallax .faq-item {
+    translate: 0 var(--contact-card-parallax-y, 0px);
 }
 
 .contact-parallax [data-contact-reveal] {

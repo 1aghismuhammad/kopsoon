@@ -9,6 +9,7 @@
     const heroContent = hero ? hero.querySelector('.contact-hero-copy') : null;
     const parallaxItems = Array.from(document.querySelectorAll('[data-contact-parallax]'));
     const revealItems = Array.from(document.querySelectorAll('[data-contact-reveal]'));
+    const cardParallaxItems = Array.from(document.querySelectorAll('.marketplace-card, .service-info-block, .service-action-row, .operational-card, .faq-item'));
 
     let latestScrollY = window.scrollY || 0;
     let ticking = false;
@@ -57,11 +58,31 @@
         });
     }
 
+
+    function updateCardParallax(multiplier) {
+        const viewportHeight = window.innerHeight || 1;
+        const viewportCenter = viewportHeight / 2;
+
+        cardParallaxItems.forEach(function (item, index) {
+            const rect = item.getBoundingClientRect();
+
+            if (rect.bottom < -120 || rect.top > viewportHeight + 120) return;
+
+            const itemCenter = rect.top + rect.height / 2;
+            const progress = clamp((viewportCenter - itemCenter) / (viewportHeight * 0.95), -1, 1);
+            const direction = index % 2 === 0 ? -1 : 1;
+            const offset = progress * direction * 7 * multiplier;
+
+            item.style.setProperty('--contact-card-parallax-y', offset.toFixed(2) + 'px');
+        });
+    }
+
     function update() {
         const multiplier = getMotionMultiplier();
         latestScrollY = window.scrollY || window.pageYOffset || 0;
         updateHero(multiplier);
         updateParallaxItems(multiplier);
+        updateCardParallax(multiplier);
         ticking = false;
     }
 

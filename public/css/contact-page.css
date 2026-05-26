@@ -257,7 +257,149 @@
     transform: translateY(-4px);
 }
 
+
+.marketplace-orbit,
+.marketplace-beans,
+.marketplace-pack-float,
+.contact-service-glow,
+.contact-service-beans,
+.contact-service-pack,
+.operational-beans {
+    position: absolute;
+    pointer-events: none;
+}
+
+.marketplace-orbit {
+    border-radius: 999px;
+    z-index: 1;
+}
+
+.marketplace-orbit-left {
+    left: -150px;
+    top: 52px;
+    width: 330px;
+    height: 330px;
+    border: 34px solid rgba(247, 240, 223, 0.075);
+}
+
+.marketplace-orbit-right {
+    right: -120px;
+    bottom: -130px;
+    width: 390px;
+    height: 390px;
+    background: rgba(247, 240, 223, 0.045);
+    box-shadow: inset 0 0 0 42px rgba(247, 240, 223, 0.045);
+}
+
+.marketplace-beans {
+    left: 7%;
+    bottom: 58px;
+    width: 142px;
+    height: 136px;
+    opacity: 0.22;
+    z-index: 1;
+}
+
+.marketplace-beans::before,
+.marketplace-beans::after,
+.contact-service-beans::before,
+.contact-service-beans::after,
+.operational-beans::before,
+.operational-beans::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 66px;
+    border: 5px solid currentColor;
+    border-radius: 50%;
+}
+
+.marketplace-beans,
+.operational-beans {
+    color: #f7f0df;
+}
+
+.marketplace-beans::before {
+    top: 12px;
+    left: 22px;
+    transform: rotate(-48deg);
+}
+
+.marketplace-beans::after {
+    right: 22px;
+    bottom: 8px;
+    transform: rotate(38deg);
+}
+
+.marketplace-pack-float {
+    right: 8%;
+    top: 68px;
+    width: clamp(92px, 10vw, 150px);
+    z-index: 1;
+    opacity: 0.78;
+    filter: drop-shadow(0 28px 32px rgba(0, 0, 0, 0.22));
+    transform: rotate(8deg);
+}
+
 /* CUSTOMER SERVICE */
+
+.contact-service-glow {
+    width: 340px;
+    height: 340px;
+    border-radius: 999px;
+    z-index: 0;
+    filter: blur(1px);
+}
+
+.contact-service-glow-left {
+    left: -130px;
+    top: 34px;
+    background: radial-gradient(circle, rgba(105, 164, 95, 0.18) 0%, rgba(105, 164, 95, 0) 68%);
+}
+
+.contact-service-glow-right {
+    right: -120px;
+    bottom: -110px;
+    border: 34px solid rgba(118, 74, 53, 0.075);
+}
+
+.contact-service-beans {
+    right: 9%;
+    top: 72px;
+    width: 136px;
+    height: 126px;
+    color: #764a35;
+    opacity: 0.18;
+    z-index: 1;
+}
+
+.contact-service-beans::before {
+    top: 8px;
+    left: 16px;
+    transform: rotate(-42deg);
+}
+
+.contact-service-beans::after {
+    right: 18px;
+    bottom: 6px;
+    transform: rotate(34deg);
+}
+
+.contact-service-pack {
+    left: 4%;
+    bottom: 26px;
+    width: clamp(82px, 9vw, 138px);
+    z-index: 1;
+    opacity: 0.62;
+    filter: drop-shadow(0 26px 30px rgba(56, 39, 29, 0.16));
+    transform: rotate(-9deg);
+}
+
+.contact-service-container {
+    position: relative;
+    z-index: 2;
+}
+
 .contact-service-section {
     background:
         radial-gradient(circle at 15% 18%, rgba(105, 164, 95, 0.10), transparent 22%),
@@ -973,4 +1115,19 @@
     .faq-curve {
         opacity: 0.7;
     }
+
+    .marketplace-pack-float,
+    .contact-service-pack,
+    .marketplace-beans,
+    .contact-service-beans,
+    .operational-beans {
+        opacity: 0.18;
+    }
+
+    .marketplace-orbit-left,
+    .marketplace-orbit-right,
+    .contact-service-glow {
+        opacity: 0.55;
+    }
+
 }

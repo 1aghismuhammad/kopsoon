@@ -40,6 +40,11 @@
         </section>
 
         <section class="marketplace-section contact-parallax-section" aria-labelledby="marketplace-title">
+            <div class="marketplace-orbit marketplace-orbit-left" data-contact-parallax data-contact-speed="-22" aria-hidden="true"></div>
+            <div class="marketplace-orbit marketplace-orbit-right" data-contact-parallax data-contact-speed="32" aria-hidden="true"></div>
+            <div class="marketplace-beans" data-contact-parallax data-contact-speed="18" aria-hidden="true"></div>
+            <img src="{{ asset('images/product-pack.png') }}" alt="" class="marketplace-pack-float" data-contact-parallax data-contact-speed="-28" aria-hidden="true">
+
             <div class="marketplace-container container">
                 <div class="marketplace-header" data-contact-reveal>
                     <h2 id="marketplace-title">Pilih platform belanja kesayanganmu dan nikmati berbagai promo gratis ongkir!</h2>
@@ -71,6 +76,11 @@
         </section>
 
         <section class="contact-service-section contact-parallax-section" id="contact-service" aria-labelledby="contact-service-title">
+            <div class="contact-service-glow contact-service-glow-left" data-contact-parallax data-contact-speed="26" aria-hidden="true"></div>
+            <div class="contact-service-glow contact-service-glow-right" data-contact-parallax data-contact-speed="-30" aria-hidden="true"></div>
+            <div class="contact-service-beans" data-contact-parallax data-contact-speed="20" aria-hidden="true"></div>
+            <img src="{{ asset('images/product-box.png') }}" alt="" class="contact-service-pack" data-contact-parallax data-contact-speed="-24" aria-hidden="true">
+
             <div class="contact-service-container container">
                 <div class="contact-service-copy" data-contact-reveal>
                     <h2 id="contact-service-title">Customer Service &amp; Media Sosial</h2>
@@ -119,6 +129,7 @@
 
         <section class="operational-section contact-parallax-section" aria-labelledby="operational-title">
             <div class="operational-splash" data-contact-parallax data-contact-speed="26" aria-hidden="true"></div>
+            <div class="operational-beans" data-contact-parallax data-contact-speed="-18" aria-hidden="true"></div>
             <div class="operational-container container">
                 <h2 id="operational-title" data-contact-reveal>Informasi Operasional &amp; Basecamp</h2>
 

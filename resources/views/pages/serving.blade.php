@@ -14,19 +14,20 @@
     <link rel="stylesheet" href="{{ asset('css/serving-hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/serving-methods.css') }}">
     <link rel="stylesheet" href="{{ asset('css/serving-hacks.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/serving-parallax.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
 </head>
-<body class="serving-page">
+<body class="serving-page serving-parallax">
     @include('components.page-transition')
 
     @include('components.navbar')
 
     <main>
-        <section class="serving-hero-page-section">
-            <div class="serving-curve serving-curve-hero"></div>
-            <div class="serving-bean serving-bean-left"></div>
+        <section class="serving-hero-page-section" data-serving-hero>
+            <div class="serving-curve serving-curve-hero" data-serving-parallax data-serving-speed="-34" aria-hidden="true"></div>
+            <div class="serving-bean serving-bean-left" data-serving-parallax data-serving-speed="24" aria-hidden="true"></div>
             <div class="serving-hero-container container">
-                <div class="serving-hero-content">
+                <div class="serving-hero-content" data-serving-reveal>
                     <h1>CARA ASIK NIKMATIN KOPSOON!</h1>
                     <p>
                         Seduh hangat untuk booster fokus saat nugas, atau bikin versi es buat ngademin hari yang panas.
@@ -36,9 +37,9 @@
             </div>
         </section>
 
-        <section class="serving-method-section serving-method-hot">
+        <section class="serving-method-section serving-method-hot serving-parallax-section">
             <div class="serving-method-container container serving-method-grid">
-                <div class="serving-method-content">
+                <div class="serving-method-content" data-serving-reveal>
                     <h2>KOPSOON Hangat <span>(Classic &amp; Comforting)</span></h2>
                     <p class="serving-method-lead">
                         Pilihan tepat buat nemenin morning routine atau begadang ngerjain deadline.
@@ -52,19 +53,19 @@
                     </ol>
                 </div>
 
-                <div class="serving-method-image-wrap">
+                <div class="serving-method-image-wrap" data-serving-reveal data-serving-reveal-delay="140" data-serving-parallax data-serving-speed="-24">
                     <img src="{{ asset('images/serving-hot.png') }}" alt="KOPSOON hangat" class="serving-method-image">
                 </div>
             </div>
         </section>
 
-        <section class="serving-method-section serving-method-ice">
+        <section class="serving-method-section serving-method-ice serving-parallax-section">
             <div class="serving-method-container container serving-method-grid serving-method-grid-reverse">
-                <div class="serving-method-image-wrap">
+                <div class="serving-method-image-wrap" data-serving-reveal data-serving-parallax data-serving-speed="22">
                     <img src="{{ asset('images/serving-ice.png') }}" alt="Es KOPSOON dingin" class="serving-method-image">
                 </div>
 
-                <div class="serving-method-content serving-method-content-dark">
+                <div class="serving-method-content serving-method-content-dark" data-serving-reveal data-serving-reveal-delay="140">
                     <h2>Es KOPSOON <span>(Chill &amp; Refreshing)</span></h2>
                     <p class="serving-method-lead">
                         Cuaca lagi panas terik? Bikin versi es aja! Sensasi dingin berpadu dengan gurihnya santan
@@ -80,19 +81,19 @@
             </div>
         </section>
 
-        <section class="serving-hacks-section">
-            <div class="serving-curve serving-curve-hacks"></div>
-            <div class="serving-bean serving-bean-hacks"></div>
-            <div class="serving-beans-outline serving-beans-outline-right"></div>
+        <section class="serving-hacks-section serving-parallax-section">
+            <div class="serving-curve serving-curve-hacks" data-serving-parallax data-serving-speed="-28" aria-hidden="true"></div>
+            <div class="serving-bean serving-bean-hacks" data-serving-parallax data-serving-speed="24" aria-hidden="true"></div>
+            <div class="serving-beans-outline serving-beans-outline-right" data-serving-parallax data-serving-speed="18" aria-hidden="true"></div>
 
             <div class="serving-hacks-container container">
-                <div class="serving-hacks-header">
+                <div class="serving-hacks-header" data-serving-reveal>
                     <h2>KOPSOON Hacks Ala Cafe</h2>
                     <p>Sesuain dengan selera Gen Zmu itu</p>
                 </div>
 
                 <div class="serving-hacks-grid">
-                    <article class="serving-hack-card">
+                    <article class="serving-hack-card" data-serving-reveal data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
                             <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON double shot" class="serving-hack-image">
                         </div>
@@ -100,7 +101,7 @@
                         <p>Suka kopi yang lebih strong? Gunakan 2 sachet KOPSOON dengan takaran air 200ml.</p>
                     </article>
 
-                    <article class="serving-hack-card">
+                    <article class="serving-hack-card" data-serving-reveal data-serving-reveal-delay="120" data-serving-parallax data-serving-speed="16">
                         <div class="serving-hack-image-box">
                             <img src="{{ asset('images/serving-ice.png') }}" alt="KOPSOON ekstra creamy" class="serving-hack-image">
                         </div>
@@ -108,7 +109,7 @@
                         <p>Tambahkan 2 sendok makan susu evaporasi ke dalam racikan es KOPSOON-mu.</p>
                     </article>
 
-                    <article class="serving-hack-card">
+                    <article class="serving-hack-card" data-serving-reveal data-serving-reveal-delay="240" data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
                             <img src="{{ asset('images/serving-hot.png') }}" alt="KOPSOON foamy style" class="serving-hack-image">
                         </div>
@@ -123,5 +124,6 @@
     @include('components.footer')
 
     <script src="{{ asset('js/page-transition.js') }}"></script>
+    <script src="{{ asset('js/serving-parallax.js') }}"></script>
 </body>
 </html>
