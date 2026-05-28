@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="serving-method-image-wrap serving-photo-frame serving-photo-frame-hot" data-serving-reveal data-serving-reveal-delay="140" data-serving-parallax data-serving-speed="-24">
-                    <img src="{{ asset('images/serving-hot.png') }}" alt="KOPSOON hangat" class="serving-method-image">
+                    <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON hangat" class="serving-method-image">
                 </div>
             </div>
         </section>
@@ -91,7 +91,7 @@
 
             <div class="serving-method-container container serving-method-grid serving-method-grid-reverse">
                 <div class="serving-method-image-wrap serving-photo-frame serving-photo-frame-ice" data-serving-reveal data-serving-parallax data-serving-speed="22">
-                    <img src="{{ asset('images/serving-ice.png') }}" alt="Es KOPSOON dingin" class="serving-method-image">
+                    <img src="{{ asset('images/serving-ice.webp') }}" alt="Es KOPSOON dingin" class="serving-method-image">
                 </div>
 
                 <div class="serving-method-content serving-method-content-dark serving-method-card serving-glass-panel" data-serving-reveal data-serving-reveal-delay="140">
@@ -208,7 +208,7 @@
                 <div class="serving-hacks-grid">
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON double shot" class="serving-hack-image">
+                            <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON double shot" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Strong</span>
                         <h3>Double Shot</h3>
@@ -217,7 +217,7 @@
 
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-reveal-delay="120" data-serving-parallax data-serving-speed="16">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/serving-ice.png') }}" alt="KOPSOON ekstra creamy" class="serving-hack-image">
+                            <img src="{{ asset('images/serving-ice.webp') }}" alt="KOPSOON ekstra creamy" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Creamy</span>
                         <h3>Extra Creamy</h3>
@@ -226,7 +226,7 @@
 
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-reveal-delay="240" data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/serving-hot.png') }}" alt="KOPSOON foamy style" class="serving-hack-image">
+                            <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON foamy style" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Foamy</span>
                         <h3>Foamy Style</h3>

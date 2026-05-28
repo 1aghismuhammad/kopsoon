@@ -36,10 +36,10 @@
                 </div>
 
                 <div class="product-hero-collage" aria-label="Kolase produk KOPSOON">
-                    <img src="{{ asset('images/product-drink.png') }}" alt="KOPSOON sachet dan es kopi santan" class="hero-collage-img hero-collage-img-1">
-                    <img src="{{ asset('images/product-pack.png') }}" alt="Paket bundling KOPSOON" class="hero-collage-img hero-collage-img-2">
-                    <img src="{{ asset('images/product-box.png') }}" alt="Box bulanan KOPSOON" class="hero-collage-img hero-collage-img-3">
-                    <img src="{{ asset('images/product-pack.png') }}" alt="Paket mitra KOPSOON" class="hero-collage-img hero-collage-img-4">
+                    <img src="{{ asset('images/product-drink.webp') }}" alt="KOPSOON sachet dan es kopi santan" class="hero-collage-img hero-collage-img-1">
+                    <img src="{{ asset('images/product-pack.webp') }}" alt="Paket bundling KOPSOON" class="hero-collage-img hero-collage-img-2">
+                    <img src="{{ asset('images/product-box.webp') }}" alt="Box bulanan KOPSOON" class="hero-collage-img hero-collage-img-3">
+                    <img src="{{ asset('images/product-pack.webp') }}" alt="Paket mitra KOPSOON" class="hero-collage-img hero-collage-img-4">
                 </div>
             </div>
         </section>
@@ -51,7 +51,7 @@
                 <article class="product-slide is-active" data-slide="0">
                     <div class="showcase-image-area">
                         <div class="showcase-image-frame">
-                            <img src="{{ asset('images/product-drink.png') }}" alt="KOPSOON Taster Sachet Satuan" class="showcase-image">
+                            <img src="{{ asset('images/product-drink.webp') }}" alt="KOPSOON Taster Sachet Satuan" class="showcase-image">
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@
                 <article class="product-slide" data-slide="1">
                     <div class="showcase-image-area">
                         <div class="showcase-image-frame">
-                            <img src="{{ asset('images/product-pack.png') }}" alt="KOPSOON Paket Nugas Bundling 5 Sachet" class="showcase-image">
+                            <img src="{{ asset('images/product-pack.webp') }}" alt="KOPSOON Paket Nugas Bundling 5 Sachet" class="showcase-image">
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                 <article class="product-slide" data-slide="2">
                     <div class="showcase-image-area">
                         <div class="showcase-image-frame">
-                            <img src="{{ asset('images/product-box.png') }}" alt="KOPSOON Box Bulanan Isi 20 Sachet" class="showcase-image">
+                            <img src="{{ asset('images/product-box.webp') }}" alt="KOPSOON Box Bulanan Isi 20 Sachet" class="showcase-image">
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
                 <article class="product-slide" data-slide="3">
                     <div class="showcase-image-area">
                         <div class="showcase-image-frame">
-                            <img src="{{ asset('images/product-pack.png') }}" alt="Paket Mitra atau Reseller Starter Kit KOPSOON" class="showcase-image">
+                            <img src="{{ asset('images/product-pack.webp') }}" alt="Paket Mitra atau Reseller Starter Kit KOPSOON" class="showcase-image">
                         </div>
                     </div>
 
@@ -132,7 +132,7 @@
 
                 <div class="product-card-grid">
                     <article class="product-card reveal-up">
-                        <img src="{{ asset('images/product-drink.png') }}" alt="KOPSOON Sachet Satuan" class="product-card-image">
+                        <img src="{{ asset('images/product-drink.webp') }}" alt="KOPSOON Sachet Satuan" class="product-card-image">
                         <div class="product-card-body">
                             <h3>Sachet Satuan</h3>
                             <p>Untuk coba rasa, pembelian cepat, dan konsumsi harian yang praktis.</p>
@@ -140,7 +140,7 @@
                     </article>
 
                     <article class="product-card reveal-up">
-                        <img src="{{ asset('images/product-pack.png') }}" alt="KOPSOON Bundling 5 Sachet" class="product-card-image">
+                        <img src="{{ asset('images/product-pack.webp') }}" alt="KOPSOON Bundling 5 Sachet" class="product-card-image">
                         <div class="product-card-body">
                             <h3>Bundling 5 Sachet</h3>
                             <p>Untuk stok mingguan, lebih hemat, dan cocok untuk mahasiswa atau pekerja.</p>
@@ -148,7 +148,7 @@
                     </article>
 
                     <article class="product-card reveal-up">
-                        <img src="{{ asset('images/product-box.png') }}" alt="KOPSOON Box Bulanan" class="product-card-image">
+                        <img src="{{ asset('images/product-box.webp') }}" alt="KOPSOON Box Bulanan" class="product-card-image">
                         <div class="product-card-body">
                             <h3>Box Bulanan</h3>
                             <p>Untuk stok rumah, kantor, kos, atau konsumsi bersama keluarga.</p>

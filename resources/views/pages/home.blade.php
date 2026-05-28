@@ -36,7 +36,7 @@
             </div>
 
             <div class="hero-image-container" data-reveal data-reveal-delay="120">
-                <img src="{{ asset('images/gambarkopi.png') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
+                <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
             </div>
 
         </div>
@@ -114,19 +114,19 @@
 
                 <div class="product-options-visual" data-reveal data-reveal-delay="120">
                     <img 
-                        src="{{ asset('images/product-drink.png') }}" 
+                        src="{{ asset('images/product-drink.webp') }}" 
                         alt="Kopsoon sachet dan minuman" 
                         class="product-image product-image-top" data-parallax data-parallax-speed="-26"
                     >
 
                     <img 
-                        src="{{ asset('images/product-box.png') }}" 
+                        src="{{ asset('images/product-box.webp') }}" 
                         alt="Kopsoon box" 
                         class="product-image product-image-right" data-parallax data-parallax-speed="22"
                     >
 
                     <img 
-                        src="{{ asset('images/product-pack.png') }}" 
+                        src="{{ asset('images/product-pack.webp') }}" 
                         alt="Kopsoon pack keluarga" 
                         class="product-image product-image-bottom" data-parallax data-parallax-speed="-16"
                     >
@@ -145,7 +145,7 @@
 
                     <div class="serving-image-wrap">
                         <img 
-                            src="{{ asset('images/serving-hot.png') }}" 
+                            src="{{ asset('images/serving-hot.webp') }}" 
                             alt="Penyajian panas Kopsoon" 
                             class="serving-image"
                         >
@@ -163,7 +163,7 @@
 
                     <div class="serving-image-wrap">
                         <img 
-                            src="{{ asset('images/serving-ice.png') }}" 
+                            src="{{ asset('images/serving-ice.webp') }}" 
                             alt="Penyajian dingin Kopsoon" 
                             class="serving-image"
                         >
@@ -231,7 +231,7 @@
                 <div class="order-product-card" data-reveal>
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/product-drink.png') }}" 
+                            src="{{ asset('images/product-drink.webp') }}" 
                             alt="Kopsoon Sachet Satuan"
                             class="order-product-image"
                         >
@@ -246,7 +246,7 @@
                 <div class="order-product-card" data-reveal data-reveal-delay="100">
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/product-pack.png') }}" 
+                            src="{{ asset('images/product-pack.webp') }}" 
                             alt="Paket Bundling Kopsoon"
                             class="order-product-image"
                         >
@@ -261,7 +261,7 @@
                 <div class="order-product-card" data-reveal data-reveal-delay="200">
                     <div class="order-image-box">
                         <img 
-                            src="{{ asset('images/product-box.png') }}" 
+                            src="{{ asset('images/product-box.webp') }}" 
                             alt="Box Keluarga Kopsoon"
                             class="order-product-image"
                         >

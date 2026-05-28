@@ -100,7 +100,7 @@ body {
 /* --- 6. Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    background-image: url("../images/Hero.png"); /* Menggunakan file gambar Hero Anda */
+    background-image: url("../images/Hero.webp"); /* Menggunakan file gambar Hero Anda */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

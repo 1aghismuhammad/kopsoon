@@ -1,7 +1,7 @@
 <nav class="site-navbar">
     <div class="navbar-container container">
         <a href="{{ route('home') }}" class="navbar-logo">
-            <img src="{{ asset('images/logo.png') }}" alt="KOPSOON Logo" class="logo-img">
+            <img src="{{ asset('images/logo.webp') }}" alt="KOPSOON Logo" class="logo-img">
         </a>
 
         <button class="navbar-toggle" id="mobile-menu-btn" aria-label="Buka Menu">

@@ -15,7 +15,7 @@ body.serving-parallax {
     overflow: hidden;
     background-image:
         linear-gradient(90deg, rgba(244, 236, 216, 0.74) 0%, rgba(244, 236, 216, 0.58) 43%, rgba(201, 184, 164, 0.38) 100%),
-        url('../images/Hero.png');
+        url('../images/Hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center calc(50% + var(--serving-hero-bg-y));
@@ -132,7 +132,7 @@ body.serving-parallax {
         padding: 136px 0 86px;
         background-image:
             linear-gradient(90deg, rgba(244, 236, 216, 0.78) 0%, rgba(244, 236, 216, 0.66) 52%, rgba(201, 184, 164, 0.32) 100%),
-            url('../images/Hero.png');
+            url('../images/Hero.webp');
     }
 
     .serving-parallax .serving-curve-hero {
@@ -150,7 +150,7 @@ body.serving-parallax {
         padding: 126px 0 72px;
         background-image:
             linear-gradient(180deg, rgba(244, 236, 216, 0.84), rgba(239, 228, 207, 0.74)),
-            url('../images/Hero.png');
+            url('../images/Hero.webp');
         background-position: center center;
     }
 
@@ -217,7 +217,7 @@ body.serving-parallax {
     align-items: center;
     background-image:
         linear-gradient(90deg, rgba(244, 236, 216, 0.76) 0%, rgba(244, 236, 216, 0.62) 42%, rgba(201, 184, 164, 0.34) 100%),
-        url('../images/Hero.png');
+        url('../images/Hero.webp');
     background-position: center calc(50% + var(--serving-hero-bg-y));
 }
 
@@ -367,7 +367,7 @@ body.serving-parallax {
         padding: 132px 0 86px;
         background-image:
             linear-gradient(180deg, rgba(244, 236, 216, 0.84), rgba(239, 228, 207, 0.74)),
-            url('../images/Hero.png');
+            url('../images/Hero.webp');
         background-position: center center;
     }
 

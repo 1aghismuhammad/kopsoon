@@ -158,7 +158,7 @@
                 <div class="reseller-package-grid">
                     <article class="reseller-package-card" data-reseller-reveal data-reseller-parallax data-reseller-speed="-16">
                         <div class="reseller-package-image-wrap">
-                            <img src="{{ asset('images/product-pack.png') }}" alt="Paket Pemula Reseller KOPSOON" class="reseller-package-image">
+                            <img src="{{ asset('images/product-pack.webp') }}" alt="Paket Pemula Reseller KOPSOON" class="reseller-package-image">
                         </div>
                         <h3>Paket Pemula <span>(Starter Kit)</span></h3>
                         <ul>
@@ -171,7 +171,7 @@
 
                     <article class="reseller-package-card is-featured" data-reseller-reveal data-reseller-reveal-delay="140" data-reseller-parallax data-reseller-speed="16">
                         <div class="reseller-package-image-wrap">
-                            <img src="{{ asset('images/product-box.png') }}" alt="Paket Juragan Reseller KOPSOON" class="reseller-package-image">
+                            <img src="{{ asset('images/product-box.webp') }}" alt="Paket Juragan Reseller KOPSOON" class="reseller-package-image">
                         </div>
                         <h3>Paket Juragan <span>(Growth Kit) - Paling Diminati!</span></h3>
                         <ul>

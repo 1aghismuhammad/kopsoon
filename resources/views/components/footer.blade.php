@@ -7,7 +7,7 @@
             </div>
 
             <div class="footer-col footer-center">
-                <img src="{{ asset('images/logo.png') }}" alt="KOPSOON Logo" class="footer-logo-img">
+                <img src="{{ asset('images/logo.webp') }}" alt="KOPSOON Logo" class="footer-logo-img">
             </div>
 
             <div class="footer-col footer-right">

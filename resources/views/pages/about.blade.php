@@ -98,7 +98,7 @@
                 </div>
                 <div class="about-product-photo about-product-photo-card" data-about-reveal data-about-reveal-delay="120" data-about-parallax data-about-speed="-24">
                     <div class="about-product-photo-frame">
-                        <img src="{{ asset('images/product-pack.png') }}" alt="Produk KOPSOON Kopi Santan Instan">
+                        <img src="{{ asset('images/product-pack.webp') }}" alt="Produk KOPSOON Kopi Santan Instan">
                         <div class="about-product-floating-badge">
                             <span>Ready to Brew</span>
                             <strong>Praktis & Creamy</strong>

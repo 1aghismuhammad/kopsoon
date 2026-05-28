@@ -15,7 +15,7 @@ body.contact-parallax {
     overflow: hidden;
     background-image:
         linear-gradient(90deg, rgba(244, 236, 216, 0.76) 0%, rgba(244, 236, 216, 0.62) 42%, rgba(201, 184, 164, 0.34) 100%),
-        url('../images/Hero.png');
+        url('../images/Hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center calc(50% + var(--contact-hero-bg-y));
@@ -115,7 +115,7 @@ body.contact-parallax {
         min-height: 100vh;
         background-image:
             linear-gradient(180deg, rgba(244, 236, 216, 0.84), rgba(239, 228, 207, 0.74)),
-            url('../images/Hero.png');
+            url('../images/Hero.webp');
         background-position: center center;
     }
 

@@ -178,14 +178,14 @@ public/images
 ```
 
 Gambar yang sudah digunakan:
-- `logo.png`
-- `Hero.png`
-- `gambarkopi.png`
-- `product-pack.png`
-- `product-box.png`
-- `product-drink.png`
-- `serving-hot.png`
-- `serving-ice.png`
+- `logo.webp`
+- `Hero.webp`
+- `gambarkopi.webp`
+- `product-pack.webp`
+- `product-box.webp`
+- `product-drink.webp`
+- `serving-hot.webp`
+- `serving-ice.webp`
 
 ---
 
