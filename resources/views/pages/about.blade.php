@@ -47,7 +47,7 @@
                     <div class="about-story-visual-card">
                         <img
                             class="about-story-visual-image"
-                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=80"
+                            src="{{ asset('images/kopi5.webp') }}"
                             alt="Suasana secangkir kopi hangat untuk cerita awal KOPSOON"
                         >
                         <div class="about-story-visual-pill">Rasa Lokal, Vibes Modern</div>
@@ -161,7 +161,7 @@
 
                         <div class="about-team-profile-pic">
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80"
+                                src="{{ asset('images/khalid.webp') }}"
                                 alt="Foto profil anggota tim KOPSOON"
                                 loading="lazy"
                             >
@@ -194,7 +194,7 @@
 
                         <div class="about-team-profile-pic">
                             <img
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+                                src="{{ asset('images/aghis.webp') }}"
                                 alt="Foto profil anggota tim KOPSOON"
                                 loading="lazy"
                             >
@@ -227,7 +227,7 @@
 
                         <div class="about-team-profile-pic">
                             <img
-                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=700&q=80"
+                                src="{{ asset('images/nico.webp') }}"
                                 alt="Foto profil anggota tim KOPSOON"
                                 loading="lazy"
                             >
@@ -260,7 +260,7 @@
 
                         <div class="about-team-profile-pic">
                             <img
-                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80"
+                                src="{{ asset('images/kiki.webp') }}"
                                 alt="Foto profil anggota tim KOPSOON"
                                 loading="lazy"
                             >
@@ -293,7 +293,7 @@
 
                         <div class="about-team-profile-pic">
                             <img
-                                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80"
+                                src="{{ asset('images/akmal.webp') }}"
                                 alt="Foto profil anggota tim KOPSOON"
                                 loading="lazy"
                             >

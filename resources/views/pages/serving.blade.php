@@ -144,7 +144,7 @@
                 <div class="serving-flavor-grid">
                     <article class="serving-flavor-card" data-serving-reveal data-serving-parallax data-serving-speed="-10">
                         <div class="serving-flavor-media">
-                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80" alt="Kopi panas untuk focus mode" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi1.webp') }}" alt="Kopi panas untuk focus mode" class="serving-flavor-image">
                             <span class="serving-flavor-number">01</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -156,7 +156,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="90" data-serving-parallax data-serving-speed="12">
                         <div class="serving-flavor-media">
-                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80" alt="Es kopi santan untuk chill break" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi2.webp') }}" alt="Es kopi santan untuk chill break" class="serving-flavor-image">
                             <span class="serving-flavor-number">02</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -168,7 +168,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="180" data-serving-parallax data-serving-speed="-12">
                         <div class="serving-flavor-media">
-                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80" alt="Kopi creamy dengan tambahan susu" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi3.webp') }}" alt="Kopi creamy dengan tambahan susu" class="serving-flavor-image">
                             <span class="serving-flavor-number">03</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -180,7 +180,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="270" data-serving-parallax data-serving-speed="10">
                         <div class="serving-flavor-media">
-                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Kopi dengan foam ala cafe" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi4.webp') }}" class="serving-flavor-image">
                             <span class="serving-flavor-number">04</span>
                         </div>
                         <div class="serving-flavor-copy">

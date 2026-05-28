@@ -52,21 +52,21 @@
 
                 <div class="marketplace-grid">
                     <article class="marketplace-card" data-contact-reveal>
-                        <div class="marketplace-logo-box marketplace-logo-shopee" aria-hidden="true"><img src="{{ asset('images/dummy-shopee.svg') }}" alt="" class="marketplace-logo-img"></div>
+                        <div class="marketplace-logo-box marketplace-logo-shopee" aria-hidden="true"><img src="{{ asset('images/shopee.svg') }}" alt="" class="marketplace-logo-img"></div>
                         <h3>Shopee</h3>
                         <p>Cocok untuk pembelian eceran dan klaim promo ongkir.</p>
                         <a href="https://wa.me/6289912314371?text=Halo%20Admin%20KOPSOON%2C%20saya%20mau%20order%20via%20Shopee." target="_blank" rel="noopener noreferrer" class="marketplace-btn">Order Now</a>
                     </article>
 
                     <article class="marketplace-card" data-contact-reveal data-contact-reveal-delay="120">
-                        <div class="marketplace-logo-box marketplace-logo-tokopedia" aria-hidden="true"><img src="{{ asset('images/dummy-tokopedia.svg') }}" alt="" class="marketplace-logo-img"></div>
+                        <div class="marketplace-logo-box marketplace-logo-tokopedia" aria-hidden="true"><img src="{{ asset('images/tokopedia.svg') }}" alt="" class="marketplace-logo-img"></div>
                         <h3>Tokopedia</h3>
                         <p>Pesan lebih mudah untuk stok rumah, kantor, atau kos.</p>
                         <a href="https://wa.me/6289912314371?text=Halo%20Admin%20KOPSOON%2C%20saya%20mau%20order%20via%20Tokopedia." target="_blank" rel="noopener noreferrer" class="marketplace-btn">Order Now</a>
                     </article>
 
                     <article class="marketplace-card" data-contact-reveal data-contact-reveal-delay="240">
-                        <div class="marketplace-logo-box marketplace-logo-tiktok" aria-hidden="true"><img src="{{ asset('images/dummy-tiktok.svg') }}" alt="" class="marketplace-logo-img"></div>
+                        <div class="marketplace-logo-box marketplace-logo-tiktok" aria-hidden="true"><img src="{{ asset('images/tiktok.svg') }}" alt="" class="marketplace-logo-img"></div>
                         <h3>TikTok Shop</h3>
                         <p>Ikuti live, konten promo, dan penawaran khusus KOPSOON.</p>
                         <a href="https://wa.me/6289912314371?text=Halo%20Admin%20KOPSOON%2C%20saya%20mau%20order%20via%20TikTok%20Shop." target="_blank" rel="noopener noreferrer" class="marketplace-btn">Order Now</a>
