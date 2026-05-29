@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Kontak & Order KOPSOON | Beli Kopi Santan Instan',
         'description' => 'Hubungi KOPSOON untuk pemesanan, reseller, marketplace, WhatsApp customer service, media sosial, dan informasi pengiriman kopi santan instan.',
@@ -49,14 +47,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact-parallax.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/kopsoon-text-palette.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact-marketplace-cards.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-contact.css') }}">
 </head>
 <body class="contact-page-body contact-parallax">
     @include('components.page-transition')

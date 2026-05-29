@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Tentang KOPSOON | Cerita Kopi Santan Instan Khas Blora',
         'description' => 'Kenali cerita KOPSOON, brand kopi santan instan yang mengangkat rasa lokal Nusantara dalam kemasan praktis, modern, dan cocok untuk generasi muda.',
@@ -49,16 +47,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-story.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-values.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-team.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-parallax.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-about.css') }}">
 </head>
 <body class="about-page about-parallax">
     @include('components.page-transition')

@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Cara Menyeduh KOPSOON | Kopi Santan Panas & Es Kopi Santan',
         'description' => 'Pelajari cara menyeduh KOPSOON panas dan dingin, lengkap dengan tips racikan creamy ala kafe untuk menikmati kopi santan instan khas Blora.',
@@ -71,15 +69,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/serving-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/serving-hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/serving-methods.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/serving-hacks.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/serving-parallax.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-serving.css') }}">
 </head>
 <body class="serving-page serving-parallax">
     @include('components.page-transition')

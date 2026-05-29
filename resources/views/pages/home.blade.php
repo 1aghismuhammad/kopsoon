@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'KOPSOON | Kopi Santan Instan Khas Blora',
         'description' => 'Nikmati KOPSOON, kopi santan instan khas Blora dengan rasa creamy Nusantara. Praktis diseduh panas atau dingin, cocok untuk nugas, kerja, dan santai.',
@@ -31,16 +29,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/uvp.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/product-options.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/servings.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/promo-reseller.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/order-section.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/home-parallax.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-home.css') }}">
 </head>
 <body class="home-parallax">
     @include('components.page-transition')

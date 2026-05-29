@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Reseller KOPSOON | Peluang Jualan Kopi Santan Instan',
         'description' => 'Bergabung menjadi reseller KOPSOON dan mulai jualan kopi santan instan khas Blora dengan paket pemula, promo bundling, dan dukungan konten promosi.',
@@ -49,17 +47,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-deals.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-benefits.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-packages.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-join.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/reseller-parallax.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page-transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kopsoon-reseller.css') }}">
 </head>
 <body class="reseller-page reseller-parallax">
     @include('components.page-transition')

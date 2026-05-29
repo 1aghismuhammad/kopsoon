@@ -1,3 +1,891 @@
+/* ==========================================================================
+   KOPSOON CSS BUNDLE: kopsoon-reseller.css
+   Generated for deployment bundling. Source files are kept for development.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Source: reseller-page.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - RESELLER PAGE BASE
+   ======================================================================== */
+
+.reseller-page {
+    background: var(--color-white);
+    color: #191817;
+}
+
+.reseller-page main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reseller-page section {
+    position: relative;
+}
+
+.reseller-page .container {
+    max-width: 1280px;
+}
+
+.reseller-curve,
+.reseller-wave,
+.reseller-circle,
+.reseller-bean,
+.reseller-beans-outline {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.reseller-curve,
+.reseller-circle {
+    border-radius: 50%;
+}
+
+.reseller-bean {
+    width: 170px;
+    height: 82px;
+    border-radius: 50%;
+    background: #7A4B35;
+    transform: rotate(9deg);
+    opacity: 0.98;
+}
+
+.reseller-bean::after {
+    content: '';
+    position: absolute;
+    inset: 17px 70px;
+    border-left: 10px solid rgba(255, 255, 255, 0.88);
+    border-radius: 50%;
+    transform: rotate(18deg);
+}
+
+.reseller-beans-outline {
+    width: 150px;
+    height: 135px;
+    opacity: 0.18;
+}
+
+.reseller-beans-outline::before,
+.reseller-beans-outline::after {
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 86px;
+    border: 6px solid #7A6A5B;
+    border-radius: 50%;
+    transform: rotate(-28deg);
+}
+
+.reseller-beans-outline::before {
+    left: 10px;
+    top: 18px;
+}
+
+.reseller-beans-outline::after {
+    right: 16px;
+    top: 36px;
+    transform: rotate(28deg);
+}
+
+@media (max-width: 768px) {
+    .reseller-page .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .reseller-bean {
+        width: 120px;
+        height: 58px;
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-hero.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - RESELLER HERO
+   ======================================================================== */
+
+.reseller-hero-section {
+    min-height: 635px;
+    background: linear-gradient(90deg, #EFE6D3 0%, #EFE6D3 51%, #C8B9A7 51%, #C8B9A7 100%);
+    display: flex;
+    align-items: center;
+    padding: 155px 0 94px;
+}
+
+.reseller-hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-hero-content {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(24px);
+}
+
+.reseller-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-coffee);
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.reseller-hero-content p {
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-body);
+}
+
+.reseller-curve-hero {
+    width: 760px;
+    height: 500px;
+    right: -102px;
+    top: 72px;
+    border: 28px solid rgba(255, 250, 236, 0.82);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-20deg);
+    box-shadow: 16px 12px 0 rgba(91, 73, 55, 0.12);
+}
+
+.reseller-bean-left {
+    left: -74px;
+    bottom: 98px;
+}
+
+.reseller-beans-hero {
+    right: 114px;
+    bottom: 54px;
+}
+
+@media (max-width: 992px) {
+    .reseller-hero-section {
+        min-height: 560px;
+        padding-top: 140px;
+        background: linear-gradient(90deg, #EFE6D3 0%, #EFE6D3 55%, #C8B9A7 55%, #C8B9A7 100%);
+    }
+
+    .reseller-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .reseller-hero-content p {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-hero-section {
+        min-height: auto;
+        padding: 132px 0 86px;
+        background: #EFE6D3;
+    }
+
+    .reseller-hero-content {
+        transform: none;
+    }
+
+    .reseller-hero-content h1 {
+        font-size: 30px;
+        line-height: 1.35;
+        letter-spacing: -0.3px;
+    }
+
+    .reseller-hero-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .reseller-curve-hero {
+        width: 420px;
+        height: 300px;
+        right: -185px;
+        top: 95px;
+        border-width: 18px;
+    }
+
+    .reseller-bean-left {
+        left: -80px;
+        bottom: 32px;
+    }
+
+    .reseller-beans-hero {
+        right: 12px;
+        bottom: 18px;
+        transform: scale(0.72);
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-deals.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - SPECIAL DEALS
+   ======================================================================== */
+
+.reseller-deals-section {
+    background: #302217;
+    color: #F4EFE5;
+    padding: 70px 0 88px;
+    overflow: hidden;
+}
+
+.reseller-deals-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-deals-container h2 {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.16;
+    color: #E4DED5;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.3px;
+}
+
+.reseller-deals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.reseller-deal-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 36px;
+    background: #F0E6D4;
+    color: #2C241E;
+    padding: 34px 16px 34px 36px;
+    min-height: 118px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.16);
+}
+
+.reseller-deal-text h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.reseller-deal-text p {
+    max-width: 680px;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.reseller-deal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+    height: 54px;
+    padding: 0 22px;
+    background: #D95454;
+    border: 2px solid #D95454;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.reseller-deal-btn:hover {
+    background: #B93F3F;
+    border-color: #B93F3F;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(217, 84, 84, 0.28);
+}
+
+.reseller-wave-top {
+    left: -70px;
+    top: -52px;
+    width: 102%;
+    height: 148px;
+    background: #6E442F;
+    border-radius: 0 0 50% 50%;
+    transform: rotate(4deg);
+    opacity: 0.48;
+}
+
+.reseller-circle-deals {
+    right: -86px;
+    bottom: 40px;
+    width: 330px;
+    height: 330px;
+    border: 11px solid rgba(122, 75, 53, 0.72);
+    opacity: 0.55;
+}
+
+@media (max-width: 992px) {
+    .reseller-deal-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 32px 28px;
+        gap: 24px;
+    }
+
+    .reseller-deal-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reseller-deal-btn {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-deals-section {
+        padding: 58px 0 70px;
+    }
+
+    .reseller-deals-container h2 {
+        font-size: 28px;
+        margin-bottom: 34px;
+    }
+
+    .reseller-deals-list {
+        gap: 26px;
+    }
+
+    .reseller-deal-card {
+        border-radius: 18px;
+        padding: 28px 22px;
+    }
+
+    .reseller-deal-text h3 {
+        font-size: 19px;
+    }
+
+    .reseller-deal-text p {
+        font-size: 13.5px;
+    }
+
+    .reseller-deal-btn {
+        min-width: 100%;
+        height: 48px;
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-benefits.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - RESELLER BENEFITS
+   ======================================================================== */
+
+.reseller-benefits-section {
+    background: #1F3B27;
+    color: #F7F3E8;
+    padding: 72px 0 92px;
+}
+
+.reseller-benefits-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-benefits-header {
+    max-width: 760px;
+    margin: 0 auto 62px;
+    text-align: center;
+}
+
+.reseller-benefits-header h2 {
+    font-family: var(--font-heading);
+    font-size: 31px;
+    font-weight: 800;
+    line-height: 1.18;
+    margin-bottom: 10px;
+    color: #F4EFE5;
+}
+
+.reseller-benefits-header p {
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.55;
+    color: rgba(247, 243, 232, 0.88);
+}
+
+.reseller-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 58px 90px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.reseller-benefit-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.reseller-benefit-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #E6E6E6;
+    color: #202020;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+.reseller-benefit-icon svg {
+    width: 31px;
+    height: 31px;
+}
+
+.reseller-benefit-item h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.22;
+    margin-bottom: 6px;
+    color: #F4EFE5;
+}
+
+.reseller-benefit-item p {
+    max-width: 380px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: rgba(247, 243, 232, 0.86);
+}
+
+@media (max-width: 992px) {
+    .reseller-benefits-grid {
+        gap: 42px 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-benefits-section {
+        padding: 62px 0 74px;
+    }
+
+    .reseller-benefits-header {
+        margin-bottom: 42px;
+    }
+
+    .reseller-benefits-header h2 {
+        font-size: 26px;
+    }
+
+    .reseller-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .reseller-benefit-item {
+        grid-template-columns: 56px 1fr;
+        gap: 18px;
+    }
+
+    .reseller-benefit-item p {
+        max-width: none;
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-packages.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - RESELLER PACKAGES
+   ======================================================================== */
+
+.reseller-packages-section {
+    background: #EFE6D3;
+    padding: 74px 0 86px;
+    color: #241D18;
+    overflow: hidden;
+}
+
+.reseller-packages-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-packages-container h2 {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 44px;
+    color: #121212;
+    letter-spacing: -0.2px;
+}
+
+.reseller-package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 120px;
+    align-items: start;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.reseller-package-card {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-package-image-wrap {
+    width: 185px;
+    height: 155px;
+    margin: 0 0 28px 98px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 18px 34px rgba(60, 42, 33, 0.14);
+}
+
+.reseller-package-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.reseller-package-card:hover .reseller-package-image {
+    transform: scale(1.06);
+}
+
+.reseller-package-card h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #241D18;
+}
+
+.reseller-package-card h3 span {
+    font-size: 0.92em;
+}
+
+.reseller-package-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reseller-package-card li {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.48;
+    color: #241D18;
+}
+
+.reseller-curve-packages-left {
+    left: -250px;
+    top: 170px;
+    width: 560px;
+    height: 380px;
+    border: 20px solid rgba(255, 250, 236, 0.92);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-17deg);
+}
+
+.reseller-curve-packages-right {
+    right: -150px;
+    bottom: -130px;
+    width: 520px;
+    height: 350px;
+    border: 22px solid rgba(122, 75, 53, 0.42);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-19deg);
+}
+
+@media (max-width: 992px) {
+    .reseller-package-grid {
+        gap: 58px;
+    }
+
+    .reseller-package-image-wrap {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-packages-section {
+        padding: 60px 0 72px;
+    }
+
+    .reseller-packages-container h2 {
+        font-size: 27px;
+        margin-bottom: 36px;
+    }
+
+    .reseller-package-grid {
+        grid-template-columns: 1fr;
+        gap: 46px;
+        max-width: 520px;
+    }
+
+    .reseller-package-card {
+        text-align: center;
+    }
+
+    .reseller-package-image-wrap {
+        width: 190px;
+        height: 160px;
+        margin: 0 auto 24px;
+    }
+
+    .reseller-package-card h3 {
+        font-size: 21px;
+    }
+
+    .reseller-package-card li {
+        font-size: 13.5px;
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-join.css
+   ========================================================================== */
+/* ========================================================================
+   KOPSOON - RESELLER JOIN STEPS
+   ======================================================================== */
+
+.reseller-join-section {
+    background: #FAF9F6;
+    padding: 78px 0 88px;
+    color: #241D18;
+    overflow: hidden;
+}
+
+.reseller-join-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reseller-join-container h2 {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.16;
+    margin-bottom: 50px;
+    color: #241D18;
+}
+
+.reseller-join-container h2 span {
+    font-size: 0.95em;
+}
+
+.reseller-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin-bottom: 54px;
+}
+
+.reseller-step-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: start;
+    gap: 26px;
+}
+
+.reseller-step-item span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #EFE6D3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1;
+    color: #191817;
+}
+
+.reseller-step-item p {
+    max-width: 1040px;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #241D18;
+    margin: 0;
+}
+
+.reseller-join-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: end;
+}
+
+.reseller-join-bottom p {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.28;
+    margin: 0;
+    color: #241D18;
+}
+
+.reseller-join-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    height: 58px;
+    padding: 0 28px;
+    background: #D95454;
+    border: 2px solid #D95454;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 800;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.reseller-join-btn:hover {
+    background: #B93F3F;
+    border-color: #B93F3F;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(217, 84, 84, 0.28);
+}
+
+.reseller-curve-join {
+    width: 570px;
+    height: 370px;
+    right: -90px;
+    top: 24px;
+    border: 22px solid rgba(200, 185, 167, 0.56);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-18deg);
+}
+
+.reseller-bean-join {
+    left: -82px;
+    bottom: 34px;
+    width: 260px;
+    height: 130px;
+}
+
+.reseller-bean-join::after {
+    inset: 25px 112px;
+    border-left-width: 12px;
+}
+
+.reseller-beans-join {
+    right: 132px;
+    bottom: 42px;
+}
+
+@media (max-width: 992px) {
+    .reseller-join-bottom {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .reseller-join-btn {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseller-join-section {
+        padding: 62px 0 74px;
+    }
+
+    .reseller-join-container h2 {
+        font-size: 27px;
+        margin-bottom: 36px;
+    }
+
+    .reseller-steps {
+        gap: 28px;
+        margin-bottom: 40px;
+    }
+
+    .reseller-step-item {
+        grid-template-columns: 36px 1fr;
+        gap: 16px;
+    }
+
+    .reseller-step-item p {
+        font-size: 16px;
+    }
+
+    .reseller-join-bottom p {
+        font-size: 16px;
+    }
+
+    .reseller-join-btn {
+        min-width: 100%;
+        height: 52px;
+        font-size: 15px;
+    }
+
+    .reseller-curve-join {
+        width: 350px;
+        height: 230px;
+        right: -188px;
+        top: 40px;
+        border-width: 18px;
+    }
+
+    .reseller-bean-join {
+        width: 160px;
+        height: 80px;
+        left: -90px;
+        bottom: 18px;
+    }
+
+    .reseller-beans-join {
+        right: 16px;
+        bottom: 18px;
+        transform: scale(0.72);
+    }
+}
+
+
+/* ==========================================================================
+   Source: reseller-parallax.css
+   ========================================================================== */
 /* ===========================================================================
    KOPSOON - RESELLER PARALLAX + REVISED SECTION DESIGN
    =========================================================================== */
@@ -1246,4 +2134,3 @@ body.reseller-parallax {
         transform: scale(0.72);
     }
 }
-
