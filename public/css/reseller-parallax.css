@@ -22,7 +22,7 @@ body.reseller-parallax {
     overflow: hidden;
     background-image:
         linear-gradient(90deg, rgba(244, 236, 216, 0.76) 0%, rgba(244, 236, 216, 0.60) 44%, rgba(201, 184, 164, 0.38) 100%),
-        url('../images/Hero.webp');
+        url('../images/hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center calc(50% + var(--reseller-hero-bg-y));
