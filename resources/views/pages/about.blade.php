@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Tentang KOPSOON | Cerita Kopi Santan Instan Khas Blora',
         'description' => 'Kenali cerita KOPSOON, brand kopi santan instan yang mengangkat rasa lokal Nusantara dalam kemasan praktis, modern, dan cocok untuk generasi muda.',

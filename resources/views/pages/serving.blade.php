@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Cara Menyeduh KOPSOON | Kopi Santan Panas & Es Kopi Santan',
         'description' => 'Pelajari cara menyeduh KOPSOON panas dan dingin, lengkap dengan tips racikan creamy ala kafe untuk menikmati kopi santan instan khas Blora.',

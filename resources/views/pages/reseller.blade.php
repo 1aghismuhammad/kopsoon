@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Reseller KOPSOON | Peluang Jualan Kopi Santan Instan',
         'description' => 'Bergabung menjadi reseller KOPSOON dan mulai jualan kopi santan instan khas Blora dengan paket pemula, promo bundling, dan dukungan konten promosi.',

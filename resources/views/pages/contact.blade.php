@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="{{ asset('images/icon-kopsoon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('images/icon-kopsoon.webp') }}">
     @include('components.seo', [
         'title' => 'Kontak & Order KOPSOON | Beli Kopi Santan Instan',
         'description' => 'Hubungi KOPSOON untuk pemesanan, reseller, marketplace, WhatsApp customer service, media sosial, dan informasi pengiriman kopi santan instan.',
