@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk KOPSOON - Kopi Santan Instan Khas Blora</title>
+    @include('components.seo', [
+        'title' => 'Produk KOPSOON | Kopi Santan Instan Sachet, Bundling & Box',
+        'description' => 'Lihat pilihan produk KOPSOON mulai dari sachet satuan, bundling hemat, box bulanan, hingga paket reseller kopi santan instan khas Blora.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/product',
+        'image' => 'images/product-pack.webp',
+        'type' => 'product',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Product',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/product#product',
+                'name' => 'KOPSOON Kopi Santan Instan',
+                'image' => [
+                    'https://kopsoon.aksivastudio.my.id/images/product-pack.webp',
+                    'https://kopsoon.aksivastudio.my.id/images/product-box.webp',
+                    'https://kopsoon.aksivastudio.my.id/images/product-drink.webp',
+                ],
+                'description' => 'KOPSOON adalah kopi santan instan khas Blora dengan pilihan sachet satuan, bundling, box bulanan, dan paket mitra reseller.',
+                'brand' => [
+                    '@type' => 'Brand',
+                    'name' => 'KOPSOON',
+                ],
+                'category' => 'Kopi instan',
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/',
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Produk',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/product',
+                    ],
+                ],
+            ],
+        ],
+    ])
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

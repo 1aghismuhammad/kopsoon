@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serving Method KOPSOON - Cara Menikmati Kopi Santan</title>
+    @include('components.seo', [
+        'title' => 'Cara Menyeduh KOPSOON | Kopi Santan Panas & Es Kopi Santan',
+        'description' => 'Pelajari cara menyeduh KOPSOON panas dan dingin, lengkap dengan tips racikan creamy ala kafe untuk menikmati kopi santan instan khas Blora.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/serving',
+        'image' => 'images/serving-hot.webp',
+        'type' => 'article',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/serving#webpage',
+                'url' => 'https://kopsoon.aksivastudio.my.id/serving',
+                'name' => 'Cara Menyeduh KOPSOON',
+                'description' => 'Panduan menyeduh KOPSOON panas dan dingin untuk menikmati kopi santan instan khas Blora.',
+                'inLanguage' => 'id-ID',
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'HowTo',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/serving#howto-hot',
+                'name' => 'Cara menyeduh KOPSOON hangat',
+                'description' => 'Langkah sederhana menyeduh KOPSOON hangat.',
+                'totalTime' => 'PT3M',
+                'step' => [
+                    [
+                        '@type' => 'HowToStep',
+                        'name' => 'Tuang',
+                        'text' => 'Buka satu sachet KOPSOON dan tuang ke dalam cangkir.',
+                    ],
+                    [
+                        '@type' => 'HowToStep',
+                        'name' => 'Seduh',
+                        'text' => 'Tambahkan 150 ml air panas dengan suhu ideal sekitar 85 sampai 90 derajat Celsius.',
+                    ],
+                    [
+                        '@type' => 'HowToStep',
+                        'name' => 'Aduk dan nikmati',
+                        'text' => 'Aduk hingga larut sempurna lalu nikmati kopi santan instan KOPSOON.',
+                    ],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/',
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Cara Penyajian',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/serving',
+                    ],
+                ],
+            ],
+        ],
+    ])
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -80,7 +142,7 @@
                 </div>
 
                 <div class="serving-method-image-wrap serving-photo-frame serving-photo-frame-hot" data-serving-reveal data-serving-reveal-delay="140" data-serving-parallax data-serving-speed="-24">
-                    <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON hangat" class="serving-method-image">
+                    <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON kopi santan instan disajikan hangat" class="serving-method-image">
                 </div>
             </div>
         </section>
@@ -91,7 +153,7 @@
 
             <div class="serving-method-container container serving-method-grid serving-method-grid-reverse">
                 <div class="serving-method-image-wrap serving-photo-frame serving-photo-frame-ice" data-serving-reveal data-serving-parallax data-serving-speed="22">
-                    <img src="{{ asset('images/serving-ice.webp') }}" alt="Es KOPSOON dingin" class="serving-method-image">
+                    <img src="{{ asset('images/serving-ice.webp') }}" alt="Es KOPSOON kopi santan instan disajikan dingin" class="serving-method-image">
                 </div>
 
                 <div class="serving-method-content serving-method-content-dark serving-method-card serving-glass-panel" data-serving-reveal data-serving-reveal-delay="140">
@@ -144,7 +206,7 @@
                 <div class="serving-flavor-grid">
                     <article class="serving-flavor-card" data-serving-reveal data-serving-parallax data-serving-speed="-10">
                         <div class="serving-flavor-media">
-                            <img src="{{ asset('images/kopi1.webp') }}" alt="Kopi panas untuk focus mode" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi1.webp') }}" alt="KOPSOON hangat untuk focus mode" class="serving-flavor-image">
                             <span class="serving-flavor-number">01</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -156,7 +218,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="90" data-serving-parallax data-serving-speed="12">
                         <div class="serving-flavor-media">
-                            <img src="{{ asset('images/kopi2.webp') }}" alt="Es kopi santan untuk chill break" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi2.webp') }}" alt="Es kopi santan KOPSOON untuk chill break" class="serving-flavor-image">
                             <span class="serving-flavor-number">02</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -168,7 +230,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="180" data-serving-parallax data-serving-speed="-12">
                         <div class="serving-flavor-media">
-                            <img src="{{ asset('images/kopi3.webp') }}" alt="Kopi creamy dengan tambahan susu" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi3.webp') }}" alt="Kopi santan KOPSOON creamy dengan tambahan susu" class="serving-flavor-image">
                             <span class="serving-flavor-number">03</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -180,7 +242,7 @@
 
                     <article class="serving-flavor-card" data-serving-reveal data-serving-reveal-delay="270" data-serving-parallax data-serving-speed="10">
                         <div class="serving-flavor-media">
-                            <img src="{{ asset('images/kopi4.webp') }}" class="serving-flavor-image">
+                            <img src="{{ asset('images/kopi4.webp') }}" alt="KOPSOON kopi santan dengan racikan gula aren" class="serving-flavor-image">
                             <span class="serving-flavor-number">04</span>
                         </div>
                         <div class="serving-flavor-copy">
@@ -208,7 +270,7 @@
                 <div class="serving-hacks-grid">
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON double shot" class="serving-hack-image">
+                            <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON kopi santan double shot" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Strong</span>
                         <h3>Double Shot</h3>
@@ -217,7 +279,7 @@
 
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-reveal-delay="120" data-serving-parallax data-serving-speed="16">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/serving-ice.webp') }}" alt="KOPSOON ekstra creamy" class="serving-hack-image">
+                            <img src="{{ asset('images/serving-ice.webp') }}" alt="KOPSOON kopi santan ekstra creamy" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Creamy</span>
                         <h3>Extra Creamy</h3>
@@ -226,7 +288,7 @@
 
                     <article class="serving-hack-card serving-glass-hack-card" data-serving-reveal data-serving-reveal-delay="240" data-serving-parallax data-serving-speed="-14">
                         <div class="serving-hack-image-box">
-                            <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON foamy style" class="serving-hack-image">
+                            <img src="{{ asset('images/serving-hot.webp') }}" alt="KOPSOON kopi santan foamy style" class="serving-hack-image">
                         </div>
                         <span class="serving-hack-tag">Foamy</span>
                         <h3>Foamy Style</h3>

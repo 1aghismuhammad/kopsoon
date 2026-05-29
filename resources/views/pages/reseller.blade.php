@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promo & Reseller KOPSOON - Peluang Cuan Kopi Santan</title>
+    @include('components.seo', [
+        'title' => 'Reseller KOPSOON | Peluang Jualan Kopi Santan Instan',
+        'description' => 'Bergabung menjadi reseller KOPSOON dan mulai jualan kopi santan instan khas Blora dengan paket pemula, promo bundling, dan dukungan konten promosi.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/reseller',
+        'image' => 'images/product-box.webp',
+        'type' => 'website',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/reseller#webpage',
+                'url' => 'https://kopsoon.aksivastudio.my.id/reseller',
+                'name' => 'Reseller KOPSOON',
+                'description' => 'Informasi paket reseller dan peluang jualan kopi santan instan KOPSOON.',
+                'inLanguage' => 'id-ID',
+                'about' => [
+                    '@id' => 'https://kopsoon.aksivastudio.my.id/#organization',
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/',
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Reseller',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/reseller',
+                    ],
+                ],
+            ],
+        ],
+    ])
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

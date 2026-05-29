@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact KOPSOON - Order, Customer Service, dan Media Sosial</title>
+    @include('components.seo', [
+        'title' => 'Kontak & Order KOPSOON | Beli Kopi Santan Instan',
+        'description' => 'Hubungi KOPSOON untuk pemesanan, reseller, marketplace, WhatsApp customer service, media sosial, dan informasi pengiriman kopi santan instan.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/contact',
+        'image' => 'images/product-pack.webp',
+        'type' => 'website',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'ContactPage',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/contact#webpage',
+                'url' => 'https://kopsoon.aksivastudio.my.id/contact',
+                'name' => 'Kontak dan Order KOPSOON',
+                'description' => 'Halaman kontak, pemesanan, marketplace, dan customer service KOPSOON.',
+                'inLanguage' => 'id-ID',
+                'mainEntity' => [
+                    '@id' => 'https://kopsoon.aksivastudio.my.id/#organization',
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/',
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Kontak',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/contact',
+                    ],
+                ],
+            ],
+        ],
+    ])
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

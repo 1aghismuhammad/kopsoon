@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About KOPSOON - Cerita Kopi Santan Nusantara</title>
+    @include('components.seo', [
+        'title' => 'Tentang KOPSOON | Cerita Kopi Santan Instan Khas Blora',
+        'description' => 'Kenali cerita KOPSOON, brand kopi santan instan yang mengangkat rasa lokal Nusantara dalam kemasan praktis, modern, dan cocok untuk generasi muda.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/about',
+        'image' => 'images/kopi5.webp',
+        'type' => 'article',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'AboutPage',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/about#webpage',
+                'url' => 'https://kopsoon.aksivastudio.my.id/about',
+                'name' => 'Tentang KOPSOON',
+                'description' => 'Cerita KOPSOON dalam mengangkat kopi santan khas Nusantara menjadi produk instan yang praktis dan modern.',
+                'inLanguage' => 'id-ID',
+                'about' => [
+                    '@id' => 'https://kopsoon.aksivastudio.my.id/#organization',
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/',
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Tentang',
+                        'item' => 'https://kopsoon.aksivastudio.my.id/about',
+                    ],
+                ],
+            ],
+        ],
+    ])
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOPSOON - Kopi Santan Instan Khas Blora</title>
+    @include('components.seo', [
+        'title' => 'KOPSOON | Kopi Santan Instan Khas Blora',
+        'description' => 'Nikmati KOPSOON, kopi santan instan khas Blora dengan rasa creamy Nusantara. Praktis diseduh panas atau dingin, cocok untuk nugas, kerja, dan santai.',
+        'canonical' => 'https://kopsoon.aksivastudio.my.id/',
+        'image' => 'images/hero.webp',
+        'type' => 'website',
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebSite',
+                '@id' => 'https://kopsoon.aksivastudio.my.id/#website',
+                'url' => 'https://kopsoon.aksivastudio.my.id/',
+                'name' => 'KOPSOON',
+                'description' => 'Website resmi KOPSOON, kopi santan instan khas Blora.',
+                'inLanguage' => 'id-ID',
+                'publisher' => [
+                    '@id' => 'https://kopsoon.aksivastudio.my.id/#organization',
+                ],
+            ],
+        ],
+    ])
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -36,7 +58,7 @@
             </div>
 
             <div class="hero-image-container" data-reveal data-reveal-delay="120">
-                <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON Kopi Santan Instan" class="hero-image">
+                <img src="{{ asset('images/gambarkopi.webp') }}" alt="KOPSOON kopi santan instan khas Blora dalam kemasan praktis" class="hero-image" fetchpriority="high" decoding="async">
             </div>
 
         </div>
@@ -115,19 +137,19 @@
                 <div class="product-options-visual" data-reveal data-reveal-delay="120">
                     <img 
                         src="{{ asset('images/product-drink.webp') }}" 
-                        alt="Kopsoon sachet dan minuman" 
+                        alt="KOPSOON sachet dan minuman kopi santan instan" 
                         class="product-image product-image-top" data-parallax data-parallax-speed="-26"
                     >
 
                     <img 
                         src="{{ asset('images/product-box.webp') }}" 
-                        alt="Kopsoon box" 
+                        alt="KOPSOON box kopi santan instan" 
                         class="product-image product-image-right" data-parallax data-parallax-speed="22"
                     >
 
                     <img 
                         src="{{ asset('images/product-pack.webp') }}" 
-                        alt="Kopsoon pack keluarga" 
+                        alt="KOPSOON paket keluarga kopi santan instan" 
                         class="product-image product-image-bottom" data-parallax data-parallax-speed="-16"
                     >
                 </div>
@@ -146,7 +168,7 @@
                     <div class="serving-image-wrap">
                         <img 
                             src="{{ asset('images/serving-hot.webp') }}" 
-                            alt="Penyajian panas Kopsoon" 
+                            alt="Penyajian panas KOPSOON kopi santan instan" 
                             class="serving-image"
                         >
                     </div>
@@ -232,7 +254,7 @@
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-drink.webp') }}" 
-                            alt="Kopsoon Sachet Satuan"
+                            alt="KOPSOON sachet satuan kopi santan instan"
                             class="order-product-image"
                         >
                     </div>
@@ -247,7 +269,7 @@
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-pack.webp') }}" 
-                            alt="Paket Bundling Kopsoon"
+                            alt="Paket bundling KOPSOON kopi santan instan"
                             class="order-product-image"
                         >
                     </div>
@@ -262,7 +284,7 @@
                     <div class="order-image-box">
                         <img 
                             src="{{ asset('images/product-box.webp') }}" 
-                            alt="Box Keluarga Kopsoon"
+                            alt="Box keluarga KOPSOON kopi santan instan"
                             class="order-product-image"
                         >
                     </div>
@@ -279,7 +301,7 @@
                     <span class="order-social-label">Stay Connected</span>
                     <h3>Ikuti kami untuk update promo dan konten FYP seru!</h3>
 
-                    <a href="https://tiktok.com/@KOPSOON" target="_blank" class="order-tiktok-link">
+                    <a href="https://tiktok.com/@KOPSOON" target="_blank" rel="noopener noreferrer" class="order-tiktok-link">
                         <span class="order-tiktok-icon">♪</span>
                         <span>tiktokkopsoon</span>
                     </a>
