@@ -66,6 +66,7 @@
     }
 
     function requestTick() {
+        if (window.innerWidth <= 768) return;
         if (ticking) return;
         ticking = true;
         window.requestAnimationFrame(update);

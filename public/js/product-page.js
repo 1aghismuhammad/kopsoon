@@ -5,6 +5,7 @@
     const showcase = slider.closest('[data-scroll-showcase]') || slider.parentElement;
     const slides = Array.from(slider.querySelectorAll('.product-slide'));
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mobileShowcaseQuery = window.matchMedia('(max-width: 768px)');
 
     if (!showcase || slides.length === 0) return;
 
@@ -16,7 +17,16 @@
         return Math.min(Math.max(value, min), max);
     }
 
+    function isMobileShowcase() {
+        return mobileShowcaseQuery.matches;
+    }
+
     function setShowcaseHeight() {
+        if (isMobileShowcase()) {
+            showcase.style.removeProperty('--showcase-scroll-height');
+            return;
+        }
+
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
         const scrollPages = slides.length + 1;
         showcase.style.setProperty('--showcase-scroll-height', `${scrollPages * viewportHeight}px`);
@@ -47,6 +57,8 @@
     }
 
     function updateSlideByScroll() {
+        if (isMobileShowcase()) return;
+
         const metrics = getMetrics();
         const currentY = window.scrollY;
 
@@ -82,7 +94,7 @@
     }
 
     function snapToNearestProductPage() {
-        if (prefersReducedMotion || !isInsideShowcaseScrollArea()) return;
+        if (isMobileShowcase() || prefersReducedMotion || !isInsideShowcaseScrollArea()) return;
 
         const metrics = getMetrics();
         const currentY = window.scrollY;
@@ -104,6 +116,8 @@
     }
 
     function scrollToProductPage(pageIndex) {
+        if (isMobileShowcase()) return;
+
         const metrics = getMetrics();
         const targetPage = clamp(pageIndex, 0, slides.length);
         const targetY = metrics.top + (targetPage * metrics.step) + 1;
@@ -118,6 +132,8 @@
     updateSlideByScroll();
 
     window.addEventListener('scroll', function () {
+        if (isMobileShowcase()) return;
+
         requestScrollUpdate();
         scheduleSnap();
     }, { passive: true });
@@ -126,6 +142,13 @@
         setShowcaseHeight();
         updateSlideByScroll();
     });
+
+    if (mobileShowcaseQuery.addEventListener) {
+        mobileShowcaseQuery.addEventListener('change', function () {
+            setShowcaseHeight();
+            updateSlideByScroll();
+        });
+    }
 
     const revealItems = document.querySelectorAll('.reveal-up, .product-card');
     if (!('IntersectionObserver' in window)) {

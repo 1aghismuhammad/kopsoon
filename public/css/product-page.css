@@ -714,22 +714,75 @@
         transform: scale(0.68);
     }
 
+    .product-showcase {
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        padding: 56px 0 42px;
+    }
+
     .showcase-stage {
-        height: 100svh;
-        min-height: 780px;
+        position: relative;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        padding: 0;
     }
 
     .product-slide {
-        padding: 44px 22px 116px;
+        position: relative;
+        inset: auto;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 0 18px 24px;
+        padding: 26px 20px 30px;
+        border-radius: 28px;
+        background: rgba(246, 240, 227, 0.08);
+        border: 1px solid rgba(246, 240, 227, 0.12);
+        opacity: 1;
+        pointer-events: auto;
+        text-align: center;
+        transition: none;
+    }
+
+    .product-slide:last-child {
+        margin-bottom: 0;
     }
 
     .showcase-image-area {
-        min-height: 280px;
+        min-height: auto;
+        transform: none;
     }
 
     .showcase-image-frame {
-        width: 315px;
-        height: 315px;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: min(315px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+        border-width: 10px;
+        clip-path: circle(76% at 54% 54%);
+        transform: none;
+        transition: none;
+    }
+
+    .product-slide.is-active .showcase-image-frame {
+        transform: none;
+    }
+
+    .showcase-content {
+        max-width: 100%;
+        margin: 0 auto;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .product-slide.is-active .showcase-content {
+        opacity: 1;
+        transform: none;
     }
 
     .showcase-content h2 {
@@ -739,8 +792,13 @@
     .showcase-content p {
         font-size: 16px;
         line-height: 1.65;
+        margin-bottom: 24px;
     }
 
+    .showcase-bg-splash,
+    .showcase-bg-curve {
+        display: none;
+    }
 
     .product-list-section {
         padding: 64px 0 70px;
@@ -810,17 +868,24 @@
     }
 
     .showcase-image-frame {
-        width: 272px;
-        height: 272px;
+        width: min(272px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
 
     .showcase-image-area {
-        min-height: 245px;
+        min-height: auto;
     }
 
     .showcase-stage {
-        height: 100svh;
-        min-height: 760px;
+        height: auto;
+        min-height: 0;
+    }
+
+    .product-slide {
+        margin-left: 14px;
+        margin-right: 14px;
+        padding: 24px 18px 28px;
     }
 
     .showcase-kicker {

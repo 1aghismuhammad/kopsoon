@@ -296,7 +296,101 @@
     }
 
     .about-team-card {
-        width: min(280px, 100%);
-        flex-basis: min(280px, 100%);
+        width: min(320px, 100%);
+        height: auto;
+        min-height: 0;
+        flex-basis: min(320px, 100%);
+        padding-bottom: 0;
+        border-top-left-radius: 55px;
+    }
+
+    .about-team-profile-pic {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: 3;
+        width: 108px;
+        height: 108px;
+        margin: 14px auto 0 14px;
+        border: 7px solid #67a35f;
+        border-radius: 50%;
+        box-shadow: rgba(122, 75, 53, 0.22) 0 5px 5px 0;
+        transition: none;
+    }
+
+    .about-team-profile-pic img {
+        filter: saturate(1) contrast(1.04) brightness(1);
+        transform: scale(1.04);
+    }
+
+    .about-team-profile-pic::before {
+        opacity: 0.42;
+    }
+
+    .about-team-bottom {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        min-height: 250px;
+        margin: -46px 0 3px;
+        padding: 72px 20px 74px;
+        border-radius: 72px 29px 29px 29px;
+        transition: none;
+    }
+
+    .about-team-content {
+        position: static;
+        height: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+
+    .about-team-name {
+        max-width: 100%;
+        font-size: 1.12rem;
+    }
+
+    .about-team-about {
+        margin-top: 0.75rem;
+    }
+
+    .about-team-bottom-bottom {
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .about-team-card:hover {
+        border-top-left-radius: 55px;
+    }
+
+    .about-team-card:hover .about-team-profile-pic:hover {
+        border-radius: 50%;
+        transform: none;
+    }
+
+    .about-team-card:hover .about-team-bottom {
+        top: auto;
+        border-radius: 72px 29px 29px 29px;
+        transition: none;
+    }
+
+    .about-team-card:hover .about-team-profile-pic {
+        top: auto;
+        left: auto;
+        z-index: 3;
+        width: 108px;
+        height: 108px;
+        border: 7px solid #67a35f;
+        border-radius: 50%;
+        transition: none;
+    }
+
+    .about-team-card:hover .about-team-profile-pic img,
+    .about-team-card:hover .about-team-profile-pic:hover img {
+        transform: scale(1.04);
     }
 }
