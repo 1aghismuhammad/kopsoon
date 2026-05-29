@@ -82,7 +82,7 @@ body.about-parallax {
     border-radius: 38px;
     background-image:
         linear-gradient(135deg, rgba(244, 236, 216, 0.30), rgba(31, 64, 43, 0.22)),
-        url('../images/Hero.webp');
+        url('../images/hero.webp');
     background-size: cover;
     background-position: center;
     box-shadow: 0 24px 54px rgba(43, 35, 29, 0.16);
@@ -108,7 +108,7 @@ body.about-parallax {
     .about-parallax .about-hero-section {
         background-image:
             linear-gradient(180deg, rgba(244, 236, 216, 0.82), rgba(239, 228, 207, 0.72)),
-            url('../images/Hero.webp');
+            url('../images/hero.webp');
         background-position: center center;
     }
 
@@ -154,7 +154,7 @@ body.about-parallax {
     align-items: center;
     background-image:
         linear-gradient(90deg, rgba(244, 236, 216, 0.76) 0%, rgba(244, 236, 216, 0.62) 42%, rgba(201, 184, 164, 0.34) 100%),
-        url('../images/Hero.webp');
+        url('../images/hero.webp');
 }
 
 .about-parallax .about-hero-section::after {
@@ -207,7 +207,7 @@ body.about-parallax {
         padding: 126px 0 72px;
         background-image:
             linear-gradient(180deg, rgba(244, 236, 216, 0.84), rgba(239, 228, 207, 0.74)),
-            url('../images/Hero.webp');
+            url('../images/hero.webp');
         background-position: center center;
     }
 
